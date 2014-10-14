@@ -1,0 +1,12 @@
+@charset: "UTF-8";
+
+/* body style */
+body {
+	/*
+		화면 가운데 정렬
+		원리: 좌/우 마진 값을 auto로 설정
+	 */
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
