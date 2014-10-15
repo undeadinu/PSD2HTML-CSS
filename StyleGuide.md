@@ -103,6 +103,13 @@
 
 =
 
+### Vector Graphics(Icon Fonts, SVG)
+* [iconic] (https://useiconic.com/)
+* [Font Awesome] (http://fortawesome.github.io/Font-Awesome/icons/)
+* [Icomoon] (https://icomoon.io/)
+
+=
+
 ### UI Compornents
 - Buttons
 - Icons
@@ -110,10 +117,3 @@
 - Hero Banner
 - Breadcrumbs
 - ...
-
-=
-
-### Vector Graphics(Icon Fonts, SVG)
-* [iconic] (https://useiconic.com/)
-* [Font Awesome] (http://fortawesome.github.io/Font-Awesome/icons/)
-* [Icomoon] (https://icomoon.io/)
