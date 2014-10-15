@@ -37,7 +37,7 @@
 
 -
 
-### 디자인 가이 참고 URL: Design Guide References
+### 디자인 가이드 참고 URL: Design Guide References
 - [Web Style Guide] (http://webstyleguide.com/wsg3/index.html "웹 스타일 가이드")
 - [Twitter Bootstrap DG](http://getbootstrap.com/ "트위터 부트스트랩 디자인 가이드")
 - [GitHub DG](https://github.com/styleguide/css "깃허브 디자인 가이드")
