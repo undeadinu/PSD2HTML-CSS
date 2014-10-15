@@ -76,6 +76,7 @@
 =
 
 ##### 그리드 시스템 (프린트): Grid System for Print
+[그래픽 디자인에 대한 보다 합리적이고 객관적인 접근법! 그리드 시스템의 대가 - 요제프 뮐러 브로크만에 대하여](http://yamoo9.net/josef-muller-brockman/)
 ![Grid System for Print 1](http://yalantis.com/blog/wp-content/uploads/2014/04/2328591656_311f762a73_o.jpg)
 ![Grid System for Print 2](http://yalantis.com/blog/wp-content/uploads/2014/04/triboro-design-2.jpg)
 ![Grid System for Print 3](http://yalantis.com/blog/wp-content/uploads/2014/04/97c969229c23fba98a6e8da890519e18.jpg)
