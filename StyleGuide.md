@@ -87,8 +87,9 @@
 ![Grid System for Web 1](http://yalantis.com/blog/wp-content/uploads/2014/04/g-column-gird02-1024x815.jpg)
 ![Grid System for Web 2](http://yalantis.com/blog/wp-content/uploads/2014/04/picture-4.png)
 
-##### Desktop Grid vs Mobile Grid
-![Desktop Grid vs Mobile Grid](http://www.demacmedia.com/wp-content/uploads/2014/07/SameGrid.jpg)
+##### Responsive Grid System
+![Responsive Grid System 1](http://yalantis.com/blog/wp-content/uploads/2014/04/responsive-design-example1.jpg)
+![Responsive Grid System 2](http://www.demacmedia.com/wp-content/uploads/2014/07/SameGrid.jpg)
 
 =
 
