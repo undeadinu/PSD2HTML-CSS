@@ -92,9 +92,9 @@
 ![Grid System for Web 2](http://yalantis.com/blog/wp-content/uploads/2014/04/02.gif)
 
 
-##### Responsive Grid System
+##### 반응형 그리드 시스템: Responsive Grid System
 ![Responsive Grid System 1](http://yalantis.com/blog/wp-content/uploads/2014/04/responsive-design-example1.jpg)
-![Responsive Grid System 2](http://www.demacmedia.com/wp-content/uploads/2014/07/SameGrid.jpg)
+![Responsive Grid System 2](http://www.cmswire.com/images/responsive-grid.png)
 
 =
 
