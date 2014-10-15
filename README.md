@@ -12,6 +12,8 @@ PSD2HTML&CSS
 - [moqups] (https://moqups.com "Moqups 앱으로 이동")
 - [mockflow] (http://mockflow.com)
 
+![그리드 시스템에 기반한 와이어프레임] (http://yalantis.com/blog/wp-content/uploads/2014/04/456718.png)
+
 ## Header 영역
 	- Expedia 로고
 	- GNB
