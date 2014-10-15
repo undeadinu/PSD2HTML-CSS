@@ -79,10 +79,12 @@
 [보다 합리적이고 객관적인 디자인 접근법! 그리드 시스템의 대가 - 요제프 뮐러 브로크만](http://yamoo9.net/josef-muller-brockman/)
 ![Grid System for Print 1](http://yalantis.com/blog/wp-content/uploads/2014/04/2328591656_311f762a73_o.jpg)
 
-그리드 시스템에 충실한 디자인한 결과물은 일견하기에도 훌륭하죠!
+그리드 시스템에 충실한 디자인한 결과물은 일견하기에도 훌륭하죠! 
+
 ![Grid System for Print 2](http://yalantis.com/blog/wp-content/uploads/2014/04/triboro-design-2.jpg)
 
-그리드 시스템은 조형 안에서 찾아내는 규칙(Pattern)입니다.
+그리드 시스템은 조형 안에서 찾아내는 일련의 규칙(Pattern)입니다.
+
 ![Grid System for Print 3](http://yalantis.com/blog/wp-content/uploads/2014/04/97c969229c23fba98a6e8da890519e18.jpg)
 
 =
@@ -98,28 +100,32 @@
 =
 
 ##### 그리드 시스템 (웹): Grid System for Web
+프린트 디자인의 다음 세대 매체인 웹/모바일 또한 객관적이고 합리적인 디자인 접근이 필요합니다!
+
 ![Grid System for Web 1](http://yalantis.com/blog/wp-content/uploads/2014/04/g-column-gird02-1024x815.jpg)
 ![Grid System for Web 2](http://yalantis.com/blog/wp-content/uploads/2014/04/picture-4.png)
 
 =
 
 ##### 모듈러 그리드 시스템 (웹)
-프린트 디자인의 다음 세대 매체인 웹/모바일 또한 객관적이고 합리적인 디자인 접근이 필요합니다!
+모듈(작은 덩어리) 단위로 대상(Object)을 응집하거나 분산함으로 디자인을 완성하는 것입니다.
+
 ![Grid System for Web 2](http://yalantis.com/blog/wp-content/uploads/2014/04/02.gif)
 
 =
 
 ##### 반응형 그리드 시스템: Responsive Grid System
 웹/모바일 세대로 접어든 오늘 날 정형화된 그리드 시스템이 아닌, 유연한 그리드 시스템으로 진화되었습니다. 매체의 변화가 가져온 산물인 것이죠. 오늘날을 살아가는 우리들 디자이너는 이런 변화에 대응하고 연구하는 자세를 가져야 하지 않을까요?
+
 ![Responsive Grid System 1](http://yalantis.com/blog/wp-content/uploads/2014/04/responsive-design-example1.jpg)
 ![Responsive Grid System 2](http://www.cmswire.com/images/responsive-grid.png)
 
 =
 
 ### Color Palette
-- 메인(Primary)
-- 보조(Secondary)
-- 무채색(Gray) 컬러
+- 메인 컬러(Primary Color)
+- 보조 컬러(Secondary Color)
+- 단색 컬러(Gray Color)
 - [Flat UI Colors] (http://flatuicolors.com/ "플랫 UI 컬러 리스트")
 
 =
