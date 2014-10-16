@@ -1,0 +1,2 @@
+[Thu Oct 16 2014 21:59:26 GMT+0900 (KST)] Layer "g+": Expected end of input but "+" found.
+[Thu Oct 16 2014 21:59:26 GMT+0900 (KST)] Layer "+ 더보기": Expected Either a default asset specification or a layer asset specification but "+" found.
