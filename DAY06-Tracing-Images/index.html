@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<!--
+		[비표준!!] ME IE 8+ 호환성 보기 모드를 사용자의 IE 최신버전으로 동작!
+		Emmet Code
+		meta:compat
+	-->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Expedia 세계 여행 정보 공유 사이트</title>
+	<!--
+		SEO = 검색엔진최적화
+		meta[name="description" content="Expedia 세계 여행 사이트입니다."]
+		meta[name="keywords" content="Expedia, 여행, 대행사"]
+		meta[name="autor" content="yamoo9"]
+	-->
+	<meta name="description" content="Expedia 세계 여행 사이트입니다.">
+	<meta name="keywords" content="Expedia, 여행, 대행사">
+	<meta name="author" content="yamoo9">
+	<!-- Mobile First & Optimize 코드 -->
+	<!-- meta:viewport 약자 -->
+	<!-- meta:vp -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- link - CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- script:src -->
+	<script src="js/main.js"></script>
+</head>
+<body>
+
+	<div id="header">
+		<!-- BRAND -->
+		<h1 id="brand"><img src="images/header/logo-Expedia.png" height="35" width="121" title="Expedia 여행 사이트" alt="Expedia"></h1>
+		<!-- GNB
+				#gnb>ul>li*>a[href="#"]
+			-->
+		    <div id="gnb">
+		    	<ul>
+		    		<li><a href="#">홈</a></li>
+		    		<li><a href="#">항공</a></li>
+		    		<li><a href="#">호텔</a></li>
+		    		<li><a href="#">특가상품</a></li>
+		    		<li><a href="#">렌트카</a></li>
+		    		<li><a href="#">쿠폰</a></li>
+		    	</ul>
+		    </div>
+
+		<!-- UNB -->
+		    <div id="unb">
+		    	<ul>
+		    		<li>
+		    			<!-- select>option[value]* -->
+		    			<select name="change-language" id="change-language">
+		    				<option value="english">English</option>
+		    				<option value="france">France</option>
+		    				<option value="china">China</option>
+		    				<option value="japan">Japan</option>
+		    			</select>
+		    		</li>
+		    		<li>고객센터
+		    				<!-- ul>li*>a -->
+		    				<ul>
+		    					<li><a href="/support.html">고객 지원</a></li>
+		    					<li><a href="/user-communication.html">고객 의견</a></li>
+		    				</ul>
+		    		</li>
+		    		<li><a href="/login.php">로그인</a></li>
+		    		<li>
+		    			<img src="images/header/flag-korea.png" height="21" width="29" alt="한국어 페이지">
+		    		</li>
+		    	</ul>
+		    </div>
+	</div><!--// header -->
+
+	<div id="landing">
+	</div><!--// landing -->
+
+	<!-- #promotions+#recommandations+#footer -->
+	<div id="promotions">
+	</div><!--// promotions -->
+	<div id="recommendations">
+	</div><!--// recommandations -->
+	<div id="footer">
+	</div><!--// footer -->
+
+</body>
+</html>
