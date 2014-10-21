@@ -12,13 +12,39 @@
 @import "./base/normalize.css";
 
 /* common */
+body > div {
+	height: 100px;
+}
+
+.row {
+	width: 940px;
+	margin: 0 auto;
+	height: 100%;
+	background: #000;
+}
 
 /* header */
+#header {
+	background: #3fb5c8;
+}
+
+#header * {
+	display: none;
+}
 
 /* landing */
-
+#landing {
+	background: #e5742f;
+}
 /* promotions */
-
-/* Recommendations */
-
+#promotions {
+	background: #54aec3;
+}
+/* recommendations */
+#recommendations {
+	background: #ffb03b;
+}
 /* footer */
+#footer {
+	background: #b9121b;
+}
