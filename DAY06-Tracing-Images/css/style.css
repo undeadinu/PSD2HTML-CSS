@@ -14,37 +14,42 @@
 /* common */
 body > div {
 	height: 100px;
+	background: #fff;
 }
 
 .row {
 	width: 940px;
 	margin: 0 auto;
-	height: 100%;
-	background: #000;
 }
 
 /* header */
 #header {
-	background: #3fb5c8;
+	/* 넘쳐난 영역 밖의 요소를 감춘다 */
+	overflow: hidden;
+	/* 포토샵의 그리드 시스템 베이스라인을 기준으로 바로 작업 */
+	height: 63px;
+	/* 포토샵 CopyCSS 기능을 쓰거나,
+	상용 플러그인 CSS Hat을 사용 */
+	border-bottom: 1px solid #ffcb00;
 }
 
 #header * {
-	display: none;
+
 }
 
 /* landing */
 #landing {
-	background: #e5742f;
+
 }
 /* promotions */
 #promotions {
-	background: #54aec3;
+
 }
 /* recommendations */
 #recommendations {
-	background: #ffb03b;
+
 }
 /* footer */
 #footer {
-	background: #b9121b;
+
 }
