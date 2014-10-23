@@ -1,31 +1,21 @@
 @charset "utf-8";
 /* style.css @ yamoo9.net, 2014 */
-
-/* Call(호출) CSS Style Modules */
-/* 문서 스타일 초기화
-	에릭마이어의 reset.css
-	YUI 라이브러리 reset.css
-
-	브라우저 사이에 기본 스타일의 차이(간극)
-	normalize.css v1, v2, v3
-*/
-@import "./base/normalize.css";
+@import "./partials/normalize.css";
 
 /* common */
-body > div {
-	height: 100px;
+body {
 	background: #fff;
 }
 
 .row {
-	width: 940px;
+	width: 940px; /* 960.gs */
 	margin: 0 auto;
 }
 
 /* header */
 #header {
 	/* 넘쳐난 영역 밖의 요소를 감춘다 */
-	overflow: hidden;
+	/*overflow: hidden;*/
 	/* 포토샵의 그리드 시스템 베이스라인을 기준으로 바로 작업 */
 	height: 63px;
 	/* 포토샵 CopyCSS 기능을 쓰거나,
@@ -34,7 +24,7 @@ body > div {
 }
 
 #header * {
-
+	margin-top: 0;
 }
 
 /* landing */
