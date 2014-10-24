@@ -5,6 +5,7 @@
 /* common */
 body {
 	background: #fff;
+	background: url(../images/baseline.gif);
 }
 
 .row {
@@ -14,7 +15,9 @@ body {
 
 nav ul,
 #gnb ul,
+#lnb ul,
 #unb ul {
+	/* 목록 스타일 초기화 */
 	padding-left: 0;
 	list-style: none;
 }
@@ -24,7 +27,7 @@ nav ul,
 	/* 넘쳐난 영역 밖의 요소를 감춘다 */
 	/*overflow: hidden;*/
 	/* 포토샵의 그리드 시스템 베이스라인을 기준으로 바로 작업 */
-	height: 63px;
+	height: 125px;
 	/* 포토샵 CopyCSS 기능을 쓰거나,
 	상용 플러그인 CSS Hat을 사용 */
 	border-bottom: 1px solid #ffcb00;
@@ -32,6 +35,30 @@ nav ul,
 
 #header * {
 	margin-top: 0;
+}
+
+#brand {
+	float: left;
+	/*margin: 13px 40px 0 0;*/
+	margin-top: 13px;
+	margin-right: 40px;
+	width: 120px;
+}
+
+#gnb {
+	float: left;
+	margin-top: 22px;
+}
+
+#gnb li {
+	display: inline-block;
+	margin-right: 35px;
+	/*width: 60px;*/
+}
+
+#gnb li:hover {
+	border-bottom: 4px solid #0065b8;
+	padding-bottom: 18px;
 }
 
 #gnb a {
