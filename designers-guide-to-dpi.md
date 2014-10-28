@@ -3,7 +3,7 @@
 복잡하지 않고, 쉽게 이해 가능한 내용을 토대로 디자인 프로세스에 도움이 될 가이드입니다.
 
 - 작성자 [Sebastien Gabriel](http://sebastien-gabriel.com/)
-- 원본 문서 [다운로드](http://liber.io/bLT)
+- 원본 문서 [온라인 보기](http://sebastien-gabriel.com/designers-guide-to-dpi/home) | [오프라인 보기: 다운로드](http://liber.io/bLT)
 - 역자 [yamoo9(지훈)](http://yamoo9.net)
 
 =
