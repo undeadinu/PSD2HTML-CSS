@@ -220,13 +220,43 @@ SP는 용도에 따라 DP, PT와 분류되지만 동일한 방식으로 작동�
 
 iPhone 6+는 다른 iPhone과 달리, 화면 그래픽을 특별하게 다운샘플링(Down-Sampling)하여 처리합니다. 예를들어 여러분이 iPhone 6에 맞게 디자인하려면 1334 x 750px 크기의 문서에 디자인 해야 실제 폰에 출력된 물리적 크기와 같게 처리됩니다. iPhone 6+의 경우는 2208 x 1242px에 맞춰 디자인하더라도 폰에서 그 보다 작은 1920 x 1080px 크기로 다운샘플링되어 렌더링됩니다. 아래 그림을 참고하세요.
 
-![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-01-2.png)
+![다운샘플링](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-01-2.png)
 
-![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-01-3.png)
+렌더링되는 해상도 보다 15% 작게 렌더링되면 화면 처리에 있어 약간의 결함(Half-Pixels 생성)을 가지게되어 흐릿하게 표시됩니다. 물론 여러분이 꼼꼼하게 보지 않으면 알기 힘들 정도로 미묘한 정도이긴 합니다. 그래서 2208 x 1242px 크기 캔버스에 디자인 하는 것은 정말 훌륭한 부분이라고 인식할 수 있습니다. 아래 시뮬레이션 이미지를 참고하세요.
 
-![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-02.png)
+![기기에서 다운샘플링 될 때 문제점](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-01-3.png)
 
-![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-03.png)
+> [참고] [Paintcode](http://www.paintcodeapp.com/)의 멋진 설명이 깃든 키노트에 감사드립니다. [그들의 페이지](http://www.paintcodeapp.com/news/iphone-6-screens-demystified)를 통해 정리된 내용을 검토해보세요. 여기서 설명한 내용은 그들의 설계 내용을 기반으로 정리하였습니다.
 
-![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-04.png)
+그 밖에 여러분이 iPod Touch 카테고리를 고려해야 한다면, iPhone으로 고려하셔도 됩니다. iPod 4세대 이하는 iOS 6까지 지원되며 일반 디스플레이가 지원됩니다. iPod 5세대 이상은 iOS 7+, 레티나 디스플레이가 지원되며 iPhone 5와 동일한 화면 크기를 가집니다.
 
+마지막으로 iPad가 있습니다. iPad 1세대는 예외(오늘날 고려하지 않음)로 하고, 그 외 iPad 2, iPad Mini 1세대는 iOS 7+ 지원하며 일반 디스플레이를 사용합니다. iPad Mini와 iPad는 디자인 관점에서 동일한 PPI를 사용하지만, 물리적인 크기는 Mini가 더 작습니다. 즉, Mini는 동일한 해상도를 9.7인치보다 작은 7.9인치에서 제공한다고 볼 수 있습니다. 같은 비율을 유지하되 그에 따라 픽셀 밀도가 증가됩니다. 여러분의 디자인 요소는 화면에서 약간 작게 보일 겁니다.
+
+![iPad 제품군/세대별 차이](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-02.png)
+![iPad vs iPad Mini](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-03.png)
+
+데스크탑/랩탑 카테고리에 대해서는 Apple 제품(Macbook, Macbook Air, 구형 Macbook Pros)이 x1 승수로 제공됩니다. 레티나 디스플레이가 지원되는 기종은 Macbook Pro 13/15인치가 밖에 없으며 iPhone, iPad와 마찬가지로 정확하게 x2 승수 값을 가집니다. 모바일과 다르게 데스크탑 디자인 할 경우에는 2종류의 다른 스크린에 대응할 수 있도록 디자인 파일을 만들어야 합니다.
+
+오직 하나의 승수(Multiplier)만을 사용해서 iOS, OSX 디자인 파일을 만드는 것은 매우 간단합니다. 먼저 x1 기준(기본 PPI, 100%)으로 디자인 파일을 생성한 후, 디자인 파일을 내보낼 때 레티나 디스플레이용으로 x2(200%)하여 @2x 파일을 생성하면 됩니다. 1x와 2x 사이 전환에 익숙해지면, 여러분은 바로 x2 기준으로 디자인할 수도 있습니다. 내보낼 때는 크기를 절반으로 줄여 x1 기준으로 만들면 됩니다. 특히 이 방법은 레티나 디스플레이(신형 Macbook Pro)에서 작업할 경우 유용할 겁니다.
+
+#### 디자인 에셋(Design Assets) 예시 - 크롬(Chrome)
+
+![크롬 웹 브라우저 디자인](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-04.png)
+
+위 이미지를 통해 확인할 수 있듯이 2개의 이미지를 만들 시간이 필요합니다. 일반 디스플레이용 이미지는 *.png 이름으로 저장하고, 레티나 디스플레이용 이미지는 '@2x'를 확장자 앞에 두는 *.@2x.png 로 저장합니다. 이것은 iOS 컨벤션(규약)이기에 따라야 합니다.
+
+만약 iPad에서만 사용할 이미지를 만들어야 한다면 '@2x' 뒤에 '~iPad'를 붙여 사용해야 합니다. 이것은 단지 Chrome 컨벤션입니다. 여러분은 각기 다른 PPI에 대응하여 이미지를 만들어야 합니다. 절대 하나만 만들어서는 안됩니다.
+
+> [참고: iOS 규칙]
+- @2x 에셋은 반드시 x1 에셋의 2배여야 합니다.
+- 레티나 디스플레이는 승수에 따라 @2x(200%), @3x(300%, iPhone 6+)를 붙여 사용해야 합니다.
+- 항상 승수에 따른 이미지를 생성합니다. (x1, x2, x3)
+- x1로 디자인을 시작해서 x2, x3 합니다.
+- PNG 파일로 이미지를 제공합니다.
+- 스펙(Spec)을 생성할 때는 px이 아닌 pt를 사용하여 디자인합니다.
+
+=
+
+### Android에서의 PPI 핸들링
+
+*번역중......*
