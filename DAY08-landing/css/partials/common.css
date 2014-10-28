@@ -10,7 +10,13 @@ body {
 }
 
 /* 그리드 시스템 토글 */
-body.grid {
+body.grid .overlay-grid {
+	position: fixed;
+	z-index: 10000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
 	background:
 		url(../../images/grid/baseline.gif) left top,
 		url(../../images/grid/columns.png) center top repeat-y;

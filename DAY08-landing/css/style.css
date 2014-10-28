@@ -138,10 +138,21 @@
 
 	/* CSS 3에 추가된 배경 모듈 */
 	/*-woms-background-size*/
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
+	/*-webkit-background-size: cover;
+	-moz-background-size: cover;*/
 	background-size: cover;
 }
+
+#landing h2 {
+	margin-top: 105px;
+	margin-bottom: 0;
+	font-size: 27px;
+	font-weight: 700;
+	text-shadow: 0 0 5px rgba(3, 3, 3, 0.6);
+	text-align: center;
+	color: #fff;
+}
+
 /* PROMOTIONS */
 #promotions {
 
