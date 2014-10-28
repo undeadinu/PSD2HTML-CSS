@@ -204,5 +204,29 @@ SP는 용도에 따라 DP, PT와 분류되지만 동일한 방식으로 작동�
 
 [StackExchange 게시글](http://graphicdesign.stackexchange.com/questions/13777/is-it-mandatory-to-keep-72-dpi-for-web-design-what-if-i-create-in-200dpi)을 통해 이 흥미로운 주제에 대한 토론을 추가적으로 읽어보세요.
 
+=
 
+### iOS에서의 PPI 핸들링
+
+플랫폼 네이티브 디자인 속으로!
+
+2014년 이후 iOS 플랫폼에 대해 짧막한 이야기를 해보겠습니다. iOS는 화면 크기와 DPI에 관련하여 모바일, 데스크탑/랩탑 스크린마다 각각 2종류를 가집니다. 모바일 기기는 이미 알고 있는 것처럼 iPhone, iPad 2종류입니다. 폰(Phone)의 범주에는 오래된 3GS(공식적으로 iOS 6까지 지원, 일반 디스플레이)도 포함되어 있습니다. iPhone 5는 iPhone 4/4S와 동일한 PPI와 조금 더 세로로 길어진 길이를 가집니다. 아래 이미지를 참고하세요.
+
+![iPhone 비교](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-01.png)
+
+2014년 9월 Apple 키노트에서 발표된 내용에 따르면 iPhone 6/6+는 새로운 카테고리 2종류가 추가되었습니다. iPhone 6는 iPhone 5보다 0.7인치 이상 더 커졌지만, 동일한 PPI를 사용합니다. 반면 iPhone 6+는 5.5인치 크기로 커졌고 PPI 또한 상향되었으며, x3 승수 계산이 새롭게 추가되어 소개되었습니다. (역자 주: [iPhone 해상도에 따른 디자인 가이드](https://github.com/yamoo9/PSD2HTML-CSS/blob/master/RetinaDisplayHD.md)를 참고하세요)
+
+![iPhone 6/6+](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-01-1.png)
+
+iPhone 6+는 다른 iPhone과 달리, 화면 그래픽을 특별하게 다운샘플링(Down-Sampling)하여 처리합니다. 예를들어 여러분이 iPhone 6에 맞게 디자인하려면 1334 x 750px 크기의 문서에 디자인 해야 실제 폰에 출력된 물리적 크기와 같게 처리됩니다. iPhone 6+의 경우는 2208 x 1242px에 맞춰 디자인하더라도 폰에서 그 보다 작은 1920 x 1080px 크기로 다운샘플링되어 렌더링됩니다. 아래 그림을 참고하세요.
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-01-2.png)
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-01-3.png)
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-02.png)
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-03.png)
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-04.png)
 
