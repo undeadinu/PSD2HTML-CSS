@@ -1,0 +1,53 @@
+/**
+ * --------------------------------
+ * common
+ * --------------------------------
+ */
+
+/* 본문 글꼴 */
+body {
+	font: 14px/1.5 "나눔 고딕", "Nanum Gothic", Dotum, Sans-Serif;
+}
+
+/* 그리드 시스템 토글 */
+body.grid {
+	background:
+		url(../../images/grid/baseline.gif) left top,
+		url(../../images/grid/columns.png) center top repeat-y;
+}
+
+/* 행(Row) 모듈: 960.gs */
+.row {
+	width: 940px;
+	margin: 0 auto;
+}
+
+/* 마이크로 클리어픽스: Micro Clearfix */
+.row::before,
+.row::after {
+	content: '';
+	display: table;
+}
+.row::after { clear: both; }
+
+
+/* 내비게이션 목록 및 하이퍼링크 스타일 초기화 */
+nav ul,
+#gnb ul,
+#lnb ul,
+#unb ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+nav ul a,
+#gnb ul a,
+#lnb ul a,
+#unb ul a {
+	text-decoration: none;
+}
+
+/* 이미지 하단 공백 제거 */
+img {
+	vertical-align: bottom;
+}

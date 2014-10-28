@@ -1,0 +1,156 @@
+@charset "utf-8";
+/**
+ * --------------------------------
+ * style.css @ yamoo9.net, 2014
+ * --------------------------------
+ */
+
+/* 분리된 스타일 모듈 호출
+ * normalize.css - 브라우저 간 차이점 조정
+ * common.css - 공통 사용되는 스타일 모듈
+ * -------------------------------- */
+@import "./partials/normalize.css";
+@import "./partials/common.css";
+
+
+/* 문서 스타일
+ * -------------------------------- */
+
+/* HEADER */
+#header {
+	overflow: hidden;
+	height: 62px;
+	border-bottom: 1px solid #ffcb00;
+}
+
+#header * {
+	margin-top: 0;
+}
+
+/* BRAND */
+#brand {
+	float: left;
+	width: 120px;
+	margin-right: 40px;
+	margin-top: 6px;
+}
+
+#brand a {
+	display: block;
+}
+
+/* GNB */
+#gnb {
+	float: left;
+	margin-top: 20px;
+	margin-left: -5px;
+}
+
+#gnb li {
+	display: inline-block;
+	margin-right: 35px;
+}
+
+#gnb a {
+	padding: 0 5px;
+	color: #0065b8;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+#gnb ul a:focus {
+	outline: none;
+}
+
+/* 내비게이션 활성화 */
+.body-home #home,
+.body-flight #flight,
+.body-hotel #hotel,
+.body-product #product,
+.body-rent #rent,
+.body-coupon #coupon,
+#gnb a:hover,
+#gnb a:focus {
+	border-bottom: 4px solid #0065b8;
+	padding-bottom: 18px;
+}
+
+/* UNB */
+#unb {
+	float: right;
+	width: 225px;
+	margin-top: 21px;
+}
+
+#unb > ul > li {
+	float: left;
+	width: 58px;
+	margin-right: 14px;
+}
+
+#unb > ul > li:nth-child(3) {
+	width: 35px;
+	margin-right: 0;
+}
+
+#unb > ul > li:nth-child(3) a {
+	background: none;
+}
+
+#unb > ul > li:last-child {
+	float: right;
+	width: 29px;
+	margin-right: 0;
+}
+
+#unb > ul > li ul {
+	display: none;
+}
+
+#unb > ul > li > a {
+	display: block;
+	height: 21px;
+	background: url(../images/header/icon-arrow.gif) no-repeat right center;
+	line-height: 21px;
+}
+
+#unb a {
+	color: #0065b8;
+	font-size: 11px;
+}
+
+/* LANDING */
+#landing {
+	overflow: hidden;
+	height: 378px;
+
+	/* CSS 2.1 배경 모듈 */
+	/* 기본형 */
+	/*background-color: transparent;
+	background-image: url();
+	background-position: 0 0;
+	background-repeat: repeat;
+	background-attachment: scroll;*/
+	/* 속기형(기본 값) */
+	/*background: transparent url() 0 0 repeat scroll;*/
+	/* 사용자 정의 덮어쓰기 */
+	background: url(../images/landing/bg-landing.jpg) center top no-repeat;
+
+	/* CSS 3에 추가된 배경 모듈 */
+	/*-woms-background-size*/
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+/* PROMOTIONS */
+#promotions {
+
+}
+/* RECOMMENDATIONS */
+#recommendations {
+
+}
+/* FOOTER */
+#footer {
+
+}
