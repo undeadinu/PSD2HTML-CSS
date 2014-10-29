@@ -277,8 +277,7 @@ iOS와 마찬가지로 Android 역시 Phones과 Tablets, 2개의 큰 범주로 �
 
 ![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-01.png)
 
-뭔가 이상하다고요? 네 맞아요... 아직 끝난게 아니에요... 하나 더 남았습니다!
-(역자 주: 오!! 가브리엘!!! ㅋㅋㅋ)
+뭔가 이상하다고요? 네 맞아요... 아직 끝난게 아니에요... 하나 더 남았습니다! XXXHDPI
 
 ![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-02.png)
 
@@ -289,7 +288,9 @@ Android에서 자주 사용되는 DPI 4가지는 다음과 같습니다.
 - XHDPI
 - XXHDPI
 
-LDPI는 더이상 사용되지 않는 오래된 DPI이고, TVDPI는 TV UI용 스펙(Spec)으로 Nexus7(2012 Edition)에 사용된 적이 있지만 Phones/Tablets에는 불필요한 것으로 간주되고 있습니다. 참고로 TVDPI의 승수(1.33x)는 일부 [LG G 워치(Watch)](http://www.lg.com/global/gwatch/one/index.html#herstyle2) 같은 [착용 가능한 기기(Wear's devices)](http://www.android.com/wear/)에 사용되지만, 그것은 나중에 이야기해보려 합니다.
+LDPI는 더이상 사용되지 않는 오래된 DPI이고, TVDPI는 TV UI용 스펙(Spec)으로 Nexus7(2012 Edition)에 사용된 적이 있지만 Phones/Tablets에는 불필요한 것으로 간주되고 있습니다. 참고로 TVDPI의 승수(1.33x)는 일부 [LG G 워치(Watch)](http://www.lg.com/global/gwatch/one/index.html#herstyle2) 같은 [착용 가능한 기기(Wear's devices)](http://www.android.com/wear/)에 사용되지만, 그것에 대해서는 나중에 이야기해봅시다.
+
+자! 이제 Android의 각 DPI에 해당되는 Phones & Tablets를 연상지어 관련 내용에 대해 공부해봅시다.
 
 ![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-03.png)
 ![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-04.png)
