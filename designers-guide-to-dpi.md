@@ -3,7 +3,7 @@
 복잡하지 않고, 쉽게 이해 가능한 내용을 토대로 디자인 프로세스에 도움이 될 가이드입니다.
 
 - 작성자 [Sebastien Gabriel](http://sebastien-gabriel.com/)
-- 원본 문서 [온라인 보기](http://sebastien-gabriel.com/designers-guide-to-dpi/home) | [오프라인 보기: 다운로드](http://liber.io/bLT)
+- 원본 문서 [온라인](http://sebastien-gabriel.com/designers-guide-to-dpi/home) | [오프라인(EPub, Mobi)](http://liber.io/bLT)
 - 역자 [yamoo9(지훈)](http://yamoo9.net)
 
 =
@@ -18,7 +18,7 @@ Windows 운영체제에서의 기본 PPI 수치는 96인데 반해 Mac 운영체
 
 <strong>예시를 통해 이해해 봅시다.</strong>
 
-27인치 Mac 시네마 디스플레이는 109 PPI를 사용합니다. 이는 스크린 1인치에 109개의 픽셀로 구성된 화면으로 표시됨을 말합니다. 시네마 디스플레이의 실제 경사(Bevel)와 폭(Width)에 따른 크기는 25.7인치(65cm)입니다. 스크린의 실제 폭은 대략 23.5 인치(23.5 x 109 ≒ 2560px)로, 이는 기기의 고유(Native) 화면 해상도를 2560 x 1440px로 처리합니다.
+27인치 Mac 시네마 디스플레이는 109 PPI를 사용합니다. 이는 스크린 1인치에 109개의 픽셀로 구성된 화면으로 표시됨을 말합니다. 시네마 디스플레이의 실제 경사(Bevel)와 폭(Width)에 따른 크기는 25.7인치(65cm)입니다. 스크린의 실제 폭은 대략 23.5 인치(23.5 x 109 ≒ 2560px)로, 이는 기기(Device)의 기본(Native) 화면 해상도를 2560 x 1440px로 처리합니다.
 
 > [참고] 23.5 x 109 값이 정확하게 2560px로 떨어지지는 않습니다. 실제로는 23.486238532 인치로 계산되는데.. 이는 센티미터 당 픽셀 개수로 계산되는 것으로 보입니다.
 
@@ -38,14 +38,14 @@ Windows 운영체제에서의 기본 PPI 수치는 96인데 반해 Mac 운영체
 
 =
 
-### 스크린 해상도 (& 고유(Native) 해상도)
-스크린 해상도(Screen Resolution)는 디자인을 사용자가 인식하는데 큰 영향을 미칩니다. 감사하게도 오늘날 스크린 환경(CRT 스크린 → LCD 스크린)은 정확한 화면 크기/PPI 비율의 고유 스크린 해상도를 사용자에게 보장해줍니다. 해상도(Resolution)란? 스크린에 표시되는 픽셀의 개수(예: 27인치 Cinema Display 기기의 스크린 해상도는 2560 x 1440px)를 말합니다. 스크린 가로 픽셀의 개수 2560, 높이 픽셀의 개수 1440이 그것입니다.
+### 스크린 해상도 (& 기본(Native) 해상도)
+스크린 해상도(Screen Resolution)는 디자인을 사용자가 인식하는데 큰 영향을 미칩니다. 감사하게도 오늘날 스크린 환경(CRT 스크린 → LCD 스크린)은 정확한 화면 크기/PPI 비율의 기본 스크린 해상도를 사용자에게 보장해줍니다. 해상도(Resolution)란? 스크린에 표시되는 픽셀의 개수(예: 27인치 Cinema Display 기기의 스크린 해상도는 2560 x 1440px)를 말합니다. 스크린 가로 픽셀의 개수 2560, 높이 픽셀의 개수 1440이 그것입니다.
 
 물론 우리는 PPI의 개념에 대해 이해하고 그것이 실질적인 크기를 나타내는 것이 아니라는 것을 앞에서 공부했으니, 2560 x 1440px 크기가 스크린 상에 표시된 영역의 크기라는 것을 잘 이해할 수 있을 겁니다. 요컨데 2560 x 1440px는 물리적인 크기가 아니라는 것이죠.
 
-오늘날 LCD 모니터는 기본적으로 화면에 표시할 수 있는 픽셀의 정확한 개수를 처리하는 고유 해상도(Native Resolution)를 가집니다. 이는 기존 세대의 CRT 모니터와 약간 다르게 동작하는 것이지만, CRT 모니터는 이미 시장에서 고려 대상이 아니니 무시해도 무방합니다.
+오늘날 LCD 모니터는 기본적으로 화면에 표시할 수 있는 픽셀의 정확한 개수를 처리하는 기본 해상도(Native Resolution)를 가집니다. 이는 기존 세대의 CRT 모니터와 약간 다르게 동작하는 것이지만, CRT 모니터는 이미 시장에서 고려 대상이 아니니 무시해도 무방합니다.
 
-앞서 살펴본 27인치 Cinema Display의 경우, 109 PPI로 스크린에 표시되며 고유 해상도 2560 x 1440px를 가집니다.
+앞서 살펴본 27인치 Cinema Display의 경우, 109 PPI로 스크린에 표시되며 기본 해상도 2560 x 1440px를 가집니다.
 
 ![Screen Resolution](http://sebastien-gabriel.com/designers-guide-to-dpi/images/resolution-01.png)
 
@@ -57,7 +57,7 @@ Windows 운영체제에서의 기본 PPI 수치는 96인데 반해 Mac 운영체
 
 ![정수로 나눠 떨어지는 해상도와 그렇지 않은 해상도 차이](http://sebastien-gabriel.com/designers-guide-to-dpi/images/resolution-02.png)
 
-아래의 다른 예로 생각해볼까요? 고유 해상도의 스크린 상에서 1px 가는 선을 화면에 렌더링할 때, 해상도를 50% 작은 절반의 해상도로 변경하면... CPU에 의해 화면은 1.5배 가량 크게 계산되어 표시될 것입니다. 결과적으로 확대된 주변 픽셀 일부를 채우기 위해 뿌옇게 되거나, 색상이 변질되는 현상이 발생하게 됩니다.
+아래의 다른 예로 생각해볼까요? 기본 해상도의 스크린 상에서 1px 가는 선을 화면에 렌더링할 때, 해상도를 50% 작은 절반의 해상도로 변경하면... CPU에 의해 화면은 1.5배 가량 크게 계산되어 표시될 것입니다. 결과적으로 확대된 주변 픽셀 일부를 채우기 위해 뿌옇게 되거나, 색상이 변질되는 현상이 발생하게 됩니다.
 
 ![이미지 업/다운 샘플링](http://sebastien-gabriel.com/designers-guide-to-dpi/images/resolution-03.png)
 
@@ -67,7 +67,7 @@ Apple사의 Retina MacBook Pro 제품에서 해상도를 변경할 경우, 아�
 
 이는 물리적 크기의 단위를 픽셀 해상도로 변경하여 사용하고 있기 때문에 매우 주관적인 표현이지만, 사용자의 관점에서 보면 거짓이라고 볼 수는 없습니다.
 
-> [참고] 당신의 디자인을 항상 완벽한 픽셀(Pixel Perfect)로 구현하고 싶다면, 디스플레이의 고유 해상도와 다르게 설정하지 않는 것이 좋습니다. 물론 작은 비율의 해상도로 설정하여 보다 편한 환경에서 작업하고 싶을 수도 있겠지만, 가능한한 정확한 작업을 위해서는 고유 해상도를 사용하는 것을 권장합니다. 불행히도 몇몇 사람들은 접근성 설정을 통해 스크린의 해상도 설정을 변경하여 디자인된 결과물을 보기 좋지 않게 바꿀 수도 있겠으나, 그것은 그 사용자의 가독성을 향상시키기도 합니다.
+> [참고] 당신의 디자인을 항상 완벽한 픽셀(Pixel Perfect)로 구현하고 싶다면, 디스플레이의 기본 해상도와 다르게 설정하지 않는 것이 좋습니다. 물론 작은 비율의 해상도로 설정하여 보다 편한 환경에서 작업하고 싶을 수도 있겠지만, 가능한한 정확한 작업을 위해서는 기본 해상도를 사용하는 것을 권장합니다. 불행히도 몇몇 사람들은 접근성 설정을 통해 스크린의 해상도 설정을 변경하여 디자인된 결과물을 보기 좋지 않게 바꿀 수도 있겠으나, 그것은 그 사용자의 가독성을 향상시키기도 합니다.
 
 =
 
@@ -259,4 +259,43 @@ iPhone 6+는 다른 iPhone과 달리, 화면 그래픽을 특별하게 다운샘
 
 ### Android에서의 PPI 핸들링
 
-*번역중......*
+Android 플랫폼은 iOS에 비해 고려해야할 제품의 폭이 넓습니다. 이유는 iOS와 달리 Android는 [OEM(Original Equipment Manufacturer, 위탁생산)](http://ko.wikipedia.org/wiki/OEM)이 가능해 몇가지 제약사항을 제외하면 Android를 가져다 사용하는데 아무런 문제가 없기 때문입니다. 그 결과 Apple을 제외한 다수의 업체가 Android를 가져다 폰/태블릿 기기의 운영체제로 사용하다 보니, 거의 대부분의 기기가 Android를 사용하게 되었습니다. 문제는 스크린 크기 및 DPI가 Apple 제품만큼 규격화되어 있지 않아 디자인 시 고려해야 할 변수가 너무 많아졌다는 점입니다. 이 점이 디자이너 및 개발자를 난감하게 합니다.
+
+고로 이번 섹션을 통해 우리는 iOS와 다른 방법으로 접근해야합니다. 먼저 다뤄볼 이야기는 DPI의 승수(Multipliers)와 범주(Categories)에 대한 것입니다.
+
+iOS와 마찬가지로 Android 역시 Phones과 Tablets, 2개의 큰 범주로 구분됩니다. 각각의 범주는 서로 다른 DPI를 가지는데 그 분류는 다음과 같습니다. (역자 주: 상당히 많습니다... OTL)
+
+- LDPI
+- MDPI
+- TVDPI
+- HDPI
+- XHDPI
+- XXHDPI
+- XXXHDPI
+
+불행중 다행히도 DPI중 일부는 거의 사용이 되지 않습니다. 고려해야 할 범주를 줄일 수 있어 디자인/개발에 고려할 폭이 줄어들 수 있습니다. 우리가 먼저 생각해봐야 할 문제는 iOS의 x1(100%)에 해당되는 Android의 DPI 값이 무엇인가 찾는 것입니다. 정답은 'MDPI'입니다. 아래 승수(Multipliers)를 그래픽으로 표현한 이미지를 참고하세요.
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-01.png)
+
+뭔가 이상하다고요? 네 맞아요... 아직 끝난게 아니에요... 하나 더 남았습니다!
+(역자 주: 오!! 가브리엘!!! ㅋㅋㅋ)
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-02.png)
+
+Android에서 자주 사용되는 DPI 4가지는 다음과 같습니다.
+
+- MDPI
+- HDPI
+- XHDPI
+- XXHDPI
+
+LDPI는 더이상 사용되지 않는 오래된 DPI이고, TVDPI는 TV UI용 스펙(Spec)으로 Nexus7(2012 Edition)에 사용된 적이 있지만 Phones/Tablets에는 불필요한 것으로 간주되고 있습니다. 참고로 TVDPI의 승수(1.33x)는 일부 [LG G 워치(Watch)](http://www.lg.com/global/gwatch/one/index.html#herstyle2) 같은 [착용 가능한 기기(Wear's devices)](http://www.android.com/wear/)에 사용되지만, 그것은 나중에 이야기해보려 합니다.
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-03.png)
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-04.png)
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-05.png)
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-06.png)
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-07.png)
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-08.png)
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-09.png)
