@@ -57,3 +57,14 @@ nav ul a,
 img {
 	vertical-align: bottom;
 }
+
+/* 마우스 블록 선택 상태 */
+::selection {
+	background: #083161;
+	color: #fff;
+}
+
+::-moz-selection {
+	background: #083161;
+	color: #fff;
+}
