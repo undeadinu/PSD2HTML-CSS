@@ -154,6 +154,16 @@
 	color: #fff;
 }
 
+#search-box {
+	width: 940px;
+	height: 169px;
+	margin-top: 42px;
+	background-color: rgba(0,0,0,0.7);
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
 /* PROMOTIONS */
 #promotions {
 
