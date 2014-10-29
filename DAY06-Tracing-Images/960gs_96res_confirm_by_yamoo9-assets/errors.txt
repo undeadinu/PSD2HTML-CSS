@@ -1,1 +1,0 @@
-[Thu Oct 23 2014 17:41:20 GMT+0900 (KST)] Layer "g+": Expected end of input but "+" found.
