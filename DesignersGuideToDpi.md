@@ -5,6 +5,23 @@
 - 원본 문서 [온라인](http://sebastien-gabriel.com/designers-guide-to-dpi/home) | [오프라인(EPub, Mobi)](http://liber.io/bLT)
 - 역자 [yamoo9(지훈)](http://yamoo9.net)
 
+#### 목차
+- [DPI와 PPI의 개념](#dpi%EC%99%80-ppi%EC%9D%98-%EA%B0%9C%EB%85%90)
+- [운영체제마다 다른 PPI, 표준 디스플레이에서의 화면 처리](#%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%A7%88%EB%8B%A4-%EB%8B%A4%EB%A5%B8-ppi-%ED%91%9C%EC%A4%80-%EB%94%94%EC%8A%A4%ED%94%8C%EB%A0%88%EC%9D%B4%EC%97%90%EC%84%9C%EC%9D%98-%ED%99%94%EB%A9%B4-%EC%B2%98%EB%A6%AC)
+- [디자인에 미치는 영향](#%EB%8B%B9%EC%8B%A0%EC%9D%98-%EB%94%94%EC%9E%90%EC%9D%B8%EC%97%90-%EB%AF%B8%EC%B9%98%EB%8A%94-%EC%98%81%ED%96%A5)
+- [스크린 해상도](#%EC%8A%A4%ED%81%AC%EB%A6%B0-%ED%95%B4%EC%83%81%EB%8F%84--%EA%B8%B0%EB%B3%B8native-%ED%95%B4%EC%83%81%EB%8F%84)
+- [4K란?](#4k%EB%9E%80)
+- [컴퓨터에 4K를 연결하면 어떻게 되나요?](#%EB%82%B4-%EC%BB%B4%ED%93%A8%ED%84%B0%EC%97%90-4k%EB%A5%BC-%EC%97%B0%EA%B2%B0%ED%95%98%EC%97%AC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4-%EC%96%B4%EB%96%A4-%EC%9D%BC%EC%9D%B4-%EC%9D%BC%EC%96%B4%EB%82%A0%EA%B9%8C%EC%9A%94)
+- [모니터 헤르츠(Hertz)](#%EB%AA%A8%EB%8B%88%ED%84%B0-%ED%97%A4%EB%A5%B4%EC%B8%A0hertz)
+- [레티나 디스플레이란?](#%EB%A0%88%ED%8B%B0%EB%82%98-%EB%94%94%EC%8A%A4%ED%94%8C%EB%A0%88%EC%9D%B4%EB%9E%80)
+- [승수(乘數, Multiplier)란?](#%EC%8A%B9%EC%88%98%E4%B9%98%E6%95%B8-multiplier%EB%9E%80)
+- [DP, PT 그리고 SP 단위](#dp-pt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-sp-%EB%8B%A8%EC%9C%84)
+- [PPI 설정](#ppi-%EC%84%A4%EC%A0%95)
+- [iOS에서의 PPI 핸들링](#ios%EC%97%90%EC%84%9C%EC%9D%98-ppi-%ED%95%B8%EB%93%A4%EB%A7%81)
+- [디자인 에셋(Design Assets) 예시 - 크롬(Chrome)](#%EB%94%94%EC%9E%90%EC%9D%B8-%EC%97%90%EC%85%8Bdesign-assets-%EC%98%88%EC%8B%9C---%ED%81%AC%EB%A1%ACchrome)
+- [Android에서의 PPI 핸들링](#android%EC%97%90%EC%84%9C%EC%9D%98-ppi-%ED%95%B8%EB%93%A4%EB%A7%81)
+- [데모 Chrome - 에셋(Assets)](#%EB%8D%B0%EB%AA%A8-chrome---%EC%97%90%EC%85%8Bassets)
+
 =
 
 ### DPI와 PPI의 개념
