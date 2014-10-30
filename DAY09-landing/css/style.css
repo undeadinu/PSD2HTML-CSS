@@ -172,15 +172,21 @@
 }
 
 #promotion-headline {
+	position: relative;
 	height: 231px;
 	padding-top: 84px;
 	text-align: center;
 	background: url(../images/promotions/bg-world-map.png) no-repeat center 21px;
 }
 
-#promotion-headline #map-pin {
+#promotion-headline::after {
+	content: '';
+}
+
+#promotion-headline #map-pin,
+#promotion-headline::after {
 	position: absolute;
-	top: 0;
+	bottom: 42px;
 	left: 50%;
 	margin-left: -94px;
 	width: 188px;
