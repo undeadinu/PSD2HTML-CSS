@@ -316,10 +316,10 @@ XXXHDPI를 실제 애플리케이션에 적용하는 경우도 있지만 매우 
 
 예시에 사용된 에셋 이름(DPI 포함)은 Android 공식 문서에서 권장하는 바와 다릅니다. DPI 범주마다 수백개의 디자인 에셋을 관리해야 하는 것을 고려하면 각 DPI 폴더를 생성한 후, 내부에 디자인 에셋 파일을 묶는 것이 보다 효율적입니다. 그런 이유로 우리는 디자인 도구에서 디자인 에셋을 내보낼 때 각 DPI 폴더마다 내보냅니다.
 
-![Android Assets Exports](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-09.png)
+![Android Assets Exports](/images/android-assets-exports.png)
 
 - drawable-mdpi/asset.png
 - drawable-hdpi/asset.png
 - drawable-xhdpi/asset.png
 - drawable-xxhdpi/asset.png
- 
+
