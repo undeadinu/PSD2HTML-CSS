@@ -378,13 +378,39 @@ XXXHDPI를 실제 애플리케이션에 적용하는 경우도 있지만 매우 
 
 =
 
-### Mac and Chrome OS PPI
+### 데스크톱 운영체제 Mac & Chrome OS에서의 PPI 핸들링
 
-### Stretchable assets
+Mac (OSX)와 Chrome OS는 완전히 동일한 방법으로 PPI를 핸들링합니다. 두 운영체제 모두 기본 PPI(100%)와 높은 해상도/레티나 PPI(200%)를 지원하며, iPhone/iPad와 마찬가지로 x2 승수만 지원합니다. (역자 주: iPhone 6+는 x3 승수)
 
-### Touch and touch targets
+Mac/Chrome OS 사용자 대부분이 아직까지는 낮은 해상도의 기기를 사용할 것이니다만, 앞으로 사용자들은 고 해상도 기기를 사용해 여러분의 디자인을 볼테니, 앞서 준비할 필요가 있습니다. 여러분의 웹 애플리케이션 또는 웹 사이트에 사용되는 디자인 에셋을 고 해상도에 맞춰 준비하세요. 절대 시간 낭비가 아닙니다. 
 
-### Design software
+3대의 랩톱(Macbook pro 13-15인치, Chromebook)에서 PPI를 핸들링하는 방법을 이야기 해보겠습니다. 참고로 Chromebook의 픽셀은 터치(Touch)로 처리합니다. (역자 주: Chromebook을 사용해보지 않아 픽셀로 터치를 처리한다는 부분이 잘 이해 안가네요...)
+
+![Macbook pro 13-15인치, Chromebook](http://sebastien-gabriel.com/designers-guide-to-dpi/images/mac_cros_01.png)
+
+#### 데모: Chrome 에셋(Assets) - 설정 버튼
+
+아래 Chrome 툴바 에셋 설정 버튼은 완벽한 예시입니다. 두 운영체제 모두에서 동일한 에셋을 사용했습니다. 물론 개발된 코드는 다르지만, 비주얼 디자인은 동일합니다. (역자 주: Chromebook에서는 29 x 29dp, OSX에서는 29 x 29pt)
+
+![Chrome 툴바 에셋 설정 버튼](http://sebastien-gabriel.com/designers-guide-to-dpi/images/mac_cros_02.png)
+
+> [참고]
+- Chrome OS와 OSX는 동일한 x2 승수를 사용합니다.
+- 고해상도 디스플레이 Chrome OS에서만 터치 인터페이스를 사용할 수 있습니다.
+
+=
+
+### 신축성이 깃든 에셋
+
+=
+
+### 터치 & 터치 대상
+
+=
+
+### 디자인 도구
+
+=
 
 ### 참고자료
 
