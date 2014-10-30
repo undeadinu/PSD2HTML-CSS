@@ -11,6 +11,7 @@
  * -------------------------------- */
 @import "./partials/normalize.css";
 @import "./partials/common.css";
+@import "./partials/960gs-12col.css";
 
 
 /* 문서 스타일
