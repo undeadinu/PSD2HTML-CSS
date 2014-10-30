@@ -310,4 +310,16 @@ XXXHDPI를 실제 애플리케이션에 적용하는 경우도 있지만 매우 
 
 가장 많이 사용되는 MDPI에서 XXHDPI까지 고려한다면 총 4세트의 디자인 에셋을 만들어야 합니다. (LDPI는 제외하세요) 아래 Chrome 모바일 웹 브라우저의 디자인 에셋 데모를 참고하세요. 특별히 TVDPI를 고려해야 한다면 총 5세트를 준비해야 합니다.
 
+다만 iOS용으로 제작할 경우는 x1(100%) 승수(Multiplier)로 만들길 권합니다. 이유는 Android(x1.33, x1.5)를 포함한 다른 승수를 적용한 디자인 구현이 손쉽기 때문입니다. 아래 Android Chrome 뒤로가기 버튼 예시를 참고하세요.
+
 ![Android Google Assets Demo](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-09.png)
+
+예시에 사용된 에셋 이름(DPI 포함)은 Android 공식 문서에서 권장하는 바와 다릅니다. DPI 범주마다 수백개의 디자인 에셋을 관리해야 하는 것을 고려하면 각 DPI 폴더를 생성한 후, 내부에 디자인 에셋 파일을 묶는 것이 보다 효율적입니다. 그런 이유로 우리는 디자인 도구에서 디자인 에셋을 내보낼 때 각 DPI 폴더마다 내보냅니다.
+
+![Android Assets Exports](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-09.png)
+
+- drawable-mdpi/asset.png
+- drawable-hdpi/asset.png
+- drawable-xhdpi/asset.png
+- drawable-xxhdpi/asset.png
+ 
