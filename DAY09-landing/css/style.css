@@ -166,9 +166,43 @@
 }
 
 /* PROMOTIONS */
-#promotions {
-
+#promotions * {
+	margin-top: 0;
+	margin-bottom: 0;
 }
+
+#promotion-headline {
+	height: 231px;
+	padding-top: 84px;
+	text-align: center;
+	background: url(../images/promotions/bg-world-map.png) no-repeat center 21px;
+}
+
+#promotion-headline #map-pin {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -94px;
+	width: 188px;
+	height: 82px;
+	background: url(../images/promotions/map.png) no-repeat;
+}
+
+#promotion-headline h3 {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 1.4;
+	color: #313335;
+}
+#promotion-headline strong {
+	color: #0065b8;
+}
+#promotion-headline span {
+	font-size: 24px;
+	font-weight: 400;
+	color: #626466;
+}
+
 /* RECOMMENDATIONS */
 #recommendations {
 
