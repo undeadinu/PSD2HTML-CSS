@@ -20,9 +20,9 @@
 8. [DP, PT 그리고 SP 단위](#dp-pt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-sp-%EB%8B%A8%EC%9C%84)
 9. [PPI 설정](#ppi-%EC%84%A4%EC%A0%95)
 10. [iOS에서의 PPI 핸들링](#ios%EC%97%90%EC%84%9C%EC%9D%98-ppi-%ED%95%B8%EB%93%A4%EB%A7%81)
-  * [데모: Chrome 에셋(Assets) - 탭 스위처](#%EB%94%94%EC%9E%90%EC%9D%B8-%EC%97%90%EC%85%8Bdesign-assets-%EC%98%88%EC%8B%9C---%ED%81%AC%EB%A1%ACchrome)
+  * [데모: Chrome 에셋(Assets) - 탭 스위처](#%EB%8D%B0%EB%AA%A8-chrome-%EC%97%90%EC%85%8Bassets---%ED%83%AD-%EC%8A%A4%EC%9C%84%EC%B2%98)
 11. [Android에서의 PPI 핸들링](#android%EC%97%90%EC%84%9C%EC%9D%98-ppi-%ED%95%B8%EB%93%A4%EB%A7%81)
-  * [데모: Chrome 에셋(Assets) - 뒤로가기](#%EB%8D%B0%EB%AA%A8-chrome---%EC%97%90%EC%85%8Bassets)
+  * [데모: Chrome 에셋(Assets) - 뒤로가기](#%EB%8D%B0%EB%AA%A8-chrome-%EC%97%90%EC%85%8Bassets---%EB%92%A4%EB%A1%9C%EA%B0%80%EA%B8%B0)
 
 =
 
