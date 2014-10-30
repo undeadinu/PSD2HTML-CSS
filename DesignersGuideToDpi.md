@@ -314,12 +314,16 @@ XXXHDPI를 실제 애플리케이션에 적용하는 경우도 있지만 매우 
 
 ![Android Google Assets Demo](http://sebastien-gabriel.com/designers-guide-to-dpi/images/android-09.png)
 
-예시에 사용된 에셋 이름(DPI 포함)은 Android 공식 문서에서 권장하는 바와 다릅니다. DPI 범주마다 수백개의 디자인 에셋을 관리해야 하는 것을 고려하면 각 DPI 폴더를 생성한 후, 내부에 디자인 에셋 파일을 묶는 것이 보다 효율적입니다. 그런 이유로 우리는 디자인 도구에서 디자인 에셋을 내보낼 때 각 DPI 폴더마다 내보냅니다.
-
-![Android Assets Exports](/images/android-assets-exports.png)
-
+> 예시에 사용된 에셋 이름(DPI 포함)은 Android 공식 문서에서 권장하는 바와 다릅니다. DPI 범주마다 수백개의 디자인 에셋을 관리해야 하는 것을 고려하면 각 DPI 폴더를 생성한 후, 내부에 디자인 에셋 파일을 묶는 것이 보다 효율적입니다. 그런 이유로 우리는 디자인 도구에서 디자인 에셋을 내보낼 때 각 DPI 폴더마다 분류하여 내보냅니다. (에셋 이름이 중복되는 오류 방지에 도움) 에셋의 소스 저장소에 저장하는 형태는 아래처럼 만들어야 합니다.
 - drawable-mdpi/asset.png
 - drawable-hdpi/asset.png
 - drawable-xhdpi/asset.png
 - drawable-xxhdpi/asset.png
+- ...
+![Android Assets Exports](https://raw.githubusercontent.com/yamoo9/PSD2HTML-CSS/master/images/android-assets-exports.png)
+
+위 Chrome 뒤로가기 버튼 데모에서 보았듯이 모든 에셋은 32 x 32dp 크기로 잘라냅니다. Android 승수(Multipliers) 계산의 문제점은 Apple과는 달리 소수점(x1.33, x1.5)을 사용한다는 것입니다. 예를들어 32px을 x1.33 하는 경우, 32 x 1.33 = 42.56px 값이 나오게 됩니다. 이럴 경우 센스를 발휘하여 값을 반올림한 43px을 사용합니다.
+
+그리고 테두리(Stroke)에 픽셀 값이 사용된 디자인 요소의 경우 주의가 요구됩니다. [스크린 해상도 섹션](/#%EC%8A%A4%ED%81%AC%EB%A6%B0-%ED%95%B4%EC%83%81%EB%8F%84--%EA%B8%B0%EB%B3%B8native-%ED%95%B4%EC%83%81%EB%8F%84)에서 설명한대로 1px이 확대되어 주변 픽셀 일부를 채우기 위해 뿌옇게 되거나, 색상이 변질되는 현상이 발생하게 됩니다.
+
 
