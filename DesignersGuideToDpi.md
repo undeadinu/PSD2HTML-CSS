@@ -1,9 +1,10 @@
-## Designer's Guide to DPI
+## 디자이너를 위한 DPI 가이드(Designer's Guide to DPI)
+
 크로스 DPI, 크로스 플랫폼 디자인을 구현하기 위한 디자이너를 위한 기초 가이드! 복잡하지 않고, 쉽게 이해 가능한 내용을 토대로 디자인 프로세스에 도움이 될 가이드입니다.
 
-- 작성자 [Sebastien Gabriel](http://sebastien-gabriel.com/)
-- 원본 문서 [온라인](http://sebastien-gabriel.com/designers-guide-to-dpi/home) | [오프라인(EPub, Mobi)](http://liber.io/bLT)
-- 역자 [yamoo9(지훈)](http://yamoo9.net)
+- 원문: [온라인](http://sebastien-gabriel.com/designers-guide-to-dpi/home) | [오프라인(EPub, Mobi)](http://liber.io/bLT)
+- 저자: [Sebastien Gabriel](http://sebastien-gabriel.com/) (Google Chrome - Visual Designer)
+- 역자: [yamoo9(지훈)](http://yamoo9.net) (Freelancer Instructor)
 
 =
 
@@ -365,7 +366,56 @@ XXXHDPI를 실제 애플리케이션에 적용하는 경우도 있지만 매우 
 
 그리고 테두리(Stroke)에 픽셀 값이 사용된 디자인 요소의 경우 주의가 요구됩니다. [스크린 해상도 섹션](#%EC%8A%A4%ED%81%AC%EB%A6%B0-%ED%95%B4%EC%83%81%EB%8F%84)에서 설명한대로 1px이 확대되어 주변 픽셀 일부를 채우기 위해 뿌옇게 되거나, 색상이 변질되는 현상이 발생하게 됩니다.
 
+> [참고 안드로이드 규칙]
+- Android는 현재 7개의 다른 DPI가 있지만, 그 중 4개(MDPI, HDPI, XHDPI, XXHDPI)를 주로 사용됩니다. (필요하면 XXXHDPI 추가)
+- MDPI는 승수 x1에 해당되는 기준이됩니다.
+- Android는 PT 대신 DP 단위를 사용하지만, PT와 DP의 개념은 동일합니다.
+- 소수점 승수(x1.33, x1.5)의 경우, 반올림하여 정수로 변환하는 센스가 필요합니다.
+- *.png 이미지 파일로 에셋(Assets)을 내보내야 합니다.
+- 프로젝트 관리자와 에셋 관리(이름 규칙 등)에 관해 사전에 상의하여야 합니다.
+
 [↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
 
 =
 
+### Mac and Chrome OS PPI
+
+### Stretchable assets
+
+### Touch and touch targets
+
+### Design software
+
+### 참고자료
+
+이 가이드를 제작하면서 많은 것을 배울 수 있었습니다. 가이드에서 논의된 주제에 대해 보다 상세한 정보를 얻고 싶다면 참고 문서 링크를 통해 읽어보세요.
+
+- 플랫폼: Platform documentation
+ - [Android UI guidelines](https://developer.android.com/design/index.html)
+ - [Google Material guidelines](http://www.google.com/design/spec/material-design/introduction.html)
+ - [iOS7 UI guidelines](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/MobileHIG/index.html)
+ - [Windows UI guidelines](http://msdn.microsoft.com/en-us/library/windows/apps/hh465424.aspx)
+ - [Google dev Principles of site design](https://developers.google.com/web/fundamentals/principles/)
+
+- 템플릿 & 치트시트: Cheat-sheets and templates
+ - [iPhone 6 Screens Demystified](http://www.paintcodeapp.com/news/iphone-6-screens-demystified)
+ - [Ultimate guide to iphone resolutions](http://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions) by [PaintCodeApp](http://www.paintcodeapp.com/)
+ - [Screen sizes, ratio and PPI](http://screensiz.es/phone)
+ - [iOS7 designer cheat sheet](http://ivomynttinen.com/blog/the-ios-7-design-cheat-sheet/)
+ - [iOS7 design resource](https://developer.apple.com/library/prerelease/ios/design/index.html) (requires Apple account)
+ - [App icons template, Android and iOS](http://appicontemplate.com/)
+ - [Bjango blog](http://bjango.com/articles/) (A design article gold mine)
+ - [iPhone GUI](http://www.teehanlax.com/tools/iphone/) and [iPad GUI(.psd)](http://www.teehanlax.com/tools/ipad/) by [@teehanlax](https://twitter.com/teehanlax)
+
+- 툴: Tools
+ - [Density converter by @brdrck](http://density.brdrck.me/)
+ - [Android asset generation by @brdrck](http://dribbble.com/shots/1237570-Asset-Creation-Process?list=searches)
+ - [Android design tips by @destroywerk and @BPScott](http://www.androiddesign.tips/)
+ - [9patch creation in Android by @romannurik](http://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch)
+ - [Android asset studio by @romannurik.](http://romannurik.github.io/AndroidAssetStudio/index.html) Lots of great tools for Android specific asset creation.
+
+- 추가적으로 읽어볼 것들: Learn more and other reads
+ - [Device independent pixel formula for Mobile devices](http://www.brandbuilderwebsites.com/blog/2012/03/29/device-independent-pixel-formula-for-mobile-devices/)
+ - [More information about 4K by Cnet.com](http://reviews.cnet.com/8301-33199_7-57364224-221/what-is-4k-uhd-next-generation-resolution-explained/)
+ - [More informations about touch targets by Smashing Mag](http://uxdesign.smashingmagazine.com/2012/02/21/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/)
+ - [The Android Screen Fragmentation Myth](http://rustyshelf.org/2014/07/08/the-android-screen-fragmentation-myth/)
