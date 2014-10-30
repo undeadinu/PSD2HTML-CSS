@@ -20,7 +20,7 @@
 8. [DP, PT 그리고 SP 단위](#dp-pt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-sp-%EB%8B%A8%EC%9C%84)
 9. [PPI 설정](#ppi-%EC%84%A4%EC%A0%95)
 10. [iOS에서의 PPI 핸들링](#ios%EC%97%90%EC%84%9C%EC%9D%98-ppi-%ED%95%B8%EB%93%A4%EB%A7%81)
-  * [데모: Chrome 에셋(Assets) - 탭 스위처 ](#%EB%94%94%EC%9E%90%EC%9D%B8-%EC%97%90%EC%85%8Bdesign-assets-%EC%98%88%EC%8B%9C---%ED%81%AC%EB%A1%ACchrome)
+  * [데모: Chrome 에셋(Assets) - 탭 스위처](#%EB%94%94%EC%9E%90%EC%9D%B8-%EC%97%90%EC%85%8Bdesign-assets-%EC%98%88%EC%8B%9C---%ED%81%AC%EB%A1%ACchrome)
 11. [Android에서의 PPI 핸들링](#android%EC%97%90%EC%84%9C%EC%9D%98-ppi-%ED%95%B8%EB%93%A4%EB%A7%81)
   * [데모: Chrome 에셋(Assets) - 뒤로가기](#%EB%8D%B0%EB%AA%A8-chrome---%EC%97%90%EC%85%8Bassets)
 
@@ -281,7 +281,7 @@ iPhone 6+는 다른 iPhone과 달리, 화면 그래픽을 특별하게 다운샘
 
 오직 하나의 승수(Multiplier)만을 사용해서 iOS, OSX 디자인 파일을 만드는 것은 매우 간단합니다. 먼저 x1 기준(기본 PPI, 100%)으로 디자인 파일을 생성한 후, 디자인 파일을 내보낼 때 레티나 디스플레이용으로 x2(200%)하여 @2x 파일을 생성하면 됩니다. 1x와 2x 사이 전환에 익숙해지면, 여러분은 바로 x2 기준으로 디자인할 수도 있습니다. 내보낼 때는 크기를 절반으로 줄여 x1 기준으로 만들면 됩니다. 특히 이 방법은 레티나 디스플레이(신형 Macbook Pro)에서 작업할 경우 유용할 겁니다.
 
-#### 데모 Chrome - 에셋(Assets) 탭 스위처
+#### 데모: Chrome 에셋(Assets) - 탭 스위처
 
 ![크롬 웹 브라우저 디자인](http://sebastien-gabriel.com/designers-guide-to-dpi/images/ios-04.png)
 
@@ -345,7 +345,7 @@ LDPI는 더이상 사용되지 않는 오래된 DPI이고, TVDPI는 TV UI용 스
 
 XXXHDPI를 실제 애플리케이션에 적용하는 경우도 있지만 매우 드문 일입니다. 하지만 미래 지향적인 애플리케이션 디자인을 고려한다면 XXXHDPI를 고려한 디자인 에셋(Assets) 또한 포함시킬 수 있을 겁니다.
 
-#### 데모 Chrome - 에셋(Assets) 뒤로가기
+#### 데모: Chrome 에셋(Assets) - 뒤로가기
 
 가장 많이 사용되는 MDPI에서 XXHDPI까지 고려한다면 총 4세트의 디자인 에셋을 만들어야 합니다. (LDPI는 제외하세요) 아래 Chrome 모바일 웹 브라우저의 디자인 에셋 데모를 참고하세요. 특별히 TVDPI를 고려해야 한다면 총 5세트를 준비해야 합니다.
 
@@ -363,7 +363,7 @@ XXXHDPI를 실제 애플리케이션에 적용하는 경우도 있지만 매우 
 
 위 Chrome 뒤로가기 버튼 데모에서 보았듯이 모든 에셋은 32 x 32dp 크기로 잘라냅니다. Android 승수(Multipliers) 계산의 문제점은 Apple과는 달리 소수점(x1.33, x1.5)을 사용한다는 것입니다. 예를들어 32px을 x1.33 하는 경우, 32 x 1.33 = 42.56px 값이 나오게 됩니다. 이럴 경우 센스를 발휘하여 값을 반올림한 43px을 사용합니다.
 
-그리고 테두리(Stroke)에 픽셀 값이 사용된 디자인 요소의 경우 주의가 요구됩니다. [스크린 해상도 섹션](#%EC%8A%A4%ED%81%AC%EB%A6%B0-%ED%95%B4%EC%83%81%EB%8F%84--%EA%B8%B0%EB%B3%B8native-%ED%95%B4%EC%83%81%EB%8F%84)에서 설명한대로 1px이 확대되어 주변 픽셀 일부를 채우기 위해 뿌옇게 되거나, 색상이 변질되는 현상이 발생하게 됩니다.
+그리고 테두리(Stroke)에 픽셀 값이 사용된 디자인 요소의 경우 주의가 요구됩니다. [스크린 해상도 섹션](#%EC%8A%A4%ED%81%AC%EB%A6%B0-%ED%95%B4%EC%83%81%EB%8F%84)에서 설명한대로 1px이 확대되어 주변 픽셀 일부를 채우기 위해 뿌옇게 되거나, 색상이 변질되는 현상이 발생하게 됩니다.
 
 [↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
 
