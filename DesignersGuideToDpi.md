@@ -384,7 +384,7 @@ Mac (OSX)와 Chrome OS는 완전히 동일한 방법으로 PPI를 핸들링합�
 
 Mac/Chrome OS 사용자 대부분이 아직까지는 낮은 해상도의 기기를 사용할 것이니다만, 앞으로 사용자들은 고 해상도 기기를 사용해 여러분의 디자인을 볼테니, 앞서 준비할 필요가 있습니다. 여러분의 웹 애플리케이션 또는 웹 사이트에 사용되는 디자인 에셋을 고 해상도에 맞춰 준비하세요. 절대 시간 낭비가 아닙니다. 
 
-3대의 랩톱(Macbook pro 13-15인치, Chromebook)에서 PPI를 핸들링하는 방법을 이야기 해보겠습니다. 참고로 Chromebook의 픽셀은 터치(Touch)로 처리합니다. (역자 주: Chromebook을 사용해보지 않아 픽셀로 터치를 처리한다는 부분이 잘 이해 안가네요...)
+3대의 랩톱(Macbook pro 13-15인치, Chromebook)에서 PPI를 핸들링하는 방법을 이야기 해보겠습니다. 참고로 Chromebook은 터치 인터페이스를 사용할 수 있습니다.
 
 ![Macbook pro 13-15인치, Chromebook](http://sebastien-gabriel.com/designers-guide-to-dpi/images/mac_cros_01.png)
 
@@ -400,9 +400,60 @@ Mac/Chrome OS 사용자 대부분이 아직까지는 낮은 해상도의 기기�
 
 =
 
-### 신축성이 깃든 에셋
+### 늘어나는 에셋(Stretchable Assets)
 
-=
+Whether your app is on desktop or mobile. You'll almost always require stretchable assets.
+
+A stretchable asset is set up so the code will be able to make it as big as it needs to be without degrading the rendering.
+
+They are different from repeatable assets, which work differently even while sometimes displaying the same result.
+
+See the Chrome example below. The toolbar on iOS is generated using only one super thin asset that is repeated on the X-axis across the entire screen.
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-01.png)
+
+Now that this is out of the way, let's see how different platforms handle stretchable assets.
+
+Stretchable assets on iOS
+
+iOS makes it easy for the designer because the stretch is defined in the code rather that in the way you make your asset slices or markings. All you'll have to do is provide a base image, and - if you're not implementing it yourself - spec this asset as stretchable horizontally, vertically or both. See the example below which is the default Chrome content button on iOS.
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-02.png)
+
+Stretchable assets on Android
+
+Android has a different way of doing stretchable assets than iOS. It relies a bit more on the designer. 
+
+For this platform, you'll be using 9-patch guides. These guides consist of 4 lines surrounding the asset itself. They have to be delivered in the slice/image like it is part of the visual itself, literally visually display its specs within it. 
+
+They define two things: the scalable area and the fill area. Once these are defined, the code will only be able to stretch what you defined and put content where you defined it to go.
+
+See the example below, which is the Android version of the default Chrome button you saw earlier. I made it bigger on purpose for the demonstration.
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-03.png)
+
+As you can see, the 9-patch is a set of 4 pure #000000 bars. They should have a width of 1px for any DPI; this is a code indication. The stretchable area does not include the rounded corners because it is not something that can be repeated (or it will look terrible.) In this case, we added a 10dp padding for the button. This is something you won't have to spec out. .9 indicators also need to lay and a 100% transparent part of the asset cut. If not, it won't work and require modification.
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-04.png)
+
+Using 9-patch requires you to append .9 to the name, the same way you add @2x for iOS assets. Retaking our button asset example below:
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-05.png)
+
+Note that you should be careful of the size of your asset. If I made it quite big for demonstration, it is important that you optimize your asset weight by reducing it's size to a minimum, as show below. I kept the corners as they were but reduced the stretchable and content area to a minimum.
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-05-2.png)
+
+Be careful that the 9-patch markings do not overlap your design and that the cut of the asset is correct. The .9 should be as close to the asset as possible without overlapping it, try not to build-in padding. The example before has built-in padding because of shadowing.
+
+The 9-patch doesn't replace exporting your asset in every DPI. It needs to be done for each version of the asset.
+
+Last thing, a .9 can have multiple stretchable areas (the top and left ones). It's not something I encountered a lot, if not ever in my workflow, but it's worth mentionning.
+
+> Takeaway:
+Always ask the person implementing your design what's the best solution to adopt, especially for desktop. The more images you'll have, the heavier the app will be, and it will become harder for you to track and update your assets. 9-patch should be used only with good naming and good organization of your sources.
+
+= 
 
 ### 터치 & 터치 대상
 
