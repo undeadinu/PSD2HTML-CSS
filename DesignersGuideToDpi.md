@@ -9,20 +9,20 @@
 
 #### 목차
 - [DPI와 PPI의 개념](#dpi%EC%99%80-ppi%EC%9D%98-%EA%B0%9C%EB%85%90)
-- [운영체제마다 다른 PPI, 표준 디스플레이에서의 화면 처리](#%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%A7%88%EB%8B%A4-%EB%8B%A4%EB%A5%B8-ppi-%ED%91%9C%EC%A4%80-%EB%94%94%EC%8A%A4%ED%94%8C%EB%A0%88%EC%9D%B4%EC%97%90%EC%84%9C%EC%9D%98-%ED%99%94%EB%A9%B4-%EC%B2%98%EB%A6%AC)
-- [디자인에 미치는 영향](#%EB%8B%B9%EC%8B%A0%EC%9D%98-%EB%94%94%EC%9E%90%EC%9D%B8%EC%97%90-%EB%AF%B8%EC%B9%98%EB%8A%94-%EC%98%81%ED%96%A5)
-- [스크린 해상도](#%EC%8A%A4%ED%81%AC%EB%A6%B0-%ED%95%B4%EC%83%81%EB%8F%84--%EA%B8%B0%EB%B3%B8native-%ED%95%B4%EC%83%81%EB%8F%84)
+..- [운영체제마다 다른 PPI, 표준 디스플레이에서의 화면 처리](#%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%A7%88%EB%8B%A4-%EB%8B%A4%EB%A5%B8-ppi-%ED%91%9C%EC%A4%80-%EB%94%94%EC%8A%A4%ED%94%8C%EB%A0%88%EC%9D%B4%EC%97%90%EC%84%9C%EC%9D%98-%ED%99%94%EB%A9%B4-%EC%B2%98%EB%A6%AC)
+- [디자인에 미치는 영향](#%EB%94%94%EC%9E%90%EC%9D%B8%EC%97%90-%EB%AF%B8%EC%B9%98%EB%8A%94-%EC%98%81%ED%96%A5)
+- [스크린 해상도](#%EC%8A%A4%ED%81%AC%EB%A6%B0-%ED%95%B4%EC%83%81%EB%8F%84)
 - [4K란?](#4k%EB%9E%80)
-- [컴퓨터에 4K를 연결하면 어떻게 되나요?](#%EB%82%B4-%EC%BB%B4%ED%93%A8%ED%84%B0%EC%97%90-4k%EB%A5%BC-%EC%97%B0%EA%B2%B0%ED%95%98%EC%97%AC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4-%EC%96%B4%EB%96%A4-%EC%9D%BC%EC%9D%B4-%EC%9D%BC%EC%96%B4%EB%82%A0%EA%B9%8C%EC%9A%94)
+..- [컴퓨터에 4K를 연결하면 어떻게 되나요?](#%EC%BB%B4%ED%93%A8%ED%84%B0%EC%97%90-4k%EB%A5%BC-%EC%97%B0%EA%B2%B0%ED%95%98%EB%A9%B4-%EC%96%B4%EB%96%BB%EA%B2%8C-%EB%90%98%EB%82%98%EC%9A%94)
 - [모니터 헤르츠(Hertz)](#%EB%AA%A8%EB%8B%88%ED%84%B0-%ED%97%A4%EB%A5%B4%EC%B8%A0hertz)
 - [레티나 디스플레이란?](#%EB%A0%88%ED%8B%B0%EB%82%98-%EB%94%94%EC%8A%A4%ED%94%8C%EB%A0%88%EC%9D%B4%EB%9E%80)
 - [승수(乘數, Multiplier)란?](#%EC%8A%B9%EC%88%98%E4%B9%98%E6%95%B8-multiplier%EB%9E%80)
 - [DP, PT 그리고 SP 단위](#dp-pt-%EA%B7%B8%EB%A6%AC%EA%B3%A0-sp-%EB%8B%A8%EC%9C%84)
 - [PPI 설정](#ppi-%EC%84%A4%EC%A0%95)
 - [iOS에서의 PPI 핸들링](#ios%EC%97%90%EC%84%9C%EC%9D%98-ppi-%ED%95%B8%EB%93%A4%EB%A7%81)
-- [데모 Chrome - 에셋(Assets) 탭 스위처 ](#%EB%94%94%EC%9E%90%EC%9D%B8-%EC%97%90%EC%85%8Bdesign-assets-%EC%98%88%EC%8B%9C---%ED%81%AC%EB%A1%ACchrome)
+..- [데모 Chrome - 에셋(Assets) 탭 스위처 ](#%EB%94%94%EC%9E%90%EC%9D%B8-%EC%97%90%EC%85%8Bdesign-assets-%EC%98%88%EC%8B%9C---%ED%81%AC%EB%A1%ACchrome)
 - [Android에서의 PPI 핸들링](#android%EC%97%90%EC%84%9C%EC%9D%98-ppi-%ED%95%B8%EB%93%A4%EB%A7%81)
-- [데모 Chrome - 에셋(Assets) 뒤로가기](#%EB%8D%B0%EB%AA%A8-chrome---%EC%97%90%EC%85%8Bassets)
+..- [데모 Chrome - 에셋(Assets) 뒤로가기](#%EB%8D%B0%EB%AA%A8-chrome---%EC%97%90%EC%85%8Bassets)
 
 =
 
@@ -60,6 +60,7 @@ Windows 운영체제에서의 기본 PPI 수치는 96인데 반해 Mac 운영체
 > [참고] 컬러 & 해상도의 차이를 떠나, 당신의 디자인은 누구에게나 다르게 보일 수 있음을 명심하세요! 최대한 많은 사용자가 포함된 그룹의 환경과 타협하는 것을 목표로 디자인 포인트를 잡아야 합니다. 모든 사용자가 디자이너인 당신과 유사한 화면에서 디자인을 볼 것이라고 단정하지 마세요.
 
 [↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
+
 =
 
 ### 스크린 해상도
@@ -94,6 +95,7 @@ Apple사의 Retina MacBook Pro 제품에서 해상도를 변경할 경우, 아�
 > [참고] 당신의 디자인을 항상 완벽한 픽셀(Pixel Perfect)로 구현하고 싶다면, 디스플레이의 기본 해상도와 다르게 설정하지 않는 것이 좋습니다. 물론 작은 비율의 해상도로 설정하여 보다 편한 환경에서 작업하고 싶을 수도 있겠지만, 가능한 한 정확한 작업을 위해서는 기본 해상도를 사용하는 것을 권장합니다. 불행히도 몇몇 사람들은 접근성 설정을 통해 스크린의 해상도 설정을 변경하여 디자인된 결과물을 보기 좋지 않게 바꿀 수도 있겠으나, 그것은 그 사용자의 가독성을 향상시키기도 합니다.
 
 [↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
+
 =
 
 ### 4K란?
@@ -122,6 +124,7 @@ Full HD는 1920 x 1080px에 적용되는 해상도를 말합니다. 대부분의
 - 오늘날 어떤 폰/태블릿도 아직 4K를 지원하지 않습니다. ([Samsung Galaxy S5는 WQHD(2560 x 1440px)](http://gadgets.ndtv.com/mobiles/news/samsung-reveals-plans-for-560-ppi-and-uhd-display-smartphones-custom-arm-cpu-442425))
 
 [↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
+
 =
 
 ### 모니터 헤르츠(Hertz)
@@ -137,6 +140,7 @@ UI 관점에서 모니터 헤르츠(Hz)는 애니메이션을 얼마나 부드�
 > [참고] 어떤 이들은 인간의 눈이 위에서 이야기한 60fps를 볼 수 없다고 말하지만, 잘못 알고 있는 겁니다. 그렇게 말하는 사람 이야기는 귀를 막고 가능한 한 기분 나쁘게 웃으며 그를 지나쳐가세요!
 
 [↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
+
 =
 
 ### 레티나 디스플레이란?
@@ -164,6 +168,7 @@ iPhone 3G/S는 3.5인치(대각선 길이) 크기, 480 x 320px 해상도 163 PPI
 > [참고] Apple 제품은 DPI 변환, 해상도 차이, PPI와 물리적 크기 비율 등을 이해하는데 훌륭한 길을 제시해줍니다. 디자인 시에 배수 비율(x2, x3)만 신경 쓰면 되기 때문이죠.
 
 [↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
+
 =
 
 ### 승수(乘數, Multiplier)란?
@@ -183,6 +188,7 @@ iOS 디자인 가이드에서 요구하는 데로 44px 크기의 버튼을 만�
 > [참고] 승수는 여러분이 디자인하는데 있어 알아두어야 합니다. 다양한 PPI, 화면 크기로 혼돈의 세상이 된 오늘날 디자인을 헤쳐나갈 방법이기 때문입니다.
 
 [↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
+
 =
 
 ### DP, PT 그리고 SP 단위
@@ -202,6 +208,7 @@ SP는 용도에 따라 DP, PT와 분류되지만 동일한 방식으로 작동�
 > [참고] 항상 디자인 할 때 해상도/크기(독립적) 값을 사용하도록 합니다. 다양하고 변화무쌍한 화면 크기/해상도에 젹합합니다.
 
 [↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
+
 =
 
 ### PPI 설정
@@ -238,6 +245,7 @@ SP는 용도에 따라 DP, PT와 분류되지만 동일한 방식으로 작동�
 [StackExchange 게시글](http://graphicdesign.stackexchange.com/questions/13777/is-it-mandatory-to-keep-72-dpi-for-web-design-what-if-i-create-in-200dpi)을 통해 이 흥미로운 주제에 대한 토론을 추가적으로 읽어보세요.
 
 [↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
+
 =
 
 ### iOS에서의 PPI 핸들링
@@ -290,6 +298,7 @@ iPhone 6+는 다른 iPhone과 달리, 화면 그래픽을 특별하게 다운샘
 - 스펙(Spec)을 생성할 때는 px이 아닌 pt를 사용하여 디자인합니다.
 
 [↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
+
 =
 
 ### Android에서의 PPI 핸들링
@@ -357,5 +366,6 @@ XXXHDPI를 실제 애플리케이션에 적용하는 경우도 있지만 매우 
 그리고 테두리(Stroke)에 픽셀 값이 사용된 디자인 요소의 경우 주의가 요구됩니다. [스크린 해상도 섹션](#%EC%8A%A4%ED%81%AC%EB%A6%B0-%ED%95%B4%EC%83%81%EB%8F%84--%EA%B8%B0%EB%B3%B8native-%ED%95%B4%EC%83%81%EB%8F%84)에서 설명한대로 1px이 확대되어 주변 픽셀 일부를 채우기 위해 뿌옇게 되거나, 색상이 변질되는 현상이 발생하게 됩니다.
 
 [↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
+
 =
 
