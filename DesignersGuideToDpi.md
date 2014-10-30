@@ -402,27 +402,23 @@ Mac/Chrome OS 사용자 대부분이 아직까지는 낮은 해상도의 기기�
 
 =
 
-### 늘어나는 에셋(Stretchable Assets)
+### 크기가 늘어나는 에셋(Stretchable Assets)
 
-Whether your app is on desktop or mobile. You'll almost always require stretchable assets.
+여러분의 웹/애플리케이션은 모바일 아니면 데스크톱에서 사용됩니다. 그렇기에 크기가 자유롭게 늘어나는(신축성, 伸縮性) 디자인 에셋이 반드시 필요합니다. 신축성을 지닌 에셋은 코드를 통해 크기를 키워도 품질(성늘 포함)에 전혀 문제가 없이 화면에 렌더링되기 때문이죠.
 
-A stretchable asset is set up so the code will be able to make it as big as it needs to be without degrading the rendering.
-
-They are different from repeatable assets, which work differently even while sometimes displaying the same result.
-
-See the Chrome example below. The toolbar on iOS is generated using only one super thin asset that is repeated on the X-axis across the entire screen.
+반복 처리된 에셋은 다른 크기의 기기에서 보더라도 동일한 결과를 만들어 냅니다. 아래 Chrome 예제를 확인해보세요. iPhone(iOS) 스크린에 렌더링된 Chrome 툴바는 오직 실처럼 가느다란 에셋(1 x 66pt)을 X축 방향으로 반복하여 만들어낸 것입니다.
 
 ![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-01.png)
 
-Now that this is out of the way, let's see how different platforms handle stretchable assets.
+자 그럼 이제부터 신축성을 지닌 에셋을 각각의 운영체제마다 어떻게 다르게 처리하는지 알아보도록 합시다.
 
-Stretchable assets on iOS
+#### iOS: 신축성을 지닌 에셋
 
 iOS makes it easy for the designer because the stretch is defined in the code rather that in the way you make your asset slices or markings. All you'll have to do is provide a base image, and - if you're not implementing it yourself - spec this asset as stretchable horizontally, vertically or both. See the example below which is the default Chrome content button on iOS.
 
 ![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-02.png)
 
-Stretchable assets on Android
+#### Android: 신축성을 지닌 에셋
 
 Android has a different way of doing stretchable assets than iOS. It relies a bit more on the designer. 
 
