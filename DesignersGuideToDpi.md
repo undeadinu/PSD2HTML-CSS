@@ -398,6 +398,8 @@ Mac/Chrome OS 사용자 대부분이 아직까지는 낮은 해상도의 기기�
 - Chrome OS와 OSX는 동일한 x2 승수를 사용합니다.
 - 고해상도 디스플레이 Chrome OS에서만 터치 인터페이스를 사용할 수 있습니다.
 
+[↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
+
 =
 
 ### 늘어나는 에셋(Stretchable Assets)
@@ -453,13 +455,136 @@ Last thing, a .9 can have multiple stretchable areas (the top and left ones). It
 > Takeaway:
 Always ask the person implementing your design what's the best solution to adopt, especially for desktop. The more images you'll have, the heavier the app will be, and it will become harder for you to track and update your assets. 9-patch should be used only with good naming and good organization of your sources.
 
+[↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
+
 = 
 
 ### 터치 & 터치 대상
 
+The first thing to understand here is that making something touch ready has nothing to do with DPI. But when it comes to creating a UI or generating assets, it is important to understand the relationship between touch and DPI.
+
+Making the choice between touch or non-touch will highly depend on the scope of your app, where it is going to be deployed and how you want the user experience to be.
+Let's split it in simple categories, desktop non-touch and mobile.
+
+Desktop, non-touch
+
+Let's not give a history class here but unless you were born in 2005, you know that the computing technology wasn't created with touch in mind.
+We use mouse and keyboard, that are extremely precise tools to navigate a UI. The precision of your mouse cursor is 1pt. You could in theory create a 1x1pt button that would be clickable by any super-human out there.
+
+See the illustration below.
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/touch_01.png)
+
+This is a 20x version of the Chrome OS cursor. 
+The red zoning it the actual area that triggers an action on the UI. Pretty precise. 
+You know were I'm heading. What's not very precise ? Our fingers.
+
+So how do you design for touch ? Well you make everything bigger.
+
+Finger size
+
+Here's the average size of the two most used fingers for UI interaction, the pointer and the thumb. It represents both the touch zone and the the area obstructed by the finger. The actual touch zone (i.e the part of your finger that is in contact with the screen) will of course be smaller and a bit more precise, unless you really smash your finger against the screen. 
+
+When designing for touch, it's safer to overestimate the size needed for touch targets than underestimate them.
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/touch_03.png)
+
+How to apply this to my design flow
+
+As we already saw, inches or cm are not the best way to count in a pixel world. Matter of fact, even pixel is not a really good way to count. So how do you make sure your design is touch ready ? 
+I'm going to state the obvious but you should always try your design on the targeted devices/platform.
+But to avoid losing too much time, there is some base pixel-based sizes that are considered safe to use and that are recommended on an per OS basis.
+Recommended touch targets per platform
+
+Again, careful, these sizes are for convenience and are not a unit of real life size measurement whatsoever. They work because OEM and manufacturers are following guidelines to make screens consistent in term of size/dpi ratio.
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/touch_04.png)
+
+As you can see each OS has its own set of recommendations but they are all around the 48pt. Windows includes the padding in its specs, that's why I added it here.
+
+The difference in these sizes comes from different factors.
+Apple controls its hardware so they know the quality of the touch screen and control the exact ratio. They can rely on a smaller touch target. Additionaly, their hardware tends to be physically smaller. 
+
+Android and Windows on the other hand have different OEMs, each building its own hardware, having bigger touch targets makes them "safer". Their UI is also more spaced out (especially windows) and their devices tends to be physically bigger.
+
+The chrome example
+
+Here's how Chrome applies this. The coded touch targets appear in blue.
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/touch_05.png)
+
+As you can see, both toolbars are the recommended touch target height for each platform. Also the area surrounding the visual is a 44x44pt and 48x48pt square for iOS and Android respectively. Not only this makes the UI consistent with the rest of the OS in term of sizing but it's a great way for you to have a minimum size for everything you want the user to interact with.
+
+Windows 8 And Chrome OS
+
+Windows 8 and Chrome OS supports both touch and non-touch interfaces. If you design for a Windows 8 app, I'd highly recommend following their guidelines for touch targets. 
+
+Chrome OS guidelines has yet to be released but and the Pixel usage it not big. However, since all Chrome OS apps are web based, I'd suggest designing to touch anyway. My recommendation would be to apply the Android touch targets guidelines.
+
+The web, hybrid devices and the future.
+
+If you're designing for mobile, it will be clear what decision to make, go touch. If you're designing for desktop, go non-touch. It sounds easy but it'd be ignoring a new tendency that arrises, hybrid devices.
+
+An hybrid device is a device that supposedly does both touch and non-touch. The Chromebook Pixel, the Surface Pro and the Lenovo Yoga are a good example. 
+What to do in this case ? Well there is no easy answer but I'm going to go ahead and give one, go for touch. That's where the technology is going to evolve. 
+If you design for the web, or anything for that matter, think touch upfront.
+
+> Takeaway:
+- Think mobile, think touch in almost everything you'll do in the future. 
+- Use recommended touch targets for each OS. This will help make your design better and help you reach consistency within the OS. - Touch targets are reference values, it doesn't mean you should follow them to the letter. Ultimately, you control the experience.
+
+[↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
+
 =
 
 ### 디자인 도구
+
+The software doesn't make the designer, but choosing the right software for the task at hand can improve your productivity and ease of work by quite a bit. Software "know-hows" shouldn't be your only skill but learning and mastering the right tool will be a great asset to make your ideas happen.
+
+When it comes to handling DPI variation in interface design, different software work in different ways. Some are better at particular tasks than others. Here are the most common:
+
+![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/software_01.png)
+
+Photoshop
+
+The mother of interface design tools. Probably the most used tool out there today. There is an infinite amount or resources, tutorials, articles for it. Photoshop has been around almost since the beginning of interface design.
+
+As its name suggests, the first intention of the program wasn't interface design but photo or bitmap retouching. It evolved over the year and with the birth of interface design, designers appropriated it and re-purposed it. Part of this was because they were used to it and because it was the only program around that was able to do things as good as needed.
+
+Photoshop is, to this day, the master of Bitmap editing and is still the most used program out there for UI design. Its decades long legacy makes it a hard program to approach and learn though. As a gigantic swiss army knife of a software, you'll be able to do anything, but not always in the most efficient way.
+
+As it it bitmap based initially, it is DPI dependent, the opposite of Illustrator and Sketch described below.
+
+Illustrator
+
+Photoshop's vector based sibling. As its name indicates, it is aimed at Illustrators but it is also usable as an interface design tool.
+
+Illustrator is suited for print design as well so its interface, color management, scale, rulers and units may throw you off at first and it requires a few tweaks to be easily usable for interface design only. Like Photoshop, it is an incredibly powerful tool with a steep learning curve.
+
+What differs from Photoshop is that it is DPI independent due to its reliance on vector shapes. Contrary to bitmap or raster images, graphics made using vector shapes, relying on mathematical formulas, will be rescaled programmatically without any quality loss.
+
+Understanding the difference between rasterized and vectorized image is key to build scalable visual design and assets.
+
+If you want to get started with using Illustrator for web/interface design, I recommend reading "My vector workflow" by @janoskoos.
+
+Sketch 3.0
+
+Sketch is new compared to Photoshop and Illustrator. With only 4 years of age, this program generated a lot of hype (in a good way) in the UI designer industry. The reason is that Sketch is aimed, from the start, to be used by interface and UX designers. Without the legacy of Photoshop or Illustrator, Sketch positions itself as the perfectly adapted tool for the niche audience that is interface designers.
+
+Sketch is suited for fast wireframing as well as more complex visual design. It is entirely vector based, like Illustrator, with a minimal and well thought UI. The combination of artboards and the ease of use and flexibility of its asset generation system makes it the fastest tool for multi-DPI and multi-platform design. The recent release of its 3.0 version make it a very solid alternative to Photoshop.
+
+On the downside, Sketch is supported by a smaller team and is still fairly recent. Its team is extremely reactive but doesn't have the scale of the Adobe (Photoshop and Illustrator) one. Sketch offers (by design) the bear minimum when it comes to bitmap edition. Photoshop will be more suited for this kind of job. Finally, due to its fairly still young life, the resources in term of source files, tutorials and overall community is orders of magnitude smaller than Photoshop. That being said, the community is very active and motivated.
+
+On a more personal note, I've been a Photoshop user since I started design 8 years ago but I recently switch to Sketch 3.0 for the most part of my design process. This is not a judgement of quality, Photoshop is still a hell of a good program, it just suits my needs better.
+
+If you want to learn more on my particular experience I encourage you to read my "A month with Sketch 3.0" article or my "Sketch tutorial_01".
+
+Want to get even deeper and understand how vectors work in sketch ? Head to @pnowelldesign's article "Harnessing vector awesomeness in Sketch"
+
+> Takeaway:
+There is no perfect tool for the job but the one you are comfortable using. If you can afford the time an money, I recommend you try them all to make up your own opinion.
+
+[↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
 
 =
 
@@ -496,3 +621,7 @@ Always ask the person implementing your design what's the best solution to adopt
  - [More information about 4K by Cnet.com](http://reviews.cnet.com/8301-33199_7-57364224-221/what-is-4k-uhd-next-generation-resolution-explained/)
  - [More informations about touch targets by Smashing Mag](http://uxdesign.smashingmagazine.com/2012/02/21/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/)
  - [The Android Screen Fragmentation Myth](http://rustyshelf.org/2014/07/08/the-android-screen-fragmentation-myth/)
+
+=
+
+[↑ 목차 보기](#%EB%AA%A9%EC%B0%A8)
