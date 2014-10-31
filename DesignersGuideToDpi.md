@@ -412,35 +412,33 @@ Mac/Chrome OS 사용자 대부분이 아직까지는 낮은 해상도의 기기�
 
 자 그럼 이제부터 신축성을 지닌 에셋을 각각의 운영체제마다 어떻게 다르게 처리하는지 알아보도록 합시다.
 
-#### iOS: 신축성을 지닌 에셋
+#### iOS: 신축성 에셋
 
-iOS makes it easy for the designer because the stretch is defined in the code rather that in the way you make your asset slices or markings. All you'll have to do is provide a base image, and - if you're not implementing it yourself - spec this asset as stretchable horizontally, vertically or both. See the example below which is the default Chrome content button on iOS.
+iOS는 신축성 에셋 제작을 코드로 정의하기 때문에, 수평(X축)/수직(Y축)으로 늘어날 수 있는 기본 이미지만 디자이너가 슬라이싱해서 제공해줘면 되기에 상대적으로 쉽습니다. 아래 Chrome 콘텐츠 버튼 이미지 예시를 보세요.
 
-![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-02.png)
+![iOS: Chrome 콘텐츠 버튼 이미지](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-02.png)
 
-#### Android: 신축성을 지닌 에셋
+#### Android: 신축성 에셋
 
-Android has a different way of doing stretchable assets than iOS. It relies a bit more on the designer. 
+iOS와 달리 Android는 신축성 에셋을 제작하는데 있어 9-패치(patch) 가이드를 사용해 만들어야 하기 때문에 디자이너의 노력을 좀 더 필요로 합니다. 9-패치 가이드는 4개의 선이 신축성 에셋 사방을 둘러 싼 형태로 구성(에셋 비주얼의 일부로 그려짐)됩니다.
 
-For this platform, you'll be using 9-patch guides. These guides consist of 4 lines surrounding the asset itself. They have to be delivered in the slice/image like it is part of the visual itself, literally visually display its specs within it. 
+9-패치 가이드는 확장(Scalable) 영역과 면(Fill) 영역, 이렇게 2가지 유형으로 구분됩니다. 9-패치 가이드를 코드로 정의한 에셋 내부에 콘텐츠를 포함하면, 가이드는 콘텐츠를 포함한 채 사방으로 늘어나게 됩니다.
 
-They define two things: the scalable area and the fill area. Once these are defined, the code will only be able to stretch what you defined and put content where you defined it to go.
+앞서 본 Chrome 버튼 예시를 이번에는 Android 버전으로 확인해보죠. 아래 이미지를 봐주세요. 
 
-See the example below, which is the Android version of the default Chrome button you saw earlier. I made it bigger on purpose for the demonstration.
+![Android: Chrome 콘텐츠 버튼 이미지](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-03.png)
 
-![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-03.png)
+위 이미지를 통해 보았듯이 9-패치 가이드는 4개의 검정색(#000) 바(Bar)로 구성되어 있습니다. 어떤 DPI에서도 1px 폭을 가지며 코드로 구현(표시)됩니다. 신축성이 필요한 영역은 반복되며는 안되는 둥근 테두리(모서리)를 포함하면 안됩니다. 예시 버튼에 패딩(내부 공간) 10dp를 추가해도 디자인 수정은 필요하지 않습니다. 참고로 '.9' 인디케이터 에셋을 자를 때 100% 투명 영역이어야만 합니다. 그렇지 않을 경우 수정해도 제대로 늘어나지 않게 됩니다.
 
-As you can see, the 9-patch is a set of 4 pure #000000 bars. They should have a width of 1px for any DPI; this is a code indication. The stretchable area does not include the rounded corners because it is not something that can be repeated (or it will look terrible.) In this case, we added a 10dp padding for the button. This is something you won't have to spec out. .9 indicators also need to lay and a 100% transparent part of the asset cut. If not, it won't work and require modification.
+![.9 설명](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-04.png)
 
-![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-04.png)
+9-패치를 이용하기 위해서는 iOS 에셋에 '@2x'를 붙이는 것처럼 '.9'를 붙여야 합니다.  아래 버튼 에셋 예시를 보고 다시 이야기해보죠.
 
-Using 9-patch requires you to append .9 to the name, the same way you add @2x for iOS assets. Retaking our button asset example below:
+![.9 이름](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-05.png)
 
-![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-05.png)
+참고로 에셋의 크기가 커지지 않도록 주의해야 합니다. 예시와 같이 에셋 크기를 크게 만들 경우, 아래 이미지처럼 에셋의 신축성 영역과 콘텐츠 영역 크기를 최대한 줄여(모서리는 유지) 최적화를 수행하는 것이 중요합니다.
 
-Note that you should be careful of the size of your asset. If I made it quite big for demonstration, it is important that you optimize your asset weight by reducing it's size to a minimum, as show below. I kept the corners as they were but reduced the stretchable and content area to a minimum.
-
-![](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-05-2.png)
+![.9 최적화](http://sebastien-gabriel.com/designers-guide-to-dpi/images/stretchable-05-2.png)
 
 Be careful that the 9-patch markings do not overlap your design and that the cut of the asset is correct. The .9 should be as close to the asset as possible without overlapping it, try not to build-in padding. The example before has built-in padding because of shadowing.
 
