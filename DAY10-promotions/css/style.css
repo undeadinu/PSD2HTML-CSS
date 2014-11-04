@@ -231,6 +231,19 @@
 	border-radius: 4px 4px 0 0;
 }
 
+#promotion-contents .item .photo-mask span {
+	position: absolute;
+	width: 301px;
+	height: 65px;
+	left: 0;
+	bottom: 0;
+	color: #fff;
+	background: rgba(0,0,0,0.7);
+	text-align: center;
+	line-height: 65px;
+	font-size: 24px;
+}
+
 #promotion-contents .item img {
 	width: 100%;
 	height: auto;
@@ -262,12 +275,15 @@
 }
 
 #promotion-contents .item .discount {
-	z-index: 10;
 	position: absolute;
+	z-index: 10;
 	left: 13px;
 	top: -7px;
-	width: 188px;
 	height: 82px;
+	padding-left: 12px;
+	padding-top: 28px;
+	color: #00355f;
+	font-size: 12px;
 	background: url(../images/promotions/icon-shape.png) no-repeat;
 }
 
