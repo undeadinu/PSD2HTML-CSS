@@ -6,17 +6,17 @@
 
 /* 본문 글꼴 */
 body {
-	font: 14px/1.5 "나눔 고딕", "Nanum Gothic", Dotum, Sans-Serif;
+	font: 14px/1.5 "ë‚˜ëˆ” ê³ ë”•", "Nanum Gothic", Dotum, Sans-Serif;
 }
 
 /* 그리드 시스템 토글 */
 body.grid .overlay-grid {
-	position: fixed;
+	position: absolute;
 	z-index: 10000;
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 100vh;
+	height: 100000px;
 	background:
 		url(../../images/grid/baseline.gif) left top,
 		url(../../images/grid/columns.png) center top repeat-y;
