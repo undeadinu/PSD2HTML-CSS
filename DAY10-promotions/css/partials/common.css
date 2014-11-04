@@ -4,9 +4,17 @@
  * --------------------------------
  */
 
+/* 모든 요소(가상요소 포함) border까지 width, height에 포함시키는 공통 스타일 모듈
+	*, *::before, *::after {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+*/
+
 /* 본문 글꼴 */
 body {
-	font: 14px/1.5 "ë‚˜ëˆ” ê³ ë”•", "Nanum Gothic", Dotum, Sans-Serif;
+	font: 14px/1.5 "나눔 고딕", "Nanum Gothic", Dotum, Sans-Serif;
 }
 
 /* 그리드 시스템 토글 */
