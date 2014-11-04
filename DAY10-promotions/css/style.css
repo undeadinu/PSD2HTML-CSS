@@ -197,11 +197,35 @@
 }
 
 #promotion-contents .item {
-	width: 300px;
-	height: 357px;
+	overflow: hidden;
+	position: relative;
+	width: 283px;
+	height: 161px;
+	padding-top: 196px;
+	padding-left: 17px;
 	background-color: #fff;
 	border-radius: 4px;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#promotion-contents .item img {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -155px;
+}
+
+#promotion-contents h4 {
+	margin-top: 3px;
+	color: #313335;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+#promotion-contents h4 .nationality {
+	color: #97999b;
+	font-size: 14px;
+	font-weight: normal; /* 400 */
 }
 
 /* RECOMMENDATIONS */
