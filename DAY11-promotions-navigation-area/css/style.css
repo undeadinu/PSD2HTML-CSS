@@ -341,9 +341,7 @@
 }
 
 #promotion-contents .control-buttons a[role=button] {
-	display: block;
-	overflow: hidden;
-	text-indent: -9999em;
+	position: relative;
 	width: 60px;
 	height: 28px;
 	background-color: #fff;
@@ -351,8 +349,24 @@
 	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-	text-align: center;
-	line-height: 28px;
+}
+
+#promotion-contents .control-buttons a[role=button]::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 12px;
+	height: 12px;
+	margin: -6px 0 0 -6px;
+	background: url(../images/promotions/icon-arrow.svg) no-repeat;
+}
+
+#promotion-contents .control-buttons a[role=button][class*="-next"]::after {
+	-webkit-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 /* RECOMMENDATIONS */

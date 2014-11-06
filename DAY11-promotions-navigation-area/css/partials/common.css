@@ -76,3 +76,9 @@ img {
 	background: #083161;
 	color: #fff;
 }
+
+.readable-hidden {
+	overflow: hidden;
+	display: block;
+	text-indent: -9999em;
+}
