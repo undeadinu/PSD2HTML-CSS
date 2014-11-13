@@ -1,0 +1,84 @@
+/**
+ * --------------------------------
+ * common
+ * --------------------------------
+ */
+
+/* ëª¨ë“  ìš”ì†Œ(ê°€ìƒìš”ì†Œ í¬í•¨) borderê¹Œì§€ width, heightì— í¬í•¨ì‹œí‚¤ëŠ” ê³µí†µ ìŠ¤íƒ€ì¼ ëª¨ë“ˆ
+	*, *::before, *::after {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+*/
+
+/* ë³¸ë¬¸ ê¸€ê¼´ */
+body {
+	font: 14px/1.5 "ë‚˜ëˆ” ê³ ë”•", "Nanum Gothic", Dotum, Sans-Serif;
+}
+
+/* ê·¸ë¦¬ë“œ ì‹œìŠ¤í…œ í† ê¸€ */
+body.grid .overlay-grid {
+	position: absolute;
+	z-index: 10000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 1932px;
+	background:
+		url(../../images/grid/baseline.gif) left top,
+		url(../../images/grid/columns.png) center top repeat-y;
+}
+
+/* í–‰(Row) ëª¨ë“ˆ: 960.gs */
+.row {
+	width: 940px;
+	margin: 0 auto;
+}
+
+/* ë§ˆì´í¬ë¡œ í´ë¦¬ì–´í”½ìŠ¤: Micro Clearfix */
+.row::before,
+.row::after {
+	content: '';
+	display: table;
+}
+.row::after { clear: both; }
+
+
+/* ë‚´ë¹„ê²Œì´ì…˜ ëª©ë¡ ë° í•˜ì´í¼ë§í¬ ìŠ¤íƒ€ì¼ ì´ˆê¸°í™” */
+nav ul,
+#gnb ul,
+#lnb ul,
+#unb ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+nav ul a,
+#gnb ul a,
+#lnb ul a,
+#unb ul a {
+	text-decoration: none;
+}
+
+/* ì´ë¯¸ì§€ í•˜ë‹¨ ê³µë°± ì œê±° */
+img {
+	vertical-align: bottom;
+}
+
+/* ë§ˆìš°ìŠ¤ ë¸”ë¡ ì„ íƒ ìƒíƒœ */
+::selection {
+	background: #083161;
+	color: #fff;
+}
+
+::-moz-selection {
+	background: #083161;
+	color: #fff;
+}
+
+.readable-hidden {
+	overflow: hidden;
+	display: block;
+	text-indent: -9999em;
+}
