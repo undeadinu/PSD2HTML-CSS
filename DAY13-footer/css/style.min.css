@@ -31,4 +31,6 @@
 #recommendation-contents a:focus{outline:0}#recommendation-contents a:hover span,#recommendation-contents a:focus span{-webkit-transform:scale(1.5,1.5);transform:scale(1.5,1.5)}
 #recommendation-contents a:hover::before,#recommendation-contents a:focus::before{opacity:0}#recommendation-contents a::before{position:absolute;top:0;left:0;width:100%;height:100%;content:'';-webkit-transition:opacity 1s ease-out;transition:opacity 1s ease-out;background:rgba(0,0,0,.5);border-radius:3px}
 #recommendation-contents i{position:absolute;top:-4px;left:-4px;width:85px;height:85px;background:url(../images/recommandations/ribbon.png)}#recommendation-contents span{font-size:21px;font-weight:700;position:absolute;top:50%;left:50%;width:100px;height:30px;margin:-15px 0 0 -50px;color:#fff;text-shadow:0 1px 5px rgba(3,3,3,.75);-webkit-transition:all .6s ease-in-out;transition:all .6s ease-in-out}
-#footer{height:189px;margin-top:50px;background:#00355f}
+#footer{box-sizing:border-box;height:189px;margin-top:50px;padding-top:42px;padding-bottom:42px;background:#00355f}#footer *{margin-top:0;margin-bottom:0;color:#a6bfce}
+#footer h5{font-size:14px;font-weight:700}#footer ul{list-style:none;padding-left:0}#footer div{margin-bottom:21px}#footer li{display:inline-block}#footer ul li:last-child a{margin-right:0;border-right:0;padding-right:0}
+#footer ul a{text-decoration:none;font-size:14px;margin-right:12px;border-right:1px solid;padding-right:12px}
