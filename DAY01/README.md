@@ -79,7 +79,8 @@
 
 -
 
-[![디자인 프로세스 영상](../__assets__/ui-design-process-poster.png)](../__assets__/ui-design-process.mp4)
+**디자인 프로세스 Showreel(영상)**
+[![디자인 프로세스 영상](../__assets__/ui-design-process-poster.png)](https://www.youtube.com/watch?v=Q5763pPchvw)
 
 -
 
