@@ -4,8 +4,6 @@
 
 > 아이디어 ⇒ 기본 컨셉 설정 ⇒ 컨셉 정리 ⇒ 비주얼그래픽/컨셉 ⇒ 웹디자인(`HTML`/`CSS`)
 
-![디자인 프로세스 영상](../__assets__/ui-design-process.mp4?raw=true)
-
 ---
 
 ### Sketch
@@ -81,9 +79,14 @@
 
 -
 
+[![디자인 프로세스 영상](../__assets__/ui-design-process-poster.png)](../__assets__/ui-design-process.mp4)
+
+-
+
 **참고 글**
 - [Why It’s Important to Sketch Before You Wireframe](http://uxmovement.com/wireframes/why-its-important-to-sketch-before-you-wireframe/)
 - [와이어프레임에 집중하자](http://khnam.postype.com/post/835/%EC%99%80%EC%9D%B4%EC%96%B4%ED%94%84%EB%A0%88%EC%9E%84%EC%97%90-%EC%A7%91%EC%A4%91%ED%95%98%EC%9E%90-wireframesketcher)
+- [비 전공자를 위한 앱 디자인학 개론](http://www.slideshare.net/five0203/ss-44961888)
 
 ---
 
