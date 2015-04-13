@@ -12,14 +12,8 @@
 
 **스케치 도구**
 - [sneakpeekit](http://sneakpeekit.com/)
-	* [4-up Browser sketch sheet](http://sneakpeekit.com/browser-sketchsheets/)
-	* [Wireframe sketch sheet](http://sneakpeekit.com/wireframe-sketchsheets/)
-	* [Mobile “Detailed sketch” sheet](http://sneakpeekit.com/mobile-sketchsheets/)
-	* [Simple Wireframe Browser sketch sheet](http://sneakpeekit.com/browser-sketchsheets/)
-	* [Mobile “Quick sketch” sheet](http://sneakpeekit.com/mobile-sketchsheets/)
 - [interfacesketch](http://www.interfacesketch.com/)
 - [graph-paper](http://konigi.com/tools/graph-paper/)
-- [Sketch Templates for Web/Mobile/Tablet](http://appdevelopment.co.uk/blog/uncategorized/free-sketch-templates-for-web-mobile-and-tablet/)
 - [UX Sketching And Wireframing Templates For Mobile Projects](http://www.smashingmagazine.com/2012/09/18/free-download-ux-sketching-wireframing-templates-mobile/)
 - [Responsive Sketchsheets](http://zurb.com/playground/responsive-sketchsheets)
 
