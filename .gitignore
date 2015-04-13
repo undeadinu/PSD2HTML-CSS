@@ -81,6 +81,6 @@ node_modules
 *.css.map
 
 # 공유 제외
-CLASS-01/
+__Class_2014__
 __ref__/
 
