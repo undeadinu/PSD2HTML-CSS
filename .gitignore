@@ -80,6 +80,7 @@ node_modules
 .sass-cache
 *.css.map
 
-# 1st 클래스 진행자료
+# 공유 제외
 CLASS-01/
+__ref__/
 
