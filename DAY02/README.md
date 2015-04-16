@@ -44,3 +44,18 @@
 경험상 본문 크기의 150% 정도가 가장 보편적인 행간 설정입니다. 평균 행간에 대한 타이포그래피 디자인 패턴에 대한 연구 결과를 사펴보면 보편적으로 사용하고 있는 평균 행간은 글꼴 크기의 약 148% 가량. 경험에 의한 관습적 사용이 통상적으로도 적용되고 있습니다.
 
 단, 행폭이 길어지면 상대적으로 행간도 넓혀줘야 합니다.
+
+---
+
+#### 참고글
+
+* [Baseline](http://baselinecss.com/)
+* [Setting Type on the Web to a Baseline Grid](http://alistapart.com/article/settingtypeontheweb)
+* [Relative font sizes and inheritance](http://maxdesign.com.au/articles/relative/)
+* [Scale & Rhythm](http://lamb.cc/typograph/)
+* [Compose to a Vertical Rhythm](http://24ways.org/2006/compose-to-a-vertical-rhythm)
+* [Incremental Leading](http://www.markboulton.co.uk/journal/incremental-leading)
+* [4 Simple Steps to Vertical Rhythm](http://typecast.com/blog/4-simple-steps-to-vertical-rhythm)
+* [CSS Baseline: The Good, The Bad And The Ugly](http://www.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/)
+* [gridlover.net](http://www.gridlover.net/app/)
+* [modularscale.com](http://www.modularscale.com/?1&em&1.5&web&text)
