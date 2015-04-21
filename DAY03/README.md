@@ -9,6 +9,8 @@
 * 그리드 시스템 그리기
 * 시스템에 맞춰 오브젝트 배치(레이아웃)
 
+-
+
 #### 리소스
-* [basel;ine](../__assets__/basel;ine.zip)
-* [UI Tiles](../__assets__/ui_tiles.zip)
+* [basel;ine](../__assets__/basel;ine.zip?raw=true)
+* [UI Tiles](../__assets__/ui_tiles.zip?raw=true)
