@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* layout.css @ yamoo9.net | 2015 */
+
+html {
+	/*background: #f00;*/
+}
+
+div {
+	border: 1px solid red;
+}
+
+p {
+	background: #D3D3D3;
+}
+
+strong, em {
+	background: #585858;
+	color: #fff;
+}
