@@ -3,14 +3,60 @@
 
 html {
 	/*background: #f00;*/
+	font-size: 14px;
+}
+
+body {
+	/* body요소의 마진 공간 초기화 */
+	margin: 0;
 }
 
 div {
-	border: 1px solid red;
+	/*Block 요소 내부의 텍스트를 가운데 정렬*/
+	text-align: center;
+	/*vertical-align: middle;*/
+	font-size: 36px;
+	color: #fff;
+	/*border: 1px solid red;*/
+}
+
+#page {
+	/* 페이지 가운데 정렬 */
+	/* w940 */
+	/*width: 940px;*/
+	max-width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	/*padding: 1em;*/
+	background: #34c0ff;
+}
+
+#header {
+	height: 100px;
+	line-height: 100px;
+	background: #79D2FF;
+}
+
+#main-view {
+	height: 240px;
+	line-height: 240px;
+	background: #A5DFFF;
+}
+
+#contents {
+	height: 670px;
+	line-height: 670px;
+	background: #C9EDFF;
+}
+
+#footer {
+	height: 290px;
+	line-height: 290px;
+	background: #1E91E1;
 }
 
 p {
-	background: #D3D3D3;
+	background: #d3d3d3;
 }
 
 strong, em {
