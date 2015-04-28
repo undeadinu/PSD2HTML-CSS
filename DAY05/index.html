@@ -5,69 +5,36 @@
 	<meta charset="UTF-8">
 	<title>CSS 박스모델 - 인라인 vs 블록요소 특징 / 레이아웃 테크닉</title>
 	<style>
-		/* display: block | inline | inline-block	*/
-
-		/*
-			인라인-블록 박스란?
-			인라인 요소인데.... 블록 박스의 특징을 가지고 있어요.
-		 */
-
 		body {
 			margin: 0;
 		}
-
-		/* 수직/수평 방향 내비게이션 */
-		nav {
-			/*width: 200px;*/
-			height: 100vh;
-			background: url(images/bg-rain.jpg) center top no-repeat;
-			background-size: cover;
-		}
-
-		nav ul {
-			/* 목록 공간 초기화 */
-			margin-top: 0;
-			margin-bottom: 0;
-			padding-left: 0;
-		}
-
-		nav li {
-			list-style-type: none;
-			float: left;
-			width: 25%;
-			margin-bottom: 1px;
-		}
-
-		nav a {
-			display: block;
-			padding-top: 1em;
-			padding-bottom: 1em;
-			text-align: center;
-			color: #fff;
-			background: #165074;
-			text-decoration: none;
-		}
-
-		nav a:hover,
-		nav a:focus {
-			background: #679DD0;
-		}
-
-		/* width, height, padding, border, margin */
-
 		/* float, position */
+		.box {
+			overflow: hidden;
+			width: 33.33%;
+			height: 100px;
+			line-height: 100px;
+			color: #000;
+			text-align: center;
+			float: left;
+		}
+		.box1 {
+			background: #f00;
+		}
+		.box2 {
+			background: #ff0;
+		}
+		.box3 {
+			background: #0ff;
+		}
 	</style>
 </head>
 <body>
 
-	<nav>
-		<ul>
-			<li><a href="">home</a></li>
-			<li><a href="">about</a></li>
-			<li><a href="">portfolio</a></li>
-			<li><a href="">contact</a></li>
-		</ul>
-	</nav>
+	<!-- .box${box-0$}*3 -->
+	<div class="box box1">box-01</div>
+	<div class="box box2">box-02</div>
+	<div class="box box3">box-03</div>
 
 </body>
 </html>
