@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>CSS 박스모델 - 인라인 vs 블록요소 특징</title>
+	<style>
+		/*
+
+			모든 HTML 요소는 박스 모델을 가지고,
+			화면에 표시되는 방식이 각각 설저되어 있다.
+			block, inline 설정.. 이 설정 값은
+			사용자에의 의해 덮어쓰기(Overriding) 될 수 있다.
+
+			Block Elements
+			가로폭은 자신을 포함한 상위 요소의 넓이 폭에 좌우
+			세로폭은 자신이 포함한 하위 요소의 높이 폭에 좌우
+			 - body
+			 - div
+			 - p
+
+			Inline Elements
+			자신이 포함한 콘텐츠의 폭/높이에 박스 크기가 좌우
+			width, height 등의 설정이 적용되지 않아요.
+			 - span
+			 - em
+		 */
+
+			html {
+				background: hsl(60, 100%, 50%);
+			}
+
+			body {
+				margin: 0;
+				/*width: 50%;*/
+				/*height: 100vh;*/
+				margin: 0 auto;
+				background: hsl(0, 100%, 50%);
+			}
+
+			div {
+				width: 50%;
+				height: 300px;
+				background: hsl(0, 0%, 0%);
+				color: hsl(0, 0%, 100%);
+			}
+
+			p {
+				margin: 0;
+			}
+
+			span, em {
+				/*display: block;*/
+				background: hsla(0, 0%, 50%, 0.5);
+				/*padding: 1em;*/
+				width: 1000px;
+				height: 10000px;
+			}
+
+			em {
+				display: none;
+			}
+
+	</style>
+</head>
+<body>
+
+	<div>
+		<p>야무 한글 <em>로렘입숨.</em> <span>아름답다</span>!</p>
+		<p>야무 한글 <em>로렘입숨.</em> <span>아름답다</span>!</p>
+		<p>야무 한글 <em>로렘입숨.</em> <span>아름답다</span>!</p>
+		<p>야무 한글 <em>로렘입숨.</em> <span>아름답다</span>!</p>
+	</div>
+
+</body>
+</html>
