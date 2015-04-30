@@ -53,19 +53,23 @@ body {
 .col-11 { width: 1080px; } /* 80*11 + (20*(11-1)) */
 .col-12 { width: 1180px; } /* 80*12 + (20*(12-1)) */
 
-.push-1  { width: 80px;   } /* 80*1 + (20*(1))   */
-.push-2  { width: 180px;  } /* 80*2 + (20*(2))   */
-.push-3  { width: 280px;  } /* 80*3 + (20*(3))   */
-.push-4  { width: 380px;  } /* 80*4 + (20*(4))   */
-.push-5  { width: 480px;  } /* 80*5 + (20*(5))   */
-.push-6  { width: 580px;  } /* 80*6 + (20*(6))   */
-.push-7  { width: 680px;  } /* 80*7 + (20*(7))   */
-.push-8  { width: 780px;  } /* 80*8 + (20*(8))   */
-.push-9  { width: 880px;  } /* 80*9 + (20*(9))   */
-.push-10 { width: 980px;  } /* 80*10 + (20*(10)) */
-.push-11 { width: 1080px; } /* 80*11 + (20*(11)) */
-.push-12 { width: 1180px; } /* 80*12 + (20*(12)) */
+.push-1  { margin-left: 110px;  } /* 80*1 + (20*(1))   */
+.push-2  { margin-left: 210px;  } /* 80*2 + (20*(2))   */
+.push-3  { margin-left: 310px;  } /* 80*3 + (20*(3))   */
+.push-4  { margin-left: 410px;  } /* 80*4 + (20*(4))   */
+.push-5  { margin-left: 510px;  } /* 80*5 + (20*(5))   */
+.push-6  { margin-left: 610px;  } /* 80*6 + (20*(6))   */
+.push-7  { margin-left: 710px;  } /* 80*7 + (20*(7))   */
+.push-8  { margin-left: 810px;  } /* 80*8 + (20*(8))   */
+.push-9  { margin-left: 910px;  } /* 80*9 + (20*(9))   */
+.push-10 { margin-left: 1010px;  } /* 80*10 + (20*(10)) */
+.push-11 { margin-left: 1110px; } /* 80*11 + (20*(11)) */
+.push-12 { margin-left: 1210px; } /* 80*12 + (20*(12)) */
 
+/* float된 요소들을 포함하는 부모 요소가 자식 요소를 감싸는 방법 중 하나를 사용 */
+.row {
+	overflow: hidden;
+}
 
 /*=#gallery*/
 #gallery div {
