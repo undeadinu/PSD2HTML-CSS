@@ -1,0 +1,54 @@
+/*
+	Grid System을 구현
+	페이지 전체 폭: Page Width = 1200px
+	컬럼의 폭: Column Width = 80px
+	거터의 폭(양쪽): Gutter Left Width, Right Width = 10px
+	베이스라인: 글꼴 사이즈의 1.5배
+
+	계산식
+	변수
+	$columns-count: 16;
+	$page-width: 1430px;
+	$gutter: 12px;
+	$column-width: ????;
+
+	y = ($page-width - ($gutter * ($colums-count*2))) / $colums-count
+	y = (1200 - (x * (12*2))) / 12
+	(1200 - (10 * (12*2))) / 12
+ */
+
+/* 화면에 기본적으로 그려지는 body 요소의 외부여백을 초기화 */
+body {
+	margin: 0;
+}
+
+/*=#app.container*/
+.container {
+	width:        1200px;
+	min-height:   100vh;
+	margin-left:  auto;
+	margin-right: auto;
+	background:   #75D7FF;
+}
+
+.col {
+	float:         left;
+	height:        49px;
+	margin-left:   10px;
+	margin-right:  10px;
+	margin-bottom: 5px;
+	background:    #000;
+}
+
+.col-1  { width: 80px;   } /* 80*1 + (20*(1-1))   */
+.col-2  { width: 180px;  } /* 80*2 + (20*(2-1))   */
+.col-3  { width: 280px;  } /* 80*3 + (20*(3-1))   */
+.col-4  { width: 380px;  } /* 80*4 + (20*(4-1))   */
+.col-5  { width: 480px;  } /* 80*5 + (20*(5-1))   */
+.col-6  { width: 580px;  } /* 80*6 + (20*(6-1))   */
+.col-7  { width: 680px;  } /* 80*7 + (20*(7-1))   */
+.col-8  { width: 780px;  } /* 80*8 + (20*(8-1))   */
+.col-9  { width: 880px;  } /* 80*9 + (20*(9-1))   */
+.col-10 { width: 980px;  } /* 80*10 + (20*(10-1)) */
+.col-11 { width: 1080px; } /* 80*11 + (20*(11-1)) */
+.col-12 { width: 1180px; } /* 80*12 + (20*(12-1)) */
