@@ -1,3 +1,4 @@
+/*모바일 최적화*/
 html, html a {
 	-webkit-font-smoothing: antialiased;
 }
@@ -8,21 +9,39 @@ body {
 	letter-spacing: -0.06em;
 }
 
+/*공통 디자인*/
+header, aside, footer {
+	font-size: 42px;
+	text-align: center;
+}
+
+/*텍스트 가운데 배치*/
 header, footer {
 	height: 25vh;
 	line-height: 25vh;
 }
 
-main, aside {
+aside {
 	height: 50vh;
 	line-height: 50vh;
 }
 
-header, main, aside, footer {
-	font-size: 42px;
-	text-align: center;
+main {
+	height: 50vh;
 }
 
+main img {
+	float: left;
+	margin-right: 6px;
+}
+
+main p {
+	clear: left;
+	margin-top: 0;
+}
+
+
+/*컬러*/
 header {
 	background: #F28177;
 }
@@ -37,4 +56,21 @@ aside {
 
 footer {
 	background: #4A42C7;
+}
+
+/*2단 레이아웃*/
+main {
+	float: left;
+	/*width: 50%;*/
+	width: 60%;
+}
+
+aside {
+	float: left;
+	/*width: 50%;*/
+	width: 40%;
+}
+
+footer {
+	clear: left;
 }
