@@ -10,7 +10,7 @@ body {
 }
 
 /*공통 디자인*/
-header, aside, footer {
+header, main, aside, footer {
 	font-size: 42px;
 	text-align: center;
 }
@@ -21,16 +21,16 @@ header, footer {
 	line-height: 25vh;
 }
 
-aside {
+main, aside {
 	height: 50vh;
 	line-height: 50vh;
 }
 
-main {
+/*main {
 	height: 50vh;
-}
+}*/
 
-main img {
+/*main img {
 	float: left;
 	margin-right: 6px;
 }
@@ -38,7 +38,7 @@ main img {
 main p {
 	clear: left;
 	margin-top: 0;
-}
+}*/
 
 
 /*컬러*/
@@ -58,19 +58,44 @@ footer {
 	background: #4A42C7;
 }
 
-/*2단 레이아웃*/
-main {
-	float: left;
-	/*width: 50%;*/
-	width: 60%;
+/*만약.... 뷰포트의 가로폭이 480px 이상이 된다면...
+미디어쿼리(Media Queries)문*/
+
+@media only screen and (min-width: 480px) {
+
+	/*2단 레이아웃*/
+	main {
+		float: left;
+		width: 50%;
+	}
+
+	aside {
+		float: left;
+		width: 50%;
+	}
+
+	footer {
+		clear: left;
+	}
+
 }
 
-aside {
-	float: left;
-	/*width: 50%;*/
-	width: 40%;
+@media only screen and (min-width: 800px) {
+
+	/*2단 레이아웃*/
+	main {
+		float: left;
+		width: 80%;
+	}
+
+	aside {
+		float: left;
+		width: 20%;
+	}
+
+	footer {
+		clear: left;
+	}
+
 }
 
-footer {
-	clear: left;
-}
