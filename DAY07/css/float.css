@@ -65,17 +65,17 @@ footer {
 
 	/*2단 레이아웃*/
 	main {
-		float: left;
+		float: right;
 		width: 50%;
 	}
 
 	aside {
-		float: left;
+		float: right;
 		width: 50%;
 	}
 
 	footer {
-		clear: left;
+		clear: right;
 	}
 
 }
