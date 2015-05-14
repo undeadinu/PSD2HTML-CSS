@@ -1,0 +1,12 @@
+/* style.css */
+html {
+	/* UI y축이 움직이는 것을 방지하기 위한 목적의 코드 */
+	overflow-y: scroll;
+}
+body {
+	/* 외부여백 초기화 */
+	margin: 0;
+	font: 100%/1.5 "Helvetica Neue", Helvetica;
+	/* Verdana, Arial */
+	/* "Nanum Gothic", "Malgun Gothic", Dotum */
+}
