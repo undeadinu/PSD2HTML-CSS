@@ -11,6 +11,7 @@ body {
 	/* "Nanum Gothic", "Malgun Gothic", Dotum */
 }
 
+/* 컨테이너: 화물(Columns)을 감싸는 그룹 */
 .container {
 	width: 1200px;
 	height: 100vh;
@@ -19,56 +20,65 @@ body {
 	background: url(../images/guide/grid-system.gif);
 }
 
-.row {
-	/*overflow: hidden*/;
-}
-
-.row::after {
+/* 행 */
+.row::after,
+.clearfix::after,
+.cf::after
+ {
 	content: '';
 	display: block;
 	clear: both;
 }
 
-.clear {
-	clear: both;
-}
-
-.col-1 {
+/* 컬럼 디자인의 공통 스타일 모듈 */
+[class*="col-"] {
 	float: left;
 	background: #000;
 	color: #fff;
-	width: 80px;
 	margin-left: 10px;
 	margin-right: 10px;
 	text-align: center;
+}
+
+/* 시스템에 의한 컬럼 개별 스타일 */
+.col-1 {
+	width: 80px;
 }
 
 .col-2 {
-	float: left;
-	background: #000;
-	color: #fff;
 	width: 180px;
-	margin-left: 10px;
-	margin-right: 10px;
-	text-align: center;
 }
 
 .col-3 {
-	float: left;
-	background: #000;
-	color: #fff;
 	width: 280px;
-	margin-left: 10px;
-	margin-right: 10px;
-	text-align: center;
 }
 
 .col-4 {
-	float: left;
-	background: #000;
-	color: #fff;
 	width: 380px;
-	margin-left: 10px;
-	margin-right: 10px;
-	text-align: center;
 }
+
+/* 아이솔레이트 레이아웃 디자인 */
+.isolate, [class*="isolate-"] {
+	margin-right: -100%;
+}
+
+.isolate-2 {
+	margin-left: 110px;
+}
+
+.isolate-3 {
+	margin-left: 210px;
+}
+
+.isolate-4 {
+	margin-left: 310px;
+}
+
+/*
+
+x = 2
+
+.isolate-x {
+	margin-left: 80*(x-1)+20*(x-1);
+}
+*/
