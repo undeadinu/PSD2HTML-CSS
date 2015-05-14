@@ -10,3 +10,65 @@ body {
 	/* Verdana, Arial */
 	/* "Nanum Gothic", "Malgun Gothic", Dotum */
 }
+
+.container {
+	width: 1200px;
+	height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+	background: url(../images/guide/grid-system.gif);
+}
+
+.row {
+	/*overflow: hidden*/;
+}
+
+.row::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.clear {
+	clear: both;
+}
+
+.col-1 {
+	float: left;
+	background: #000;
+	color: #fff;
+	width: 80px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.col-2 {
+	float: left;
+	background: #000;
+	color: #fff;
+	width: 180px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.col-3 {
+	float: left;
+	background: #000;
+	color: #fff;
+	width: 280px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.col-4 {
+	float: left;
+	background: #000;
+	color: #fff;
+	width: 380px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+}
