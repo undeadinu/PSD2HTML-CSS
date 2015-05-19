@@ -4,11 +4,16 @@
 @import "./parts/normalize.min.css";
 @import "./parts/gs.min.css";
 
+/* 배경 디자인 (색상, 이미지)
+ * 가로축: 가운데(center)
+ * 세로축: 상단(top)
+ * 반복: 안하는 걸로(no-repeat)
+ */
 body {
 	background: #003652 url('../images/page/sea.png') center top no-repeat;
 }
 
-/* #page */
+/* #page 디자인 */
 #page {
 	position: relative;
 	width: 1200px;
@@ -17,7 +22,7 @@ body {
 	margin-right: auto;
 }
 
-/* GS 가이드 */
+/* GS 가이드 디자인 */
 #page::before {
 	content: '';
 	position: absolute;
@@ -30,3 +35,12 @@ body {
 	background: url(../images/guide/gs-guide.png);
 }
 
+#page h1 {
+	padding-top: 102px;
+}
+
+#indurge {
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
