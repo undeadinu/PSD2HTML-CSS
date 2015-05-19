@@ -36,11 +36,14 @@ body {
 }
 
 #page h1 {
-	padding-top: 102px;
+	padding-top: 113px;
 }
 
 #indurge {
 	margin-top: 0;
 	margin-bottom: 0;
 	text-align: center;
+	/*color: #fff;*/
+	text-indent: -9999em;
+	background: url(../images/header/header-logo.png) no-repeat center bottom;
 }
