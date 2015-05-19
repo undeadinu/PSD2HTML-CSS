@@ -47,3 +47,15 @@ body {
 	text-indent: -9999em;
 	background: url(../images/header/header-logo.png) no-repeat center bottom;
 }
+
+/* #navigation */
+#navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+#navigation a {
+	color: #fff;
+	text-decoration: none;
+}
