@@ -6,9 +6,22 @@
 
 /* #page */
 #page {
+	position: relative;
 	width: 1200px;
 	height: 100vh;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#page::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+}
+
+#page.grid::before {
 	background: url(../images/guide/gs-guide.png);
 }
