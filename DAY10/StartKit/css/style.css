@@ -4,6 +4,10 @@
 @import "./parts/normalize.min.css";
 @import "./parts/gs.min.css";
 
+body {
+	background: #003652 url('../images/page/sea.png') center top no-repeat;
+}
+
 /* #page */
 #page {
 	position: relative;
@@ -13,15 +17,16 @@
 	margin-right: auto;
 }
 
+/* GS 가이드 */
 #page::before {
 	content: '';
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 100vh;
+	height: 200vh;
 }
-
 #page.grid::before {
 	background: url(../images/guide/gs-guide.png);
 }
+
