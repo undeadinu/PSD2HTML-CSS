@@ -73,7 +73,7 @@ body {
 	text-decoration: none;
 	font-size: 18px;
 	font-size: 1.125rem;
-	font-weight: 200; /* Light */
+	font-weight: 300; /* Light */
 	letter-spacing: 0.01em;
 	transition: transform .3s cubic-bezier(0.27, -0.48, 0.44, 0.91);
 }
@@ -113,4 +113,20 @@ body {
 #side-menu li:last-child a {
 	padding-left: 28px;
 	background: url(../images/icons/icon-card.png) no-repeat 0 4px;
+}
+
+
+/* #cta */
+#cta {
+	margin-top: 179px;
+	font-size: 32px;
+	letter-spacing: 0.01em;
+	text-align: center;
+	color: #fff;
+	font-weight: 300;
+	line-height: 1.19;
+}
+
+#cta strong {
+	font-weight: 700;
 }
