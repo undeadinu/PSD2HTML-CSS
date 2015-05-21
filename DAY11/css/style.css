@@ -75,7 +75,7 @@ body {
 	font-size: 1.125rem;
 	font-weight: 300; /* Light */
 	letter-spacing: 0.01em;
-	transition: transform .3s cubic-bezier(0.27, -0.48, 0.44, 0.91);
+	transition: all 0.4s cubic-bezier(0, 0, 0.3, 0.94);
 }
 
 #navigation a:hover,
