@@ -2,6 +2,7 @@
 
 /* 외부의 스타일 모듈 호출 */
 @import "./parts/normalize.min.css";
+@import "./parts/common.css";
 @import "./parts/gs.min.css";
 @import "./parts/fonts.css";
 
@@ -58,6 +59,10 @@ body {
 	padding-left: 0;
 }
 
+#navigation li {
+	float: left;
+}
+
 #navigation a {
 	color: #fff;
 	text-decoration: none;
@@ -70,4 +75,3 @@ body {
 #navigation a.active {
 	font-weight: 700; /* Bold */
 }
-
