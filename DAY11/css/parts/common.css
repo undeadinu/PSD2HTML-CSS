@@ -1,13 +1,13 @@
 /* Micro Clearfix */
-.clearfix::before,
-.clearfix::after {
+.cf::before,
+.cf::after {
 	content: '';
 	display: table;
 }
-.clearfix::after {
+.cf::after {
 	clear: both;
 }
 
-.lt-ie8 .clearfix {
-	zoom: 1;
+.lt-ie8 .cf {
+	zoom: 1; /* MS 비표준 속성 */
 }
