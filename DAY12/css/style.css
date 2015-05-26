@@ -1,10 +1,16 @@
 @charset "utf-8";
 
-/* 외부의 스타일 모듈 호출 */
+/* 외부의 스타일 모듈 호출
+ * ---------------------------------------------------------------------------
+ */
 @import "./parts/normalize.min.css";
 @import "./parts/common.css";
 @import "./parts/gs.min.css";
 @import "./parts/fonts.css";
+
+/* 기초 공사(타이포그래피) / 배경이미지
+ * ---------------------------------------------------------------------------
+ */
 
 /* 배경 디자인 (색상, 이미지)
  * 가로축: 가운데(center)
@@ -16,7 +22,11 @@ body {
 	font: 0.875rem/1.5 'Lato', Arial, sans-serif;
 }
 
-/* #page 디자인 */
+/* #page 디자인
+ * ---------------------------------------------------------------------------
+ */
+
+/* 페이지 중앙 정렬 */
 #page {
 	position: relative;
 	width: 1200px;
@@ -25,7 +35,7 @@ body {
 	margin-right: auto;
 }
 
-/* GS 가이드 디자인 */
+/* Grid-System 가이드 디자인 */
 #page::before {
 	content: '';
 }
@@ -38,20 +48,24 @@ body {
 	background: url(../images/guide/gs-guide.png);
 }
 
-#page h1 {
-	padding-top: 113px;
-}
+/* header 헤더
+ * ---------------------------------------------------------------------------
+ */
 
+/* 로고 */
 #indurge {
 	margin-top: 0;
 	margin-bottom: 0;
+	padding-top: 113px;
 	text-align: center;
 	/*color: #fff;*/
 	text-indent: -9999em;
 	background: url(../images/header/header-logo.png) no-repeat center bottom;
 }
 
-/* #navigation */
+/* #navigation 내비게이션
+ * ---------------------------------------------------------------------------
+ */
 #navigation {
 	margin-top: 72px;
 }
@@ -83,7 +97,7 @@ body {
 	transform: scale(1.2);
 }
 
-#navigation :focus {
+#navigation a:focus {
 	outline: none;
 }
 
@@ -91,11 +105,13 @@ body {
 	font-weight: 700; /* Bold */
 }
 
+/* #global-menu */
 #global-menu {
 	float: left;
     margin-left: 10px;
 }
 
+/* #side-menu */
 #side-menu {
 	float: right;
 }
@@ -114,10 +130,10 @@ body {
 	background: url(../images/icons/icon-card.png) no-repeat 0 4px;
 }
 
-
-/* #cta */
+/* #cta 콜투액션
+ * ---------------------------------------------------------------------------
+ */
 #cta {
-
 	margin-top: 179px;
 	font-size: 32px;
 	letter-spacing: 0.01em;
@@ -144,7 +160,6 @@ body {
 }
 
 #cta a {
-	/*box-sizing: border-box;*/
 	display: inline-block;
 	margin-top: 40px;
 	border: 1px solid #fff;
@@ -157,27 +172,27 @@ body {
 	text-decoration: none;
 	color: #fff;
 	background: url(../images/icons/icon-play.png) no-repeat 30px center;
-	transition: all 0.4s ease-in;
+	transition: all 0.4s cubic-bezier(0.01, 0.56, 0.53, 0.73);
 }
 
 #cta a:hover,
 #cta a:focus {
 	transform-style: preserve-3d;
-	transform: perspective(700px) scale(1.16) rotateY(28deg);
+	transform: perspective(400px) scale(1.2) rotateY(-34deg);
 }
 #cta a:focus {
 	outline: none;
 }
 
-/* #contents */
+/* #contents 콘텐츠
+ * ---------------------------------------------------------------------------
+ */
 #contents {
 	width: 1200px;
 	margin: 168px auto 300px;
 	padding-left: 10px;
 	padding-right: 10px;
 }
-
-/* $box-module: 118px; */
 
 #contents div {
 	position: relative;
@@ -186,7 +201,7 @@ body {
 	height: 250px;
 }
 
-#contents div img {
+#contents img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -198,14 +213,20 @@ body {
 	transform: translate(-50%, -50%) scale(1.2);
 }
 
-#contents .col1 { width: 118px; }
-#contents .col2 { width: 236px; }
-#contents .col3 { width: 354px; }
-#contents .col4 { width: 472px; }
-#contents .col5 { width: 590px; }
-#contents .col6 { width: 708px; }
+/**
+ * 레이아웃 박스 모듈 디자인
+ * 박스 모듈: 118px
+ * .box-col[1, 2, 3, 4, 5, 6]
+ * .box-row2
+ */
+#contents .box-col1 { width: 118px; }
+#contents .box-col2 { width: 236px; }
+#contents .box-col3 { width: 354px; }
+#contents .box-col4 { width: 472px; }
+#contents .box-col5 { width: 590px; }
+#contents .box-col6 { width: 708px; }
 
-#contents .row2 { height: 500px; }
+#contents .box-row2 { height: 500px; }
 
 #contents .fr {float: right;}
 
@@ -215,18 +236,21 @@ body {
 #contents div:nth-child(7n) { background: #FFB03B; } /* 7, 14, ... */
 #contents div:nth-child(4n) { background: #fff; } /* 4, 8, 12, ... */
 
+/* footer 푸터
+ * ---------------------------------------------------------------------------
+ */
 
 /*
  * 레티나 디스플레이(@2x)
- * http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/
+ *
  */
 @media
-only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px),
-only screen and (        min-device-pixel-ratio: 2) and (min-width: 320px),
-only screen and (           min-resolution: 192dpi) and (min-width: 320px),
-only screen and (            min-resolution: 2dppx) and (min-width: 320px) {
+(-webkit-min-device-pixel-ratio: 2),
+(           min-resolution: 192dpi),
+(            min-resolution: 2dppx) {
+	/* 로고 */
 	#indurge {
 		background-image: url(../images/header/header-logo@2x.png);
-		background-size: 175px 51px; /* @1x 배율 스크린에서 보여지는 실제 이미지 크기 */
+		background-size: 175px 51px; /* @1x 배율 스크린에서 보여지는 실제 배경 이미지 크기 */
 	}
 }
