@@ -143,16 +143,30 @@ body {
 }
 
 #cta a {
+	box-sizing: border-box;
 	display: inline-block;
-	margin-top: 42px;
+	margin-top: 40px;
 	border: 1px solid #fff;
-	padding: 0.67em 1.72em;
+	padding: 0.53em 1.72em;
+	padding-left: 2.89em;
 	font-size: 18px;
 	font-weight: 700;
 	text-transform: uppercase;
 	text-align: center;
 	text-decoration: none;
 	color: #fff;
+	background: url(../images/icons/icon-play.png) no-repeat 30px center;
+	transition: all 0.1s ease-in;
+}
+
+#cta a:hover,
+#cta a:focus {
+	position: relative;
+	transform: translateY(-4px);
+	border-width: 5px;
+}
+#cta a:focus {
+	outline: none;
 }
 
 
