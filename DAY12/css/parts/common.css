@@ -1,3 +1,9 @@
+body, body *,
+body::before, body *::before,
+body::after, body *::after {
+	box-sizing: border-box;
+}
+
 /* Micro Clearfix */
 .cf::before,
 .cf::after {
