@@ -122,10 +122,45 @@ body {
 	letter-spacing: 0.01em;
 	text-align: center;
 	color: #fff;
-	font-weight: 300;
+	font-weight: 100; /* Thin */
 	line-height: 1.19;
+	/*
+	 * 대,소문자를 구분하는 텍스트를 모두 대문자로 변경
+	 * 대문자화: uppercase
+	 * 소문자화: lowercase
+	 * 개별 단어의 첫 글자만 대문자화: capitalize
+	 */
+	text-transform: uppercase;
 }
 
 #cta strong {
-	font-weight: 700;
+	font-weight: 700; /* Bold */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * 레티나 디스플레이(@2x)
+ */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 320px) {
+	#indurge {
+		background-image: url(../images/header/header-logo@2x.png);
+		background-size: 175px 51px; /* @1x 배율 스크린에서 보여지는 실제 이미지 크기 */
+	}
 }
