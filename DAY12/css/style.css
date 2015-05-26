@@ -133,10 +133,27 @@ body {
 	text-transform: uppercase;
 }
 
+#cta .slogan {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 #cta strong {
 	font-weight: 700; /* Bold */
 }
 
+#cta a {
+	display: inline-block;
+	margin-top: 42px;
+	border: 1px solid #fff;
+	padding: 0.67em 1.72em;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
 
 
 
