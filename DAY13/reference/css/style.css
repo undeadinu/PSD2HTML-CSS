@@ -30,7 +30,6 @@ body {
 #page {
 	position: relative;
 	width: 1200px;
-	height: 100vh;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -45,7 +44,7 @@ body {
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 300vh;
+	height: 3000px;
 	background: url(../images/guide/gs-guide.png);
 }
 
@@ -94,7 +93,7 @@ body {
 
 #navigation a:hover,
 #navigation a:focus {
-	color: #72D6FF;
+	color: hsl(197, 100%, 72%);
 	transform: scale(1.2);
 }
 
@@ -190,7 +189,7 @@ body {
  */
 #contents {
 	width: 1200px;
-	margin: 168px auto 300px;
+	margin: 168px auto 84px;
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -290,6 +289,103 @@ body {
 /* footer 푸터
  * ---------------------------------------------------------------------------
  */
+footer {
+	height: 147px;
+	color: #fff;
+	background: #141728;
+}
+
+footer ul {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+footer a {
+	color: #fff;
+	text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+	color: #70d7ff;
+}
+
+footer a:focus {
+	outline: none;
+	padding-bottom: 2px;
+	border-bottom: 1px solid;
+}
+
+footer h3 {
+	margin-top: 61px;
+	overflow: hidden;
+	width: 93px;
+	height: 27px;
+	background: url(../images/header/header-logo.png) no-repeat;
+	background-size: 93px 27px;
+	text-indent: -9999em;
+}
+
+footer nav {
+	margin-top: 63px;
+}
+
+footer li {
+	float: left;
+	margin-right: 35px;
+}
+
+footer li:last-child,
+#sns-menu li:last-child {
+	margin-right: 0;
+}
+
+#sns-menu {
+	float: right;
+	width: 87px;
+	margin-top: 65px;
+}
+
+#sns-menu li {
+	margin-right: 15px;
+}
+
+#sns-menu a {
+	opacity: 0.7;
+	display: inline-block;
+	text-indent: -9999em;
+	transition: all 0.3s ease;
+}
+
+#sns-menu a:hover,
+#sns-menu a:focus {
+	opacity: 1;
+}
+#sns-menu a:focus {
+	outline: none;
+}
+
+#sns-menu .f {
+	width: 17px;
+	height: 17px;
+	background: url(../images/icons/fa-facebook-square.png) no-repeat;
+}
+
+#sns-menu .t {
+	width: 18px;
+	height: 15px;
+	background: url(../images/icons/fa-twitter.png) no-repeat;
+}
+
+#sns-menu .y {
+	width: 22px;
+	height: 16px;
+	background: url(../images/icons/fa-youtube-play.png) no-repeat;
+}
+
+
 
 /*
  * 레티나 디스플레이(@2x)
@@ -304,4 +400,24 @@ body {
 		background-image: url(../images/header/header-logo@2x.png);
 		background-size: 175px 51px; /* @1x 배율 스크린에서 보여지는 실제 배경 이미지 크기 */
 	}
+
+	footer h3 {
+		background-image: url(../images/header/header-logo@2x.png);
+	}
+
+	#sns-menu .f {
+		background-image: url(../images/icons/fa-facebook-square@2x.png);
+		background-size: 17px 17px;
+	}
+
+	#sns-menu .t {
+		background-image: url(../images/icons/fa-twitter@2x.png);
+		background-size: 18px 15px;
+	}
+
+	#sns-menu .y {
+		background-image: url(../images/icons/fa-youtube-play@2x.png);
+		background-size: 22px 16px;
+	}
+
 }
