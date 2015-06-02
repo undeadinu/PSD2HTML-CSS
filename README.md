@@ -7,18 +7,18 @@
 ---
 
 ### Agenda
-* [01일차](DAY01/README.md) `디자인 프로세스`
-* [02일차](DAY02/README.md) `웹 타이포그래피`
-* [03일차](DAY03/README.md) `웹 그리드시스템`
-* 04일차
-* 05일차
-* 06일차
-* 07일차
-* 08일차
-* 09일차
-* 10일차
-* 11일차
-* 12일차
-* 13일차
-* 14일차
-* 15일차
+* [01일차](DAY01/README.md)
+* [02일차](DAY02/README.md)
+* [03일차](DAY03/README.md)
+* [04일차](DAY04/README.md)
+* [05일차](DAY05/README.md)
+* [06일차](DAY06/README.md)
+* [07일차](DAY07/README.md)
+* [08일차](DAY08/README.md)
+* [09일차](DAY09/README.md)
+* [10일차](DAY10/README.md)
+* [11일차](DAY11/README.md)
+* [12일차](DAY12/README.md)
+* [13일차](DAY13/README.md)
+* [14일차](DAY14/README.md)
+* [15일차](DAY15/README.md)

@@ -1,0 +1,462 @@
+@charset "utf-8";
+
+/* 외부의 스타일 모듈 호출
+ * ---------------------------------------------------------------------------
+ */
+@import "./parts/normalize.min.css";
+@import "./parts/common.css";
+@import "./parts/gs.min.css";
+@import "./parts/fonts.css";
+
+/* 기초 공사(타이포그래피) / 배경이미지
+ * ---------------------------------------------------------------------------
+ */
+
+/* 배경 디자인 (색상, 이미지)
+ * 가로축: 가운데(center)
+ * 세로축: 상단(top)
+ * 반복: 안하는 걸로(no-repeat) */
+body {
+    background: #003652 url("../images/page/sea.png") center top no-repeat;
+    /* 웹폰트 Lato를 설정 */
+
+    font: 0.875rem/1.5 "Lato", Arial, sans-serif;
+}
+
+/* #page 디자인
+ * ---------------------------------------------------------------------------
+ */
+
+/* 페이지 중앙 정렬 */
+#page {
+    position: relative;
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Grid-System 가이드 디자인 */
+#page::before {
+    content: "";
+}
+
+#page.grid::before {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2288px;
+    background: url(../images/guide/gs-guide.png);
+}
+
+/* header 헤더
+ * ---------------------------------------------------------------------------
+ */
+/* 로고 */
+
+#indurge {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 110px;
+    background: url(../images/header/header-logo.png) no-repeat center bottom;
+    text-align: center;
+    text-indent: -9999em;
+}
+
+/* #navigation 내비게이션
+ * ---------------------------------------------------------------------------
+ */
+#navigation {
+    margin-top: 76px;
+}
+
+#navigation ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+#navigation li {
+    float: left;
+    margin-right: 35px;
+}
+
+#navigation a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-weight: 300;
+    /* Light */
+
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: all 0.4s cubic-bezier(0, 0, 0.3, 0.94);
+}
+
+#navigation a:hover,
+#navigation a:focus {
+    color: hsl(197, 100%, 72%);
+            transform: scale(1.2);
+}
+
+#navigation a:focus {
+    outline: none;
+}
+
+#navigation .active {
+    /* Bold */
+    font-weight: 700;
+}
+
+/* #global-menu */
+
+#global-menu {
+    float: left;
+    margin-left: 10px;
+}
+
+/* #side-menu */
+
+#side-menu {
+    float: right;
+}
+
+#side-menu li:first-child a {
+    padding-left: 23px;
+    background: url(../images/icons/icon-search.png) no-repeat 0 5px;
+}
+
+#side-menu li:last-child {
+    margin-right: 10px;
+}
+
+#side-menu li:last-child a {
+    padding-left: 28px;
+    background: url(../images/icons/) no-repeat 0 4px;
+}
+
+/* #cta 콜투액션
+ * ---------------------------------------------------------------------------
+ */
+
+#cta {
+    margin-top: 178px;
+    color: #fff;
+    font-size: 32px;
+    /* Thin */
+    font-weight: 100;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.01em;
+    /*
+	 * 대,소문자를 구분하는 텍스트를 모두 대문자로 변경
+	 * 대문자화: uppercase
+	 * 소문자화: lowercase
+	 * 개별 단어의 첫 글자만 대문자화: capitalize
+	 */
+    text-transform: uppercase;
+}
+
+#cta .slogan {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#cta strong {
+    font-weight: 700;
+    /* Bold */
+}
+
+#cta a {
+    display: inline-block;
+    margin-top: 40px;
+    border: 1px solid #fff;
+    padding: 0.549em 1.72em;
+    padding-left: 2.89em;
+    color: #fff;
+    background: url(../images/icons/icon-play.png) no-repeat 30px center;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.01, 0.56, 0.53, 0.73);
+}
+
+#cta a:hover {
+    transform-style: preserve-3d;
+    transform: perspective(400px) scale(1.1) rotateY(-20deg);
+}
+
+#cta a:focus {
+    outline: none;
+}
+
+/* #contents 콘텐츠
+ * ---------------------------------------------------------------------------
+ */
+#contents {
+    width: 1200px;
+    margin: 168px auto 84px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/**
+ * 레이아웃 박스 모듈 디자인
+ * 박스 모듈 width: 118px
+ * 박스 모듈 hieght: 252px
+ * .box-col[1, 2, 3, 4, 5, 6]
+ * .box-row2
+ * ---------------------------------------------------------------------------
+ */
+
+[class*="box-col"] {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    height: 252px;
+}
+
+.box-col1 {
+    width: 118px;
+}
+
+.box-col2 {
+    width: 236px;
+}
+
+.box-col3 {
+    width: 354px;
+}
+
+.box-col4 {
+    width: 472px;
+}
+
+.box-col5 {
+    width: 590px;
+}
+
+.box-col6 {
+    width: 708px;
+}
+
+.box-row2 {
+    height: 504px;
+}
+
+.box-message {
+    position: absolute;
+    z-index: 100;
+    top: 18px;
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.81;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.85);
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.colorchip {
+    color: #fff;
+    background: #7f6162;
+    font-weight: 300;
+    text-align: center;
+}
+
+.colorchip p {
+    width: 136px;
+    margin-top: 39px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 22px;
+    line-height: 1.36;
+}
+
+.colorchip a {
+    display: inline-block;
+    margin-top: 12px;
+    border: 1px solid;
+    padding: 0.44em 1.69em;
+    color: inherit;
+    font-size: 16px;
+    line-height: 1;
+    text-decoration: none;
+    transition: all 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.colorchip a:hover,
+.colorchip a:focus {
+    color: #7f6162;
+    background: #fff;
+}
+
+.colorchip a:focus {
+    outline: none;
+}
+
+[class*="box-col"] img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 1.2s cubic-bezier(0.47, 0, 0.75, 0.72);
+            transform: translate(-50%, -50%);
+}
+
+[class*="box-col"] img:hover {
+            transform: translate(-50%, -50%) scale(1.04);
+}
+
+/* footer 푸터
+ * ---------------------------------------------------------------------------
+ */
+footer {
+    height: 147px;
+    color: #fff;
+    background: #141728;
+}
+
+footer ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #70d7ff;
+}
+
+footer a:focus {
+    outline: none;
+    border-bottom: 1px solid;
+    padding-bottom: 2px;
+}
+
+footer h3 {
+    overflow: hidden;
+    width: 93px;
+    height: 27px;
+    margin-top: 61px;
+    background: url(../images/header/header-logo.png) no-repeat;
+    text-indent: -9999em;
+    background-size: 93px 27px;
+}
+
+footer nav {
+    margin-top: 63px;
+}
+
+footer li {
+    float: left;
+    margin-right: 35px;
+}
+
+footer li:last-child,
+#sns-menu li:last-child {
+    margin-right: 0;
+}
+
+#sns-menu {
+    float: right;
+    width: 87px;
+    margin-top: 65px;
+}
+
+#sns-menu li {
+    margin-right: 15px;
+}
+
+#sns-menu a {
+    opacity: 0.7;
+    display: inline-block;
+    text-indent: -9999em;
+    transition: all 0.3s ease;
+}
+
+#sns-menu a:hover,
+#sns-menu a:focus {
+    opacity: 1;
+}
+
+#sns-menu a:focus {
+    outline: none;
+}
+
+#sns-menu .f {
+    width: 17px;
+    height: 17px;
+    background: url(../images/icons/fa-facebook-square.png) no-repeat;
+}
+
+#sns-menu .t {
+    width: 18px;
+    height: 15px;
+    background: url(../images/icons/fa-twitter.png) no-repeat;
+}
+
+#sns-menu .y {
+    width: 22px;
+    height: 16px;
+    background: url(../images/icons/fa-youtube-play.png) no-repeat;
+}
+/*
+ * 레티나 디스플레이(@2x)
+ *
+ */
+
+( min-resolution: 192dpi),
+( min-resolution: 2dppx) {
+    /* 로고 */
+
+    #indurge {
+        background-image: url(../images/header/header-logo@2x.png);
+        background-size: 175px 51px;
+        /* @1x 배율 스크린에서 보여지는 실제 배경 이미지 크기 */
+    }
+    #side-menu li:first-child a {
+        background-image: url(../images/icons/icon-search@2x.png);
+        background-size: 19px 19px;
+    }
+    #side-menu li:last-child a {
+        background-image: url(../images/icons/icon-card@2x.png);
+        background-size: 24px 18px;
+    }
+    footer h3 {
+        background-image: url(../images/header/header-logo@2x.png);
+        background-size: 93px 27px;
+    }
+    #sns-menu .f {
+        background-image: url(../images/icons/fa-facebook-square@2x.png);
+        background-size: 17px 17px;
+    }
+    #sns-menu .t {
+        background-image: url(../images/icons/fa-twitter@2x.png);
+        background-size: 18px 15px;
+    }
+    #sns-menu .y {
+        background-image: url(../images/icons/fa-youtube-play@2x.png);
+        background-size: 22px 16px;
+    }
+}
