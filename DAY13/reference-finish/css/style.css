@@ -421,13 +421,17 @@ footer li:last-child,
     height: 16px;
     background: url(../images/icons/fa-youtube-play.png) no-repeat;
 }
+
 /*
  * 레티나 디스플레이(@2x)
- *
  */
-
-( min-resolution: 192dpi),
-( min-resolution: 2dppx) {
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and ( min-resolution: 192dpi),
+only screen and ( min-resolution: 2dppx) {
     /* 로고 */
 
     #indurge {
