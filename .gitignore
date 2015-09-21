@@ -1,5 +1,11 @@
-###TEMP###
+# 공유 제외
+__Class_2014__
+__Class_2015_1__
+__ref__/
 Assets
+
+
+
 
 ###Windows###
 
@@ -82,9 +88,3 @@ node_modules
 
 .sass-cache
 *.css.map
-
-# 공유 제외
-__Class_2014__
-__ref__/
-DAY08/banner_illustrator_landscape_psd_layered_7_176009/**/*
-DAY08/action_assets
