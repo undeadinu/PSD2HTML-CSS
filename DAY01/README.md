@@ -60,7 +60,7 @@
 
 #### 웹 디자인/개발 도구 설치/환경설정
 
-- 그래픽 도구: [Adobe Photoshop](http://me2.do/GhXwiL2V)
+- 그래픽 도구: [Adobe Photoshop](http://url.yamoo9.net/pscc2015)
 - 에디터 도구: [Sublime Text](http://www.sublimetext.com/3)
 
 -
