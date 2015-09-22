@@ -101,3 +101,14 @@
 - [publicdomainvectors.org](http://publicdomainvectors.org/)
 - [splitshire.com](http://www.splitshire.com/)
 - [imcreator.com/free](http://www.imcreator.com/free)
+
+
+## 상용 이미지/사운드/비디오클립 리소스
+
+- [istockphoto.com](http://www.istockphoto.com/)
+- [pond5.com](http://www.pond5.com/)
+
+
+## UI Kit
+
+- [Flat-UI](http://designmodo.github.io/Flat-UI/)
