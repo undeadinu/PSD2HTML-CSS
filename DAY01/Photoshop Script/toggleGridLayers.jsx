@@ -37,13 +37,20 @@ if (toggleType === 'group') {
 /* ------------------------------------------------------------------
  * 그룹 레이어 토글 함수
  * ------------------------------------------------------------------ */
+ var origin_layer;
 function toggleGridGroup(ref, name) {
 	var layers = ref.layers;
+	if (!origin_layer) {
+		origin_layer = activeDocument.activeLayer;
+		activeDocument.activeLayer = layers[0];
+	}
 	for ( var i=0, l=layers.length; i<l; i++ ) {
 		var layer = layers[i];
 		if(layer.typename === 'LayerSet') {
 			if ( layer.name.toLowerCase() === name.toLowerCase() ) {
 				layer.visible = !layer.visible;
+				activeDocument.activeLayer = origin_layer;
+				break;
 			}
 			toggleGridGroup(layer, gridLayerName);
 		}
@@ -55,11 +62,17 @@ function toggleGridGroup(ref, name) {
  * ------------------------------------------------------------------ */
 function toggleGridLayer(ref, name) {
 	var layers = ref.layers;
+	if (!origin_layer) {
+		origin_layer = activeDocument.activeLayer;
+		activeDocument.activeLayer = layers[0];
+	}
 	for ( var i=0, l=layers.length; i<l; i++ ) {
 		var layer = layers[i];
 		if(layer.typename !== 'LayerSet') {
 			if ( layer.name.toLowerCase() === name.toLowerCase() ) {
 				layer.visible = !layer.visible;
+				activeDocument.activeLayer = origin_layer;
+				break;
 			}
 		} else {
 			toggleGridLayer(layer, gridLayerName);
