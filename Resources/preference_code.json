@@ -1,0 +1,17 @@
+// Side Bar.sublime-settings
+{
+	"default_browser": "chrome"
+}
+
+
+
+
+
+// Default (OSX).sublime-keymap
+// Default (Windows).sublime-keymap
+[
+	{
+		"keys": ["f12"],
+		"command": "side_bar_open_in_browser"
+	}
+]
