@@ -6,22 +6,3 @@
 
 <!-- ![PSD to HTML/CSS](__assets__/psd2htmlcss.png) -->
 ![PSD to HTML/CSS](__assets__/featured_adobe.jpg)
-
----
-
-### Agenda
-* [01일차](DAY01/README.md)
-* 02일차
-* 03일차
-* 04일차
-* 05일차
-* 06일차
-* 07일차
-* 08일차
-* 09일차
-* 10일차
-* 11일차
-* 12일차
-* 13일차
-* 14일차
-* 15일차
