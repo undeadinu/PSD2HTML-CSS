@@ -89,6 +89,23 @@
 
 ![photoshop_artboards](../__assets__/photoshop_artboards.jpg)
 
+
+---
+
+## 웹 디자인 스타일 가이드
+
+#### 상품(Brand) 연구
+
+기업의 목표/비전 등을 분석하여
+
+-
+
+#### 타이포그래피 설계(Typography Design)
+
+웹 디자인의 약 95%는 타이포그래피. ([Oliver Reichenstein](https://ia.net/know-how/the-web-is-all-about-typography-period))
+
+![style-guides](assets-github/Style-Guide.png)
+
 ---
 
 ## 무료 이미지 리소스
@@ -112,3 +129,7 @@
 ## UI Kit
 
 - [Flat-UI](http://designmodo.github.io/Flat-UI/)
+
+## UI Style Guide
+
+- [frontify.com](https://frontify.com/styleguide), [Demo](https://brand.frontify.com/d/qAiubNBytHKf/ui-patterns#/getting-started/typography)
