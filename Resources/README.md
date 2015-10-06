@@ -126,9 +126,15 @@
 - [pond5.com](http://www.pond5.com/)
 
 
+## 영문 폰트
+
+- [gfxfont.blogspot.kr](http://gfxfont.blogspot.kr/)
+
+
 ## UI Kit
 
 - [Flat-UI](http://designmodo.github.io/Flat-UI/)
+
 
 ## UI Style Guide
 
