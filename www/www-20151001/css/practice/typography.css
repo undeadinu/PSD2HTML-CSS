@@ -1,0 +1,40 @@
+/*	------------------------------------------------------------
+	본고딕 웹폰트 호출 (아시아 언어를 위해 개발된 무료 폰트)
+	------------------------------------------------------------
+	구글: Noto Sans
+	어도비: Source Han Sans
+ */
+@import url("http://fonts.googleapis.com/css?family=Noto+Sans");
+
+body {
+	margin: 0;
+	/*배경 이미지*/
+	background-image: url("../../images/baseline.png");
+	/* 웹 브라우저는 글꼴 크기가 기본적으로 16px -> 100% */
+	/* 행간 설정 부분은 100%(16px)의 1.5배 -> 24px */
+	/* 폰트 속기형 */
+	font: 100%/1.5 'Noto Sans', Dotum, sans-serif;
+}
+
+/* 연습 공간 디자인 */
+.practice {
+	/*넓이*/
+	width: 1000px;
+	/*최소 높이*/
+	min-height: 100vh;
+	/*외부여백(좌,우)*/
+	margin-left: auto;
+	margin-right: auto;
+	/*배경색*/
+	/*background-color: #7648D7;*/
+}
+
+/* 단락 디자인 */
+.practice p {
+	width: 576px; /* px, em, % */
+	/*외부여백 CSS 웹 디자인*/
+	margin-top: 0;
+	margin-bottom: 1.5em;
+	font-size: 16px;
+	line-height: 1.5; /* 16 x 1.5 = 24px */
+}
