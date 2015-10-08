@@ -1,1 +1,20 @@
 @charset "utf-8";
+
+.container {
+	width: 1000px;
+	border: 1px solid hotpink;
+}
+
+[class^="box-"] {
+	float: left;
+	width: 25%;
+	height: 400px;
+	text-align: center;
+	line-height: 400px;
+	/*border: 1px solid;*/
+}
+
+.box-1 {background: purple;}
+.box-2 {background: yellow;}
+.box-3 {background: lightgreen;}
+.box-4 {background: darkred;}
