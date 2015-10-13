@@ -1,0 +1,36 @@
+# EditorConfig: http://EditorConfig.org
+# Sublime Text plugin: https://github.com/sindresorhus/editorconfig-sublime#readme
+
+# 지원 속성
+# root
+# indent_style
+# indent_size
+# end_of_line
+# charset
+# trim_trailing_whitespace
+# insert_final_newline
+
+
+root = true
+
+[*.{js,py}]
+charset = utf-8
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = true
+
+[lib/**.js]
+indent_style = tab
+indent_size = 4
+
+[package.json]
+indent_style = tab
+indent_size = 4
+
+[*.py]
+indent_style = space
+indent_size = 4
