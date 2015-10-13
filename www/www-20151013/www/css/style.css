@@ -22,3 +22,31 @@ body.grid {
  * 카달로그 디자인
  * --------------------------------
  */
+.catalog,
+.catalog * {
+	/* 박스의 크기를 border까지 확장, IE 8+ */
+	box-sizing: border-box;
+}
+
+.catalog {
+	height: 360px;
+	margin-top: 150px;
+
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #ABB4C0;
+}
+
+.catalog-product {
+	height: 100%;
+
+	float: left;
+	width: 25%;
+	border-right: 1px solid #ececec;
+}
+
+.catalog-product:first-child {background: #ff0;}
+.catalog-product:nth-child(2) {background: #0f0;}
+.catalog-product:nth-child(3) {background: #439000;}
+.catalog-product:nth-child(4) {background: #ff0;}
