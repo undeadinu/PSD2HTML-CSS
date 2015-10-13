@@ -32,7 +32,6 @@ body.grid::before {
 	width: 100%;
 	min-height: 100vh;
 	background: url("../images/guide/leading-10.png");
-	min-height: 100vh;
 }
 
 /**
