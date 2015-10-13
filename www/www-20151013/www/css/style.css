@@ -2,6 +2,13 @@
 
 /**
  * --------------------------------
+ * 스타일 모듈 호출
+ * --------------------------------
+ */
+@import "base/reset.css";
+
+/**
+ * --------------------------------
  * 웹폰트 호출
  * --------------------------------
  */
@@ -13,18 +20,17 @@
 
 /**
  * --------------------------------
- * 스타일 모듈 호출
- * --------------------------------
- */
-@import "base/reset.css";
-
-
-/**
- * --------------------------------
  * 가이드라인
  * --------------------------------
  */
-body.grid {
+body.grid::before {
+	content: "";
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
 	background: url("../images/guide/leading-10.png");
 	min-height: 100vh;
 }
@@ -47,7 +53,7 @@ body.grid {
 	width: 960px;
 	margin-left: auto;
 	margin-right: auto;
-	border: 1px solid #ABB4C0;
+	/*border: 1px solid #ABB4C0;*/
 }
 
 .catalog-product {
@@ -57,6 +63,10 @@ body.grid {
 	width: 25%;
 	border-right: 1px solid #ececec;
 	text-align: center;
+}
+
+.catalog-product:last-child {
+	border-right: 0;
 }
 
 /*
@@ -84,6 +94,12 @@ body.grid {
 */
 
 .catalog-product--headline {
-
+	margin-top: 27px;
+	font-size: 12px;
+	line-height: 1.333; /* 1.333= (16/12px) */
+	color: #222;
 }
 
+.catalog-product--image {
+	margin-top: 50px;
+}
