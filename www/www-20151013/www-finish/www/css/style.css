@@ -1,0 +1,217 @@
+@charset "utf-8";
+/**
+ * --------------------------------
+ * 스타일 모듈 호출
+ * --------------------------------
+ */
+@import "base/reset.css";
+
+
+/**
+ * --------------------------------
+ * 웹폰트
+ * --------------------------------
+ */
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+@import url("https://fonts.googleapis.com/css?family=Oswald:700");
+@import url("https://fonts.googleapis.com/css?family=PT+Serif:400italic");
+
+.varela {
+	font-family: 'Varela Round', sans-serif;
+}
+
+.oswald {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+}
+
+.pt-serif {
+	font-family: 'PT Serif', serif;
+	font-style: italic;
+}
+
+
+/**
+ * --------------------------------
+ * 가이드라인
+ * --------------------------------
+ */
+body.grid::after {
+	content: '';
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	background: url('../images/guide/leading-10.png');
+}
+
+
+/**
+ * --------------------------------
+ * .catalog 디자인
+ * --------------------------------
+ */
+.catalog {
+	width:        960px;
+	min-height:   360px;
+	margin-top:   150px;
+	margin-left:  auto;
+	margin-right: auto;
+	border: 1px solid hsla(211, 65%, 34%, 0.5);
+	background:   #fff;
+}
+
+.catalog, .catalog * {
+	box-sizing: border-box;
+}
+
+/**
+ * --------------------------------
+ * .catalog-product 디자인
+ * --------------------------------
+ */
+.catalog-product {
+	position: relative;
+	float: left;
+	width: 25%;
+	min-height: 360px;
+	border-right: 1px solid #ececec;
+	text-align: center;
+}
+
+.catalog-product:last-child {
+	border-right: 0;
+}
+
+.catalog-product:hover .catalog-product-shopping,
+.catalog-product.on .catalog-product-shopping {
+	display: block;
+}
+
+.catalog-product-shopping {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*z-index: -1;*/
+	width: 100%;
+	height: 100%;
+	/*text-align: left;*/
+	background: hsla(0, 0%, 18%, 0.95);
+}
+
+.select-product--size {
+	position: relative;
+	display: inline-block;
+	width: 6.67em;
+	height: 2.5em;
+	margin-top: 160px;
+	margin-right: 10px;
+	line-height: 2.5em;
+	border-radius: 30px;
+	padding-left: 1.67em;
+	text-align: left;
+	font-size: 12px;
+	text-decoration: none;
+	color: #868686;
+	background: #fff;
+}
+
+.select-product--size::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	right: 1.25em;
+	width: 6px;
+	height: 4px;
+	margin-top: -2px;
+	background: url("../images/icon/arrow-bottom.png") no-repeat;
+}
+
+.select-product--size---popup {
+	display: none;
+}
+
+.btn-product--cart {
+	padding: 0.83em 1.92em;
+	border-radius: 30px;
+	font-size: 12px;
+	text-decoration: none;
+	text-align: center;
+	color: #fff;
+	background: #1f4ba5;
+}
+
+.btn-product--wishlist {
+	display: block;
+	margin-top: 20px;
+	padding-left: 2em;
+	text-align: center;
+	text-decoration: none;
+	color: #b8b8b8;
+	font-size: 12px;
+	background: url("../images/icon/heart-plus.png") no-repeat 70px 0;
+}
+
+
+.catalog-product--headline {
+	margin-top: 30px;
+	font-size: 12px;
+	line-height: 1.33;
+	color: #222;
+}
+
+.catalog-product:hover .catalog-product--headline,
+.catalog-product:hover .catalog-product--info,
+.catalog-product.on .catalog-product--headline,
+.catalog-product.on .catalog-product--info {
+	position: relative;
+	z-index: 10;
+}
+
+.catalog-product:hover .catalog-product--headline,
+.catalog-product:hover .catalog-product--price,
+.catalog-product.on .catalog-product--headline,
+.catalog-product.on .catalog-product--price {
+	color: #fff;
+}
+
+.catalog-product--image {
+	margin-top: 50px;
+}
+
+.catalog-product--info {
+	margin-top: 55px;
+	min-height: 30px;
+}
+
+.catalog-product--info > span {
+	float: left;
+	width: 33.33%;
+	min-height: 30px;
+	line-height: 30px;
+}
+
+.catalog-product--id img {
+	vertical-align: middle;
+}
+
+.catalog-product--price {
+	font-size: 12px;
+	letter-spacing: 0.1em;
+}
+
+.catalog-product--sale,
+.catalog-product:hover .catalog-product--sale,
+.catalog-product.on .catalog-product--sale {
+	color: #ff3f2b;
+}
+
+.catalog-product--origin {
+	font-size: 8px;
+	letter-spacing: 0.1em;
+	text-decoration: line-through;
+	color: #a1a1a1;
+}
