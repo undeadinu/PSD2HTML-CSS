@@ -12,7 +12,10 @@
  * 가이드라인
  * --------------------------------
  */
-
+body.grid {
+	background: url("../images/guide/leading-10.png");
+	min-height: 100vh;
+}
 
 /**
  * --------------------------------
