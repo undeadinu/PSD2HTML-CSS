@@ -112,9 +112,10 @@ body.grid::before {
 /*=.catalog-product-info*/
 .catalog-product--info {
 	margin-top: 49px;
+	margin-bottom: 20px;
 }
 
-> 기호는 직접적인 자식요소. 즉, 즉계
+/* > 기호는 직접적인 자식요소. 즉, 즉계 자식을 말한다. */
 
 .catalog-product--info > * {
 	/*span 요소는 인라인 요소이기 때문에
@@ -133,3 +134,24 @@ body.grid::before {
 /*.catalog-product-info :first-child {background: #f00;}
 .catalog-product-info :nth-child(2) {background: #ff0;}
 .catalog-product-info :last-child {background: #f0f;}*/
+
+.catalog-product--state {
+	line-height: 36px;
+}
+
+.catalog-product--price,
+.catalog-product--origin {
+	letter-spacing: 0.1em; /* 100/1000em */
+	line-height: 30px;
+}
+
+.catalog-product--price {
+	font-size: 12px;
+	color: #222;
+}
+
+.catalog-product--origin {
+	font-size: 8px;
+	color: #a1a1a1;
+	text-decoration: line-through;
+}
