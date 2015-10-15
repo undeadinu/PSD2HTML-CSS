@@ -6,7 +6,7 @@
  * --------------------------------
  */
 @import "base/reset.css";
-@import "base/commons.css";
+@import "base/common.css";
 
 /**
  * --------------------------------
@@ -14,9 +14,15 @@
  * --------------------------------
  */
 @import url("https://fonts.googleapis.com/css?family=Varela+Round");
+@import url("https://fonts.googleapis.com/css?family=Oswald:700");
 
 .varela {
 	font-family: 'Varela Round', sans-serif;
+}
+
+.osward {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
 }
 
 /**
@@ -102,3 +108,28 @@ body.grid::before {
 .catalog-product--image {
 	margin-top: 50px;
 }
+
+/*=.catalog-product-info*/
+.catalog-product--info {
+	margin-top: 49px;
+}
+
+> 기호는 직접적인 자식요소. 즉, 즉계
+
+.catalog-product--info > * {
+	/*span 요소는 인라인 요소이기 때문에
+	높이/넓이를 가질 수 없다.
+
+	인라인요소인 span을 화면에 block 처럼`
+	그릴 수 있도록 설정한다. 그러면 웹 브라우저는
+	해당 요소를 block 요소처럼 화면에 그린다.*/
+	/*display: block;*/
+	float: left;
+	width: 33.33%;
+	height: 30px;
+	/*background: hsla(0, 0%, 0%, 0.45);*/
+}
+
+/*.catalog-product-info :first-child {background: #f00;}
+.catalog-product-info :nth-child(2) {background: #ff0;}
+.catalog-product-info :last-child {background: #f0f;}*/

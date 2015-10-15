@@ -19,3 +19,15 @@
 .clearfix {
 	zoom: 1; /* MS IE 전용, 비표준 속성: hasLayout 설정 */
 }
+
+
+/* Micro Clearfix */
+.micro-clearfix::before,
+.micro-clearfix::after {
+	content: '';
+	display: table;
+}
+
+.micro-clearfix::after {
+	clear: both;
+}
