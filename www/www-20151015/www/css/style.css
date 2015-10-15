@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+/**
+ * --------------------------------
+ * 스타일 모듈 호출
+ * --------------------------------
+ */
+@import "base/reset.css";
+@import "base/commons.css";
+
+/**
+ * --------------------------------
+ * 웹폰트 호출
+ * --------------------------------
+ */
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+
+.varela {
+	font-family: 'Varela Round', sans-serif;
+}
+
+/**
+ * --------------------------------
+ * 가이드라인
+ * --------------------------------
+ */
+body.grid::before {
+	content: "";
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	background: url("../images/guide/leading-10.png");
+}
+
+/**
+ * --------------------------------
+ * 카달로그 디자인
+ * --------------------------------
+ */
+.catalog,
+.catalog * {
+	/* 박스의 크기를 border까지 확장, IE 8+ */
+	box-sizing: border-box;
+}
+
+.catalog {
+	margin-top: 150px;
+
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	/*border: 1px solid #ABB4C0;*/
+}
+
+.catalog-product {
+	height: 100%;
+
+	float: left;
+	width: 25%;
+	border-right: 1px solid #ececec;
+	text-align: center;
+}
+
+.catalog-product:last-child {
+	border-right: 0;
+}
+
+/*
+	가상 선택자 (Pseudo Selector)
+
+	첫번째 자식요소 :first-child
+	마지막 자식요소 :last-child
+
+	순번에 따른 자식요소를 선택할 때
+	1st, 2nd, 3rd, 4th, 5th, ...., nth
+
+	:nth-child(1)
+	:nth-child(2)
+	:nth-child(3)
+	:nth-child(4)
+	:nth-child(5)
+	.
+	.
+	.
+
+.catalog-product:first-child {background: #ff0;}
+.catalog-product:nth-child(2) {background: #0f0;}
+.catalog-product:nth-child(3) {background: #439000;}
+.catalog-product:nth-child(4) {background: #ff0;}
+*/
+
+.catalog-product--headline {
+	margin-top: 27px;
+	font-size: 12px;
+	line-height: 1.333; /* 1.333= (16/12px) */
+	color: #222;
+}
+
+.catalog-product--image {
+	margin-top: 50px;
+}
