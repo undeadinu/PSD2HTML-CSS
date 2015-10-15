@@ -73,7 +73,7 @@ body.grid::before {
 .catalog-product:hover::after {
 	opacity: 0.75;
 	/* 애니메이션 */
-	animation: blink 0.2s;
+	/*animation: blink 0.2s;*/
 }
 
 /* 가상요소 - ::after */
@@ -87,16 +87,7 @@ body.grid::before {
 	height: 100%;
 	background: #000;
 	/* 장면전환: transition */
-	/*transition: opacity 1.4s linear;*/
-}
-
-@keyframes blink {
-	0%   { opacity: 0;   }
-	20%  { opacity: 0.4; }
-	40%  { opacity: 0;   }
-	60%  { opacity: 0.4; }
-	80%  { opacity: 0;   }
-	100% { opacity: 0.7; }
+	transition: opacity .2s;
 }
 
 .catalog-product:last-child {
@@ -127,7 +118,15 @@ body.grid::before {
 .catalog-product:nth-child(4) {background: #ff0;}
 */
 
+.catalog-product:hover .catalog-product--headline,
+.catalog-product:hover .catalog-product--price {
+	color: #fff;
+}
+
+
 .catalog-product--headline {
+	position: relative;
+	z-index: 10;
 	margin-top: 27px;
 	font-size: 12px;
 	line-height: 1.333; /* 1.333= (16/12px) */
@@ -140,6 +139,8 @@ body.grid::before {
 
 /*=.catalog-product-info*/
 .catalog-product--info {
+	position: relative;
+	z-index: 10;
 	margin-top: 49px;
 	margin-bottom: 20px;
 }
@@ -187,4 +188,15 @@ body.grid::before {
 	font-size: 8px;
 	color: #a1a1a1;
 	text-decoration: line-through;
+}
+
+
+/* 애니메이션 키프레임 */
+@keyframes blink {
+	0%   { opacity: 0;   }
+	20%  { opacity: 0.4; }
+	40%  { opacity: 0;   }
+	60%  { opacity: 0.4; }
+	80%  { opacity: 0;   }
+	100% { opacity: 0.7; }
 }
