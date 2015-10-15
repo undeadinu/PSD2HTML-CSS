@@ -69,15 +69,34 @@ body.grid::before {
 	text-align: center;
 }
 
+/* 가상클래스 - 마우스가 올라간 상태 :hover */
+.catalog-product:hover::after {
+	opacity: 0.75;
+	/* 애니메이션 */
+	animation: blink 0.2s;
+}
+
+/* 가상요소 - ::after */
 .catalog-product::after {
 	content: '';
+	opacity: 0;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	background: #000;
-	opacity: 0.75;
+	/* 장면전환: transition */
+	/*transition: opacity 1.4s linear;*/
+}
+
+@keyframes blink {
+	0%   { opacity: 0;   }
+	20%  { opacity: 0.4; }
+	40%  { opacity: 0;   }
+	60%  { opacity: 0.4; }
+	80%  { opacity: 0;   }
+	100% { opacity: 0.7; }
 }
 
 .catalog-product:last-child {
