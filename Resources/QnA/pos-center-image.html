@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>Position Center Image</title>
+	<style>
+		body {
+			margin: 0;
+			background: #000;
+		}
+		.pos-center--image {
+			box-sizing: border-box;
+			overflow: hidden;
+			position: relative;
+			top: 50px;
+			width: 96%;
+			max-width: 1280px;
+			height: 600px;
+			margin-left: auto;
+			margin-right: auto;
+			border: 4px solid #434343;
+		}
+		.pos-center--image img {
+			position: absolute;
+			/*top: 50%;*/
+			top: -220px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	</style>
+</head>
+<body>
+
+	<div class="pos-center--image">
+		<img src="bg.jpg" width="1920" height="900" alt="">
+	</div>
+
+</body>
+</html>
