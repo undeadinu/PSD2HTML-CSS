@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>컨테이너 요소 가운데 자식 요소 배치</title>
+	<style>
+		body {
+			margin: 3em 0 0 3em;
+		}
+		.parent {
+			position: relative;
+			width: 700px;
+			height: 540px;
+			border: 1px solid #7045CF;
+		}
+		.child {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 230px;
+			height: 180px;
+			/*margin-top: -160px;
+			margin-left: -255px;*/
+			background: #333;
+			/*transform: translateX(-50%) translateY(-50%);*/
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+
+	<div class="parent">
+		<div class="child"></div>
+	</div>
+
+</body>
+</html>
