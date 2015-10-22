@@ -181,16 +181,56 @@ body.grid::before {
 }
 
 
-.catalog-product-shopping-group {
+.catalog-product .catalog-product-shopping-group {
+	display: none;
 	position: absolute;
+	z-index: 100;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #f00;
+}
+
+.catalog-product:hover .catalog-product-shopping-group {
+	display: block;
+}
+
+.catalog-product-shopping-group :first-child {
+	margin-top: 160px;
+	min-height: 30px;
+}
+.catalog-product-shopping-group :last-child {
+	margin-top: 20px;
 }
 
 .catalog-product-shopping-group a {
 	text-decoration: none;
 	color: #fff;
+}
+
+
+.catalog-product-shopping-group .selected-item {
+	color: #868686;
+	font-size: 12px;
+	padding-top: 0.83em;
+	padding-bottom: .83em;
+	padding-left: 1.67em;
+	padding-right: 3.33em;
+	border-radius: 30px;
+	/* 100-(6+15)/80*100 */
+	background: #fff url(../images/icon/arrow-bottom.png) no-repeat 73.75%;
+}
+
+.catalog-product-shopping-group .cart {
+	background: #1f4ba5;
+	padding: 0.83em 2em;
+	font-size: 12px;
+	border-radius: 30px;
+}
+
+.catalog-product-shopping-group .wishlist {
+	color: #b8b8b8;
+	font-size: 12px;
+	padding-left: 2em;
+	background: url(../images/icon/heart-plus.png) no-repeat;
 }
