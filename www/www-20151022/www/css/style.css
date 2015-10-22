@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+/**
+ * --------------------------------
+ * 스타일 모듈 호출
+ * --------------------------------
+ */
+@import "base/reset.css";
+@import "base/common.css";
+
+/**
+ * --------------------------------
+ * 웹폰트 호출
+ * --------------------------------
+ */
+@import url("base/font.css");
+
+/**
+ * --------------------------------
+ * 가이드라인
+ * --------------------------------
+ */
+body.grid::before {
+	content: "";
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100vh;
+	background: url("../images/guide/leading-10.png");
+}
+
+/**
+ * --------------------------------
+ * 카달로그 디자인
+ * --------------------------------
+ */
+.catalog,
+.catalog * {
+	/* 박스의 크기를 border까지 확장, IE 8+ */
+	box-sizing: border-box;
+}
+
+.catalog {
+	margin-top: 150px;
+
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	/*border: 1px solid #ABB4C0;*/
+}
+
+.catalog-product {
+	float: left;
+	position: relative;
+	width: 25%;
+	border-right: 1px solid #ececec;
+	text-align: center;
+}
+
+/* 가상클래스 - 마우스가 올라간 상태 :hover */
+.catalog-product:hover::after,
+.catalog-product.on::after {
+	opacity: 0.75;
+	/* 애니메이션 */
+	/*animation: blink 0.2s;*/
+}
+
+/* 가상요소 - ::after */
+.catalog-product::after {
+	content: '';
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	/* 장면전환: transition */
+	transition: opacity .2s;
+}
+
+.catalog-product:last-child {
+	border-right: 0;
+}
+
+/*
+	가상 선택자 (Pseudo Selector)
+
+	첫번째 자식요소 :first-child
+	마지막 자식요소 :last-child
+
+	순번에 따른 자식요소를 선택할 때
+	1st, 2nd, 3rd, 4th, 5th, ...., nth
+
+	:nth-child(1)
+	:nth-child(2)
+	:nth-child(3)
+	:nth-child(4)
+	:nth-child(5)
+	.
+	.
+	.
+
+.catalog-product:first-child {background: #ff0;}
+.catalog-product:nth-child(2) {background: #0f0;}
+.catalog-product:nth-child(3) {background: #439000;}
+.catalog-product:nth-child(4) {background: #ff0;}
+*/
+
+.catalog-product:hover .catalog-product--headline,
+.catalog-product:hover .catalog-product--price,
+.catalog-product.on .catalog-product--headline,
+.catalog-product.on .catalog-product--price {
+	color: #fff;
+}
+
+
+.catalog-product--headline {
+	position: relative;
+	z-index: 10;
+	margin-top: 27px;
+	font-size: 12px;
+	line-height: 1.333; /* 1.333= (16/12px) */
+	color: #222;
+}
+
+.catalog-product--image {
+	margin-top: 50px;
+}
+
+/*=.catalog-product-info*/
+.catalog-product--info {
+	position: relative;
+	z-index: 10;
+	margin-top: 49px;
+	margin-bottom: 20px;
+}
+
+/* > 기호는 직접적인 자식요소. 즉, 즉계 자식을 말한다. */
+
+.catalog-product--info > * {
+	/*span 요소는 인라인 요소이기 때문에
+	높이/넓이를 가질 수 없다.
+
+	인라인요소인 span을 화면에 block 처럼`
+	그릴 수 있도록 설정한다. 그러면 웹 브라우저는
+	해당 요소를 block 요소처럼 화면에 그린다.*/
+	/*display: block;*/
+	float: left;
+	width: 33.33%;
+	height: 30px;
+	/*background: hsla(0, 0%, 0%, 0.45);*/
+}
+
+/*.catalog-product-info :first-child {background: #f00;}
+.catalog-product-info :nth-child(2) {background: #ff0;}
+.catalog-product-info :last-child {background: #f0f;}*/
+
+.catalog-product--state {
+	line-height: 36px;
+}
+
+.catalog-product--price,
+.catalog-product--origin {
+	letter-spacing: 0.1em; /* 100/1000em */
+	line-height: 30px;
+}
+
+.catalog-product--price {
+	font-size: 12px;
+	color: #222;
+}
+
+.catalog-product .catalog-product--price.state-sale {
+	color: #ff3f2b;
+}
+
+.catalog-product--origin {
+	font-size: 8px;
+	color: #a1a1a1;
+	text-decoration: line-through;
+}
+
+
+.catalog-product .catalog-product-shopping-group {
+	display: none;
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.catalog-product:hover .catalog-product-shopping-group,
+.catalog-product.on .catalog-product-shopping-group {
+	display: block;
+}
+
+.catalog-product-shopping-group > :first-child {
+	margin-top: 160px;
+	/*min-height: 30px;*/
+}
+.catalog-product-shopping-group > :last-child {
+	margin-top: 20px;
+}
+
+.catalog-product-shopping-group a {
+	text-decoration: none;
+	color: #fff;
+}
+
+
+.catalog-product-shopping-group .selected-item {
+	color: #868686;
+	font-size: 12px;
+	padding-top: 0.67em;
+	padding-bottom: 0.67em;
+	padding-left: 1.67em;
+	padding-right: 3.33em;
+	border-radius: 30px;
+	/* 100 - ((6+15)/80*100) */
+	background: #fff url(../images/icon/arrow-bottom.png) no-repeat 73.75%;
+}
+
+.catalog-product-shopping-group .cart {
+	background: #1f4ba5;
+	padding: 0.67em 2em;
+	font-size: 12px;
+	border-radius: 30px;
+}
+
+.catalog-product-shopping-group .wishlist {
+	color: #b8b8b8;
+	font-size: 12px;
+	padding-left: 2em;
+	background: url(../images/icon/heart-plus.png) no-repeat;
+}
