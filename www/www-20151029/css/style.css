@@ -58,13 +58,17 @@
 	padding-top: 30px;
 }
 
+.brand {
+	z-index: 10;
+}
+
 .sprite-svg-logo-aware {
 	margin-left: -38px;
 }
 
 .sprite-svg-icon-hamberger {
 	margin-left: 30px;
-	margin-top: 5px;
+	margin-top: 3px;
 }
 
 /**
@@ -72,25 +76,32 @@
  * .gnb
  * --------------------------------
  */
+.gnb {
+	padding-top: 32px;
+}
 
+/* .gnb li */
 .gnb li {
 	position: relative;
 	float: left;
-	margin-right: 28px;
+	margin-right: 26px;
 }
 
 .gnb li:last-child {
 	margin-right: 0;
 }
 
+/* .gnb span.sprite-svg-icon-arrow-down */
 .gnb .sprite-svg-icon-arrow-down {
 	position: absolute;
-	top: 5px;
+	top: 7px;
 	right: 0;
 }
 
+/* .gnb a */
 .gnb a {
 	position: relative;
+	z-index: 10;
 	padding-right: 1.21em;
 	color: #222;
 	text-decoration: none;
