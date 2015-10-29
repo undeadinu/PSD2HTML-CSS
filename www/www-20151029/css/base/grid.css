@@ -9,10 +9,15 @@
 	width: 960px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.container,
+.clearfix {
 	*zoom: 1; /* 비 표준 IE 전용 속성: hasLayout */
 }
 
-.container:after {
+.container:after,
+.clearfix:after {
 	content: '';
 	display: block;
 	clear: both;
