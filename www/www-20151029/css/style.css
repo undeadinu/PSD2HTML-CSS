@@ -1,12 +1,24 @@
 @charset "utf-8";
+/**
+ * --------------------------------
+ * 스타일 모듈 호출
+ * --------------------------------
+ */
 @import url("base/reset.css");
+@import url("base/grid.css");
+@import url("../images/sprites/sprites-ui.css");
 
+
+
+/**
+ * --------------------------------
+ * AWARE 사이트 스타일 디자인
+ * --------------------------------
+ */
 .container {
 	position: relative;
-	width: 960px;
 	min-height: 100vh;
-	margin-left: auto;
-	margin-right: auto;
+	background: #ddd;
 }
 
 .container.grid::before {
@@ -18,4 +30,24 @@
 	top: 0;
 	z-index: 1000;
 	background: url(../images/guide/bg-grid-system-960-8.png);
+}
+
+
+/**
+ * --------------------------------
+ * .header
+ * --------------------------------
+ */
+.header {
+	background: #fff;
+	height: 60px;
+}
+
+.brand {
+	/* IR 테크닉 활용: png, svg, sprite */
+	display: block;
+	width: 97px;
+	height: 20px;
+	/*background: url(../images/svg/svg-logo-aware.svg) no-repeat;*/
+	/*background: url(../images/png/svg-logo-aware.png) no-repeat;*/
 }
