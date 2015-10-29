@@ -40,14 +40,28 @@
  */
 .header {
 	background: #fff;
-	height: 60px;
+	height: 80px;
 }
 
 .brand {
 	/* IR 테크닉 활용: png, svg, sprite */
-	display: block;
+	/*display: block;
 	width: 97px;
-	height: 20px;
+	height: 20px;*/
 	/*background: url(../images/svg/svg-logo-aware.svg) no-repeat;*/
 	/*background: url(../images/png/svg-logo-aware.png) no-repeat;*/
+}
+
+.brand,
+.off-canvas-menu {
+	padding-top: 30px;
+}
+
+.sprite-svg-logo-aware {
+	margin-left: -38px;
+}
+
+.sprite-svg-icon-hamberger {
+	margin-left: 30px;
+	margin-top: 5px;
 }
