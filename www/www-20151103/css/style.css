@@ -1,0 +1,148 @@
+@charset "utf-8";
+/**
+ * --------------------------------
+ * 스타일 모듈 호출
+ * --------------------------------
+ */
+@import url("base/reset.css");
+@import url("base/grid.css");
+@import url("../images/sprites/sprites-ui.css");
+@import url("base/webfont.css");
+
+
+
+/**
+ * --------------------------------
+ * AWARE 사이트 스타일 디자인
+ * --------------------------------
+ */
+
+/**
+ * .container
+ * --------------------------------
+ */
+.container {
+	position: relative;
+	min-height: 100vh;
+	background: #ddd;
+}
+
+.container.grid::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	min-height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	background: url(../images/guide/bg-grid-system-960-8.png);
+}
+
+/**
+ * .header
+ * --------------------------------
+ */
+.header {
+	background: #fff;
+	height: 80px;
+}
+
+/* .brand */
+.brand {
+	z-index: 10;
+	/* IR 테크닉 활용: png, svg, sprite */
+	/*display: block;
+	width: 97px;
+	height: 20px;*/
+	/*background: url(../images/svg/svg-logo-aware.svg) no-repeat;*/
+	/*background: url(../images/png/svg-logo-aware.png) no-repeat;*/
+}
+
+.sprite-svg-logo-aware {
+	margin-left: -38px;
+}
+
+/* .off-canvas-menu */
+.sprite-svg-icon-hamberger {
+	margin-left: 30px;
+	margin-top: 3px;
+}
+
+.brand,
+.off-canvas-menu {
+	padding-top: 30px;
+}
+
+/* .gnb */
+.gnb {
+	padding-top: 32px;
+}
+
+/* .gnb li */
+.gnb li {
+	position: relative;
+	float: left;
+	margin-right: 26px;
+}
+
+.gnb li:last-child {
+	margin-right: 0;
+}
+
+/* .gnb span.sprite-svg-icon-arrow-down */
+.gnb .sprite-svg-icon-arrow-down {
+	position: absolute;
+	top: 7px;
+	right: 0;
+}
+
+/* .gnb a */
+.gnb a {
+	position: relative;
+	z-index: 10;
+	padding-right: 1.21em;
+	color: #222;
+	text-decoration: none;
+	font-family: 'Varela', sans-serif;
+	font-size: 14px;
+	line-height: 1.2;
+	transition: all .3s ease;
+}
+
+.gnb a:hover,
+.gnb a:focus,
+.gnb a:active {
+	color: #1e4fa5;
+}
+
+
+/* .utils */
+.utils {
+	padding-top: 32px;
+}
+
+.utils ul {
+	float: right;
+	margin-right: 30px;
+}
+
+.utils li {
+	float: left;
+	margin-right: 40px;
+}
+
+.utils li:last-child {
+	margin-right: 0;
+}
+
+.utils a {
+	text-decoration: none;
+}
+
+.utils .search-form {
+	display: none;
+}
+
+.utils .search-form.active {
+	display: block;
+}
