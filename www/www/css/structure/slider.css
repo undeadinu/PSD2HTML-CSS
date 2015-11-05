@@ -1,16 +1,27 @@
-.slide-content {
+.slide-content,
+.slide-content li {
 	position: relative;
 }
 
 .slide-content .content-desc {
 	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 100;
+	top: 120px;
+	left: 120px;
+	width: 240px;
 }
 
+/* .content-desc */
+.content-desc .content-category {
+	font-size: 12px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #656565;
+}
 
-
+.content-desc .content-headline {
+	font-size: 36px;
+	color: #222;
+}
 
 /* .slide-controls */
 .slide-controls a {
