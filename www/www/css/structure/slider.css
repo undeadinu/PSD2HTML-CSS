@@ -1,0 +1,40 @@
+.slide-content {
+	position: relative;
+}
+
+.slide-content .content-desc,
+.slide-content .slide-controls {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+.slide-list a {
+	position: relative;
+	display: block;
+}
+
+.slide-list a:before {
+	box-sizing: border-box; /* IE 8+ */
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*width: calc( 100% - 11px );*/ /* IE 9+ */
+	height: 100%;
+	border: 1px solid #1f4ba5;
+	border-left: 10px solid #1f4ba5;
+	background: hsla(0, 0%, 100%, 0.7);
+}
+
+.slide-list a:hover,
+.slide-list a:focus {
+
+}
+
+
+.slide-list a img {
+	vertical-align: bottom;
+}

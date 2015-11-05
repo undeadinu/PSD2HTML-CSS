@@ -71,7 +71,7 @@
 		<div class="slider">
 			<h1 class="slider-headline a11y-hidden">Slider UI Component of Products</h1>
 			<!-- .slide-content+.slide-controls>a[role=button].control-prev-btn{previous slide}+a[role=button].control-next-btn{next slide}^.slide-list -->
-			<div class="slide-content">
+			<div class="slide-content col-6">
 				<ul>
 					<li>
 						<img src="images/photos/photo-slider-content.jpg" width="720" height="480" alt="">
@@ -86,19 +86,37 @@
 						</div>
 					</li>
 					<!-- 향후 데이터를 채웁니다. -->
+					<li aria-hidden="true"></li>
 				</ul>
+
+				<div class="slide-controls">
+					<a href="" role="button" class="control-prev-btn">previous slide</a>
+					<a href="" role="button" class="control-next-btn">next slide</a>
+				</div>
 			</div>
-			<div class="slide-controls">
-				<a href="" role="button" class="control-prev-btn">previous slide</a>
-				<a href="" role="button" class="control-next-btn">next slide</a>
-			</div>
-			<div class="slide-list">
-				<!-- ul>li*4>a -->
+
+			<div class="slide-list col-2">
 				<ul>
-					<li><a href="">slide-01</a></li>
-					<li><a href="">slide-02</a></li>
-					<li><a href="">slide-03</a></li>
-					<li><a href="">slide-04</a></li>
+					<li>
+						<a href="" role="button">
+							<img src="images/photos/photo-slider-slides-01.jpg" width="240" height="120" alt="청록색 반바지 콘텐츠 보기">
+						</a>
+					</li>
+					<li>
+						<a href="" role="button">
+							<img src="images/photos/photo-slider-slides-02.jpg" width="240" height="120" alt="빨간 운동화 콘텐츠 보기">
+						</a>
+					</li>
+					<li>
+						<a href="" role="button">
+							<img src="images/photos/photo-slider-slides-03.jpg" width="240" height="120" alt="청바지 콘텐츠 보기">
+						</a>
+					</li>
+					<li>
+						<a href="" role="button">
+							<img src="images/photos/photo-slider-slides-04.jpg" width="240" height="120" alt="파란색 반바지 콘텐츠 보기">
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>
