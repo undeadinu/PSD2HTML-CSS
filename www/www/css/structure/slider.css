@@ -4,6 +4,23 @@
 	position: relative;
 }
 
+.js .slide-content {
+	overflow: hidden;
+}
+
+/* .slide-container */
+.js .slide-container {
+	width: 2880px;
+	width: calc(720px * 4);
+	transition: all .3s ease-out .1s;
+	/*transform: translateX(-720px);*/
+}
+
+/* .slide */
+.js .slide {
+	float: left;
+}
+
 /* .content-desc */
 .content-desc {
 	position: absolute;
