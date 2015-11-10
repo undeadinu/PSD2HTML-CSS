@@ -1,9 +1,0 @@
-﻿Manual installation
-
-Windows: Put "Zeick" directory to "C:\Program Files\Common Files\Adobe\CEP\extensions\". So finally you will have file with path "C:\Program Files\Common Files\Adobe\CEP\extensions\Zeick\index.html". Be careful not to add any additional directories between
-
-
-Mac OS X: Put "Zeick" directory to "Macintosh HD ▸ Library ▸ Application Support ▸ Adobe ▸ CEP ▸ extensions". So finally you will have file with path "/Library/Application Support/Adobe/CEP/extensions/Zeick/index.html". Be careful not to add any additional directories between
-
-Restart Photoshop
-Run Zeick from Photoshop menu "Window" → "Extensions" → "Zeick" Use it
